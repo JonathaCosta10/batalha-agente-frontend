@@ -1,0 +1,3367 @@
+{
+  "versao": "mapa_estrutura/0.2.0",
+  "gerado_em": "2026-09-27T07:47:55.866Z",
+  "alvo": {
+    "nome": "desafio-itau-batalha-de-agentes-time2",
+    "caminho": "C:/Users/ACER/Desktop/itaú-agentes---app-demo-&-backend-django/desafio-itau-batalha-de-agentes-time2",
+    "listagem": "git",
+    "excluido_da_listagem": null,
+    "fora_dos_padroes": [],
+    "git": {
+      "e_repo": true,
+      "topo_igual_ao_alvo": true,
+      "cabeca": "985ea03dfcc3e009a231ed8db1e90ab391a7fbf2"
+    }
+  },
+  "instrumentos": [
+    {
+      "id": "listagem",
+      "estado": "MEDIDO",
+      "detalhe": "git ls-files -co --exclude-standard; ignorados por git check-ignore -v",
+      "ficheiros": 162
+    },
+    {
+      "id": "python-ast",
+      "estado": "MEDIDO",
+      "detalhe": "python 3.12.10 (C:\\Users\\ACER\\Desktop\\itaú-agentes---app-demo-&-backend-django\\.venv\\Scripts\\python.exe), modulo ast",
+      "ficheiros": 67,
+      "falhas": []
+    },
+    {
+      "id": "typescript-ast",
+      "estado": "SEM_ALVO",
+      "detalhe": "0 ficheiros TS/JS",
+      "ficheiros": 0,
+      "falhas": []
+    }
+  ],
+  "resumo": {
+    "ficheiros": 162,
+    "por_extensao": {
+      "(sem)": 3,
+      ".html": 6,
+      ".ipynb": 2,
+      ".json": 38,
+      ".jsonl": 1,
+      ".md": 28,
+      ".py": 67,
+      ".sql": 15,
+      ".txt": 1,
+      ".yaml": 1
+    },
+    "detectados": 26,
+    "ausentes": 10,
+    "nao_medidos": 0,
+    "anomalias": 14
+  },
+  "fronteiras": [],
+  "arvore": {
+    "diretorios": [
+      {
+        "caminho": ".",
+        "ficheiros": 162,
+        "papeis": [
+          "codigo",
+          "config",
+          "entrada"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "."
+          }
+        ]
+      },
+      {
+        "caminho": "apps",
+        "ficheiros": 49,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven",
+        "ficheiros": 39,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/context_agent_datadriven"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/agente",
+        "ficheiros": 1,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/context_agent_datadriven/agente"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/agentes",
+        "ficheiros": 9,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/context_agent_datadriven/agentes"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/migrations",
+        "ficheiros": 2,
+        "papeis": [
+          "migracoes"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/context_agent_datadriven/migrations"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/pastas_raiz",
+        "ficheiros": 15,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/context_agent_datadriven/pastas_raiz"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/rotas",
+        "ficheiros": 3,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/context_agent_datadriven/rotas"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/services",
+        "ficheiros": 3,
+        "papeis": [
+          "servicos"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/context_agent_datadriven/services"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/templates",
+        "ficheiros": 1,
+        "papeis": [
+          "templates"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/context_agent_datadriven/templates"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/recomendacao",
+        "ficheiros": 10,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/recomendacao"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/recomendacao/migrations",
+        "ficheiros": 2,
+        "papeis": [
+          "migracoes"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/recomendacao/migrations"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/recomendacao/services",
+        "ficheiros": 3,
+        "papeis": [
+          "servicos"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "apps/recomendacao/services"
+          }
+        ]
+      },
+      {
+        "caminho": "archive",
+        "ficheiros": 1,
+        "papeis": [
+          "archive"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "archive"
+          }
+        ]
+      },
+      {
+        "caminho": "desafio_itau",
+        "ficheiros": 7,
+        "papeis": [
+          "codigo",
+          "config",
+          "entrada"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "desafio_itau"
+          }
+        ]
+      },
+      {
+        "caminho": "docs",
+        "ficheiros": 52,
+        "papeis": [
+          "docs"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/archive",
+        "ficheiros": 3,
+        "papeis": [
+          "archive"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/archive"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/archive/2026-09-27",
+        "ficheiros": 2,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/archive/2026-09-27"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/estudo-i-agora",
+        "ficheiros": 27,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/estudo-i-agora"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/estudo-i-agora/medicoes",
+        "ficheiros": 9,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/estudo-i-agora/medicoes"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/estudo-i-agora/schemas",
+        "ficheiros": 4,
+        "papeis": [
+          "contratos"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/estudo-i-agora/schemas"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/estudo-i-agora/sql",
+        "ficheiros": 10,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/estudo-i-agora/sql"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/inteirações-cloud",
+        "ficheiros": 13,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/inteirações-cloud"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/inteirações-cloud/27-09-2026",
+        "ficheiros": 13,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/inteirações-cloud/27-09-2026"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/qualidade-conversa",
+        "ficheiros": 3,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/qualidade-conversa"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/qualidade-conversa/medicoes",
+        "ficheiros": 1,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/qualidade-conversa/medicoes"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/templates",
+        "ficheiros": 1,
+        "papeis": [
+          "templates"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/templates"
+          }
+        ]
+      },
+      {
+        "caminho": "notebooks",
+        "ficheiros": 3,
+        "papeis": [
+          "dados"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "notebooks"
+          }
+        ]
+      },
+      {
+        "caminho": "notebooks/estudo-i-agora",
+        "ficheiros": 2,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "notebooks/estudo-i-agora"
+          }
+        ]
+      },
+      {
+        "caminho": "relatorios",
+        "ficheiros": 21,
+        "papeis": [
+          "relatorios"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "relatorios"
+          }
+        ]
+      },
+      {
+        "caminho": "relatorios/revisao-gemini",
+        "ficheiros": 2,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "relatorios/revisao-gemini"
+          }
+        ]
+      },
+      {
+        "caminho": "relatorios/skills",
+        "ficheiros": 19,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "relatorios/skills"
+          }
+        ]
+      },
+      {
+        "caminho": "scripts",
+        "ficheiros": 2,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "scripts"
+          }
+        ]
+      },
+      {
+        "caminho": "skills",
+        "ficheiros": 7,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "skills"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai",
+        "ficheiros": 7,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "skills/extracao-comportamental-iai"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias",
+        "ficheiros": 1,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "skills/extracao-comportamental-iai/evidencias"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/scripts",
+        "ficheiros": 4,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "skills/extracao-comportamental-iai/scripts"
+          }
+        ]
+      },
+      {
+        "caminho": "templates",
+        "ficheiros": 6,
+        "papeis": [
+          "templates"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "templates"
+          }
+        ]
+      },
+      {
+        "caminho": "templates/recommendations",
+        "ficheiros": 5,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "templates/recommendations"
+          }
+        ]
+      },
+      {
+        "caminho": "tests",
+        "ficheiros": 8,
+        "papeis": [
+          "testes"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "tests"
+          }
+        ]
+      }
+    ],
+    "ignorados": [
+      {
+        "caminho": ".claude",
+        "tipo": "pasta",
+        "fonte": ".gitignore:9",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 9,
+            "sha": "59a0facf5498d52e",
+            "texto": ".claude/"
+          }
+        ]
+      },
+      {
+        "caminho": "__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/agente/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/agentes/LLM_Models/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/agentes/LLM_Models/antropic/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/agentes/LLM_Models/google/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/agentes/LLM_Models/openIa/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/agentes/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/migrations/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/pastas_raiz/controles_evals/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/pastas_raiz/docs/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/pastas_raiz/estudos/i_agora/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/rotas/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/services/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/context_agent_datadriven/templates/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/recomendacao/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/recomendacao/migrations/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "apps/recomendacao/services/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "archive/2026-09-27",
+        "tipo": "pasta",
+        "fonte": "desconhecida",
+        "evidencias": []
+      },
+      {
+        "caminho": "archive/2026-09-27/db.sqlite3",
+        "tipo": "ficheiro",
+        "fonte": ".gitignore:3",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 3,
+            "sha": "2715a3fe6059aec1",
+            "texto": "*.sqlite3"
+          }
+        ]
+      },
+      {
+        "caminho": "db.sqlite3",
+        "tipo": "ficheiro",
+        "fonte": ".gitignore:3",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 3,
+            "sha": "2715a3fe6059aec1",
+            "texto": "*.sqlite3"
+          }
+        ]
+      },
+      {
+        "caminho": "desafio_itau/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/estudo-i-agora/sql/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "scripts/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/proposta-simulada-20260927-0420.json",
+        "tipo": "ficheiro",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/proposta-simulada-20260927-0425.json",
+        "tipo": "ficheiro",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/proposta-simulada-final-20260927.json",
+        "tipo": "ficheiro",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/proposta-simulada-sem-cache-20260927.json",
+        "tipo": "ficheiro",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmp0ycxx3yi",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmp4_796m3b",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmp5u11dh4w",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmp62zt_qi_",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmp66qtpisg",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpbkj02ei1",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpcku60sif",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpcuhau8xr",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpk9m5_mgx",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpkxvbj3sm",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpo9tt4p_d",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpp1lse52z",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpvab83dqp",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpwupcgqke",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/tmpwxfrgt_z",
+        "tipo": "pasta",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/validacao-final-20260927.json",
+        "tipo": "ficheiro",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/validacao-real-20260927-0420.json",
+        "tipo": "ficheiro",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/validacao-real-20260927-0425.json",
+        "tipo": "ficheiro",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/evidencias/validacao-real-sem-cache-20260927.json",
+        "tipo": "ficheiro",
+        "fonte": "skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+            "linha": 1,
+            "sha": "684888c0ebb17f37",
+            "texto": "*"
+          }
+        ]
+      },
+      {
+        "caminho": "skills/extracao-comportamental-iai/scripts/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      },
+      {
+        "caminho": "tests/__pycache__",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "7df69b0a8df4de51",
+            "texto": "__pycache__/"
+          }
+        ]
+      }
+    ]
+  },
+  "stack": [
+    {
+      "id": "django",
+      "versao": ">=4.2.0,<5.1.0",
+      "manifesto": "requirements.txt",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 1,
+          "sha": "1f41717ba18cd468",
+          "texto": "django>=4.2.0,<5.1.0"
+        }
+      ]
+    },
+    {
+      "id": "django-cors-headers",
+      "versao": ">=4.3.0",
+      "manifesto": "requirements.txt",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 3,
+          "sha": "45b01f8c3f820585",
+          "texto": "django-cors-headers>=4.3.0"
+        }
+      ]
+    },
+    {
+      "id": "djangorestframework",
+      "versao": ">=3.14.0",
+      "manifesto": "requirements.txt",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 2,
+          "sha": "7043cbf73a30be42",
+          "texto": "djangorestframework>=3.14.0"
+        }
+      ]
+    },
+    {
+      "id": "numpy",
+      "versao": ">=1.24.0",
+      "manifesto": "requirements.txt",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 5,
+          "sha": "47328abb08bc86b0",
+          "texto": "numpy>=1.24.0"
+        }
+      ]
+    },
+    {
+      "id": "pandas",
+      "versao": ">=2.0.0",
+      "manifesto": "requirements.txt",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 4,
+          "sha": "dec4228a933b0aa2",
+          "texto": "pandas>=2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "pydantic",
+      "versao": ">=2.0.0",
+      "manifesto": "requirements.txt",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 8,
+          "sha": "e75a46515d3a8cfe",
+          "texto": "pydantic>=2.0.0"
+        }
+      ]
+    }
+  ],
+  "padroes": [
+    {
+      "id": "arvore.papeis-de-diretorio",
+      "categoria": "arvore",
+      "titulo": "Papeis de diretorio (entrada, codigo, testes, docs, config...)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "."
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/agente"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/agentes"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/migrations"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/rotas"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/services"
+        }
+      ],
+      "evidencias_total": 26,
+      "detalhe": {
+        "codigo": [
+          ".",
+          "apps",
+          "apps/context_agent_datadriven",
+          "apps/context_agent_datadriven/agente",
+          "apps/context_agent_datadriven/agentes",
+          "apps/context_agent_datadriven/rotas",
+          "apps/recomendacao",
+          "desafio_itau",
+          "docs/estudo-i-agora/sql",
+          "docs/qualidade-conversa",
+          "scripts",
+          "skills/extracao-comportamental-iai/scripts"
+        ],
+        "config": [
+          ".",
+          "desafio_itau"
+        ],
+        "entrada": [
+          ".",
+          "desafio_itau"
+        ],
+        "migracoes": [
+          "apps/context_agent_datadriven/migrations",
+          "apps/recomendacao/migrations"
+        ],
+        "servicos": [
+          "apps/context_agent_datadriven/services",
+          "apps/recomendacao/services"
+        ],
+        "templates": [
+          "apps/context_agent_datadriven/templates",
+          "docs/templates",
+          "templates"
+        ],
+        "archive": [
+          "archive",
+          "docs/archive"
+        ],
+        "docs": [
+          "docs"
+        ],
+        "contratos": [
+          "docs/estudo-i-agora/schemas"
+        ],
+        "dados": [
+          "notebooks"
+        ],
+        "relatorios": [
+          "relatorios"
+        ],
+        "testes": [
+          "tests"
+        ]
+      }
+    },
+    {
+      "id": "arvore.entradas",
+      "categoria": "arvore",
+      "titulo": "Pontos de entrada",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/asgi.py",
+          "linha": 9,
+          "sha": "4de2d563c0ddc31f",
+          "texto": "application = get_asgi_application()"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/wsgi.py",
+          "linha": 9,
+          "sha": "795a3fed69097035",
+          "texto": "application = get_wsgi_application()"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "manage.py",
+          "linha": 17,
+          "sha": "8ce9c214c1a655f6",
+          "texto": "execute_from_command_line(sys.argv)"
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {
+        "parser_indisponivel": []
+      }
+    },
+    {
+      "id": "arvore.ignorados",
+      "categoria": "arvore",
+      "titulo": "Gerado/ignorado presente no disco (.gitignore)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 1,
+          "sha": "7df69b0a8df4de51",
+          "texto": "__pycache__/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 3,
+          "sha": "2715a3fe6059aec1",
+          "texto": "*.sqlite3"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 9,
+          "sha": "59a0facf5498d52e",
+          "texto": ".claude/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "skills/extracao-comportamental-iai/evidencias/.gitignore",
+          "linha": 1,
+          "sha": "684888c0ebb17f37",
+          "texto": "*"
+        }
+      ],
+      "evidencias_total": 4,
+      "detalhe": {
+        "caminhos": [
+          ".claude/ <- .gitignore:9",
+          "__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/agente/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/agentes/LLM_Models/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/agentes/LLM_Models/antropic/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/agentes/LLM_Models/google/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/agentes/LLM_Models/openIa/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/agentes/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/migrations/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/pastas_raiz/controles_evals/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/pastas_raiz/docs/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/pastas_raiz/estudos/i_agora/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/rotas/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/services/__pycache__/ <- .gitignore:1",
+          "apps/context_agent_datadriven/templates/__pycache__/ <- .gitignore:1",
+          "apps/recomendacao/__pycache__/ <- .gitignore:1",
+          "apps/recomendacao/migrations/__pycache__/ <- .gitignore:1",
+          "apps/recomendacao/services/__pycache__/ <- .gitignore:1",
+          "archive/2026-09-27/ <- desconhecida",
+          "archive/2026-09-27/db.sqlite3 <- .gitignore:3",
+          "db.sqlite3 <- .gitignore:3",
+          "desafio_itau/__pycache__/ <- .gitignore:1",
+          "docs/estudo-i-agora/sql/__pycache__/ <- .gitignore:1",
+          "scripts/__pycache__/ <- .gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/proposta-simulada-20260927-0420.json <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/proposta-simulada-20260927-0425.json <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/proposta-simulada-final-20260927.json <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/proposta-simulada-sem-cache-20260927.json <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmp0ycxx3yi/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmp4_796m3b/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmp5u11dh4w/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmp62zt_qi_/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmp66qtpisg/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpbkj02ei1/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpcku60sif/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpcuhau8xr/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpk9m5_mgx/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpkxvbj3sm/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpo9tt4p_d/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpp1lse52z/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpvab83dqp/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpwupcgqke/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/tmpwxfrgt_z/ <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/validacao-final-20260927.json <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/validacao-real-20260927-0420.json <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/validacao-real-20260927-0425.json <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/evidencias/validacao-real-sem-cache-20260927.json <- skills/extracao-comportamental-iai/evidencias/.gitignore:1",
+          "skills/extracao-comportamental-iai/scripts/__pycache__/ <- .gitignore:1",
+          "tests/__pycache__/ <- .gitignore:1"
+        ]
+      }
+    },
+    {
+      "id": "arvore.fronteiras-git",
+      "categoria": "arvore",
+      "titulo": "Repos Git aninhados (fronteiras, nao misturados)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "nenhuma pasta com .git dentro do alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "stack.manifestos",
+      "categoria": "stack",
+      "titulo": "Manifestos de stack",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "manage.py"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "requirements.txt"
+        }
+      ],
+      "evidencias_total": 2,
+      "detalhe": {
+        "manifestos": [
+          "manage.py",
+          "requirements.txt"
+        ],
+        "conhecidas": [
+          "django",
+          "django-cors-headers",
+          "djangorestframework",
+          "numpy",
+          "pandas",
+          "pydantic"
+        ]
+      }
+    },
+    {
+      "id": "arq.django-projeto",
+      "categoria": "arquitetura",
+      "titulo": "Projeto Django (settings + manage.py)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/asgi.py",
+          "linha": 9,
+          "sha": "4de2d563c0ddc31f",
+          "texto": "application = get_asgi_application()"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/settings.py",
+          "linha": 22,
+          "sha": "727b3210448f25ff",
+          "texto": "INSTALLED_APPS = ["
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/wsgi.py",
+          "linha": 9,
+          "sha": "795a3fed69097035",
+          "texto": "application = get_wsgi_application()"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "manage.py",
+          "linha": 17,
+          "sha": "8ce9c214c1a655f6",
+          "texto": "execute_from_command_line(sys.argv)"
+        }
+      ],
+      "evidencias_total": 4,
+      "detalhe": {
+        "settings": [
+          "desafio_itau/settings.py"
+        ],
+        "installed_apps": [
+          "django.contrib.contenttypes",
+          "django.contrib.staticfiles",
+          "corsheaders",
+          "rest_framework",
+          "apps.recomendacao",
+          "apps.context_agent_datadriven"
+        ]
+      }
+    },
+    {
+      "id": "arq.django-apps",
+      "categoria": "arquitetura",
+      "titulo": "Apps Django (AppConfig)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/apps.py",
+          "linha": 3,
+          "sha": "969c9a4d0d5121fa",
+          "texto": "class ContextAgentDatadrivenConfig(AppConfig):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/apps.py",
+          "linha": 3,
+          "sha": "a3e236e0365eb509",
+          "texto": "class RecomendacaoConfig(AppConfig):"
+        }
+      ],
+      "evidencias_total": 2,
+      "detalhe": {
+        "apps": [
+          "apps/context_agent_datadriven",
+          "apps/recomendacao"
+        ]
+      }
+    },
+    {
+      "id": "arq.mvt",
+      "categoria": "arquitetura",
+      "titulo": "Django MVT por app (models, views, urls, templates)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/models.py",
+          "linha": 12,
+          "sha": "b49a587e2f7c80ef",
+          "texto": "class AgenteSecretConfig(models.Model):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/urls.py",
+          "linha": 10,
+          "sha": "5a9ed342ad491ee5",
+          "texto": "urlpatterns = ["
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/views.py",
+          "linha": 29,
+          "sha": "921d913036c66c90",
+          "texto": "class StatusHarnessAPI(APIView):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/models.py",
+          "linha": 8,
+          "sha": "a68b62853ba1f882",
+          "texto": "class FeatureFlagInteracaoTelaIAI(models.Model):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/urls.py",
+          "linha": 18,
+          "sha": "5a9ed342ad491ee5",
+          "texto": "urlpatterns = ["
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 23,
+          "sha": "e685216e346df904",
+          "texto": "class ChaveInteracaoTelaIAIAPI(APIView):"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "templates/base.html"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "templates/recommendations/chat_f.html"
+        }
+      ],
+      "evidencias_total": 8,
+      "detalhe": {
+        "por_app": [
+          {
+            "app": "apps/context_agent_datadriven",
+            "models": true,
+            "views": true,
+            "urls": true,
+            "templates_html": 6
+          },
+          {
+            "app": "apps/recomendacao",
+            "models": true,
+            "views": true,
+            "urls": true,
+            "templates_html": 6
+          }
+        ],
+        "templates_html": 6
+      }
+    },
+    {
+      "id": "arq.camadas-python",
+      "categoria": "arquitetura",
+      "titulo": "Camadas Python (views -> services -> repositories -> models)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/views.py",
+          "linha": 19,
+          "sha": "a90705d3dcd3518a",
+          "texto": "from .models import ConversaAgenteSessao, MensagemAgenteRegistro"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/views.py",
+          "linha": 25,
+          "sha": "52974309ba84a38a",
+          "texto": "from .services.agente_service import AgenteSecretService"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/views.py",
+          "linha": 26,
+          "sha": "6fdc667b44900a75",
+          "texto": "from .services.primeira_chamada import chamar_gemini"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/services/template_engine.py",
+          "linha": 90,
+          "sha": "8da730afa7f419f8",
+          "texto": "from ..models import FeatureFlagInteracaoTelaIAI"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/services/template_engine.py",
+          "linha": 104,
+          "sha": "8da730afa7f419f8",
+          "texto": "from ..models import FeatureFlagInteracaoTelaIAI"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 15,
+          "sha": "2e5185dcc7ac6586",
+          "texto": "from .services.customer_repository import RepositorioClientes, ClienteForaDoRecorte"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 16,
+          "sha": "754c76980b0b9f34",
+          "texto": "from .services.behavioral_score import BehavioralScoreEngine"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 17,
+          "sha": "f07fcc4693474cce",
+          "texto": "from .services.template_engine import TemplateEngine, PLANILHA_FIXA_PRODUTOS"
+        }
+      ],
+      "evidencias_total": 8,
+      "detalhe": {
+        "camadas": {
+          "models": 2,
+          "repositorio": 1,
+          "servicos": 5,
+          "views": 2
+        },
+        "arestas": {
+          "servicos->models": 2,
+          "views->models": 1,
+          "views->repositorio": 1,
+          "views->servicos": 4
+        }
+      }
+    },
+    {
+      "id": "arq.rotas-django",
+      "categoria": "arquitetura",
+      "titulo": "Rotas Django (urlpatterns, path, include)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/urls.py",
+          "linha": 10,
+          "sha": "5a9ed342ad491ee5",
+          "texto": "urlpatterns = ["
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/urls.py",
+          "linha": 18,
+          "sha": "5a9ed342ad491ee5",
+          "texto": "urlpatterns = ["
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/urls.py",
+          "linha": 11,
+          "sha": "5a9ed342ad491ee5",
+          "texto": "urlpatterns = ["
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/urls.py",
+          "linha": 16,
+          "sha": "586216769e4d347a",
+          "texto": "path('app/', include('apps.recomendacao.urls', namespace='recomendacao')),"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/urls.py",
+          "linha": 19,
+          "sha": "d3ab7bfd97db721b",
+          "texto": "path('api/v1/', include(('apps.recomendacao.urls', 'api_v1'), namespace='api_v1')),"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/urls.py",
+          "linha": 22,
+          "sha": "9783a6af3bf57eb1",
+          "texto": "path('context-agent/', include('apps.context_agent_datadriven.urls', namespace='context_agent_datadriven')),"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/urls.py",
+          "linha": 23,
+          "sha": "9c2cb76d94aa0d78",
+          "texto": "path('api/v1/context-agent/', include(('apps.context_agent_datadriven.urls', 'api_context_agent'), namespace='api_contex"
+        }
+      ],
+      "evidencias_total": 7,
+      "detalhe": {
+        "rotas_path": 20,
+        "includes": [
+          "apps.context_agent_datadriven.urls",
+          "apps.recomendacao.urls"
+        ]
+      }
+    },
+    {
+      "id": "arq.api-drf",
+      "categoria": "arquitetura",
+      "titulo": "API Django REST Framework",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/views.py",
+          "linha": 29,
+          "sha": "921d913036c66c90",
+          "texto": "class StatusHarnessAPI(APIView):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/views.py",
+          "linha": 66,
+          "sha": "6c9b06a6cedda449",
+          "texto": "class EnviarMensagemHarnessAPI(APIView):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/views.py",
+          "linha": 191,
+          "sha": "c987a86129e8ffae",
+          "texto": "class PrimeiraChamadaAPI(APIView):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 23,
+          "sha": "e685216e346df904",
+          "texto": "class ChaveInteracaoTelaIAIAPI(APIView):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 98,
+          "sha": "ed8687b79923c3eb",
+          "texto": "class ClienteDetalheAPI(APIView):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 110,
+          "sha": "e38e3301ede48d7a",
+          "texto": "class ClienteRandomicoAPI(APIView):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 123,
+          "sha": "e57bbed586df2341",
+          "texto": "class GruposFixosAPI(APIView):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 145,
+          "sha": "d6460035e59a3600",
+          "texto": "class ChatVariavel1API(APIView):"
+        }
+      ],
+      "evidencias_total": 11,
+      "detalhe": {
+        "endpoints_classe_ou_funcao": 11
+      }
+    },
+    {
+      "id": "arq.migracoes",
+      "categoria": "arquitetura",
+      "titulo": "Migracoes versionadas",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/migrations/0001_initial.py",
+          "linha": 7,
+          "sha": "50eed9a5d37942d7",
+          "texto": "class Migration(migrations.Migration):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/migrations/0001_initial.py",
+          "linha": 6,
+          "sha": "50eed9a5d37942d7",
+          "texto": "class Migration(migrations.Migration):"
+        }
+      ],
+      "evidencias_total": 2,
+      "detalhe": {
+        "por_pasta": {
+          "apps/context_agent_datadriven/migrations": 1,
+          "apps/recomendacao/migrations": 1
+        }
+      }
+    },
+    {
+      "id": "arq.react-componentes",
+      "categoria": "arquitetura",
+      "titulo": "Componentes React (funcao PascalCase que devolve JSX)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros TS/JS no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.react-telas",
+      "categoria": "arquitetura",
+      "titulo": "Telas (screens/pages) como componentes",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros TS/JS no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.ts-tipos",
+      "categoria": "arquitetura",
+      "titulo": "Tipos centralizados (types/)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros TS/JS no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.ts-servicos",
+      "categoria": "arquitetura",
+      "titulo": "Servicos TS (services/)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros TS/JS no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.barrel-index",
+      "categoria": "arquitetura",
+      "titulo": "Barrel index (index.ts so com re-exports)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros TS/JS no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.roteamento-front",
+      "categoria": "arquitetura",
+      "titulo": "Roteamento do front (router vs maquina de estados)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros TS/JS no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.cliente-api",
+      "categoria": "arquitetura",
+      "titulo": "Cliente de API (fetch/axios/requests)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/google/cliente.py",
+          "linha": 54,
+          "sha": "917fcec48acf1186",
+          "texto": "with urllib.request.urlopen(req, timeout=12) as response:"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/services/agente_service.py",
+          "linha": 64,
+          "sha": "663a4383531acc57",
+          "texto": "with urllib.request.urlopen(req, timeout=cls.TIMEOUT_VALIDACAO_S) as resposta:"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/services/agente_service.py",
+          "linha": 197,
+          "sha": "a78161e0f3b8b14f",
+          "texto": "with urllib.request.urlopen(req, timeout=15) as response:"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/services/primeira_chamada.py",
+          "linha": 27,
+          "sha": "7135e356735a6b3f",
+          "texto": "with urllib.request.urlopen(requisicao, timeout=20) as resposta:"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "scripts/revisao_gemini.py",
+          "linha": 65,
+          "sha": "fdf4b4c7f44f2f2a",
+          "texto": "with urllib.request.urlopen(pedido, timeout=120) as resposta:"
+        }
+      ],
+      "evidencias_total": 5,
+      "detalhe": {
+        "endpoints": []
+      }
+    },
+    {
+      "id": "arq.proxy-dev",
+      "categoria": "arquitetura",
+      "titulo": "Proxy de desenvolvimento para a API",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "sem config de bundler nem \"proxy\" no package.json",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.contratos-json-schema",
+      "categoria": "arquitetura",
+      "titulo": "Contratos em JSON Schema",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/estudo-i-agora/schemas/envio-agente.schema.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/estudo-i-agora/schemas/extrato-sintetico.schema.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/estudo-i-agora/schemas/medicao.schema.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/estudo-i-agora/schemas/veredito-guard.schema.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/chat-variavel-1/padrao-retorno.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/chave-interacao-tela-iai/padrao-envio.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/chave-interacao-tela-iai/padrao-retorno.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/e-agora/padrao-retorno.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        }
+      ],
+      "evidencias_total": 16,
+      "detalhe": {
+        "ficheiros": 16,
+        "dialetos": [
+          "https://json-schema.org/draft/2020-12/schema"
+        ]
+      }
+    },
+    {
+      "id": "arq.contratos-openapi",
+      "categoria": "arquitetura",
+      "titulo": "Contratos OpenAPI/Swagger",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "nenhum ficheiro com chave openapi/swagger no topo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.contratos-exemplos",
+      "categoria": "arquitetura",
+      "titulo": "Exemplos de payload versionados com a documentacao",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27/estatistica_t3.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27/guard_e2e.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27/q01_volumetria.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27/q02_categorias.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27/q03_saude_financeira.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27/q04_coorte_dezembro.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27/q05_renda_por_vinculo.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27/q06_composicao_saidas.json"
+        }
+      ],
+      "evidencias_total": 10,
+      "detalhe": {
+        "ficheiros": 10
+      }
+    },
+    {
+      "id": "testes.python",
+      "categoria": "testes",
+      "titulo": "Testes Python (framework, local, nomes)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "tests/test_consultas_i_agora.py",
+          "linha": 30,
+          "sha": "17e02895d52b9fc0",
+          "texto": "class RegrasDeClassificacao(unittest.TestCase):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "tests/test_medidor_usuario.py",
+          "linha": 15,
+          "sha": "3e82216130470867",
+          "texto": "class MedidorUsuarioTest(unittest.TestCase):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "tests/test_primeira_chamada.py",
+          "linha": 31,
+          "sha": "7c4982bc8c291609",
+          "texto": "class PrimeiraChamadaTest(unittest.TestCase):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "tests/test_qualidade_conversa.py",
+          "linha": 16,
+          "sha": "584edfc6275a6141",
+          "texto": "class AvaliacaoHonestaTest(SimpleTestCase):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "tests/test_qualidade_fluxo.py",
+          "linha": 9,
+          "sha": "4561e1e7ba7f7302",
+          "texto": "class QualidadeFluxoTest(unittest.TestCase):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "tests/test_revisao_gemini.py",
+          "linha": 20,
+          "sha": "d571648c9bd10213",
+          "texto": "class RevisaoGeminiTest(unittest.TestCase):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "tests/test_semantica_backend.py",
+          "linha": 81,
+          "sha": "e8ee18eb26fd5934",
+          "texto": "class BaseBD(unittest.TestCase):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "tests/test_t3_guard_i_agora.py",
+          "linha": 52,
+          "sha": "fb540f503ae75bf0",
+          "texto": "class RegraT3(unittest.TestCase):"
+        }
+      ],
+      "evidencias_total": 8,
+      "detalhe": {
+        "ficheiros": 8,
+        "frameworks": [
+          "django.test",
+          "unittest"
+        ],
+        "localizacao": [
+          "tests/ na raiz"
+        ],
+        "prefixo_test_": 8
+      }
+    },
+    {
+      "id": "testes.ts",
+      "categoria": "testes",
+      "titulo": "Testes TS/JS (framework, local, nomes)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros TS/JS no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "conv.estilo-nomes-ficheiros",
+      "categoria": "convencao",
+      "titulo": "Estilo de nomes de ficheiros e pastas",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/migrations/0001_initial.py"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/pastas_raiz/controles_evals/evals_google_agent.py"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/pastas_raiz/estudos/i_agora/sql/_base_cliente.sql"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/pastas_raiz/estudos/i_agora/sql/populacao_t3.sql"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/inteirações-cloud"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "templates/recommendations/chat_f.html"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "templates/recommendations/chat_m.html"
+        }
+      ],
+      "evidencias_total": 8,
+      "detalhe": {
+        ".html": {
+          "contagem": {
+            "minusculo": 2,
+            "snake_case": 4
+          },
+          "dominante": "snake_case",
+          "fracao": 1,
+          "convencao": true
+        },
+        ".ipynb": {
+          "contagem": {
+            "minusculo": 1,
+            "snake_case": 1
+          },
+          "dominante": "snake_case",
+          "fracao": 1,
+          "convencao": false
+        },
+        ".json": {
+          "contagem": {
+            "snake_case": 10,
+            "kebab-case": 15,
+            "minusculo": 2,
+            "misto": 11
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.42,
+          "convencao": false
+        },
+        ".jsonl": {
+          "contagem": {
+            "minusculo": 1
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".md": {
+          "contagem": {
+            "maiusculo": 9,
+            "misto": 11,
+            "minusculo": 2,
+            "kebab-case": 4,
+            "snake_case": 2
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.24,
+          "convencao": false
+        },
+        ".py": {
+          "contagem": {
+            "dunder": 11,
+            "minusculo": 27,
+            "snake_case": 29
+          },
+          "dominante": "snake_case",
+          "fracao": 1,
+          "convencao": true
+        },
+        ".sql": {
+          "contagem": {
+            "snake_case": 15
+          },
+          "dominante": "snake_case",
+          "fracao": 1,
+          "convencao": true
+        },
+        ".txt": {
+          "contagem": {
+            "minusculo": 1
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".yaml": {
+          "contagem": {
+            "snake_case": 1
+          },
+          "dominante": "snake_case",
+          "fracao": 1,
+          "convencao": false
+        },
+        "pastas": {
+          "contagem": {
+            "minusculo": 35,
+            "snake_case": 5,
+            "misto": 1,
+            "camelCase": 1,
+            "kebab-case": 11
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.61,
+          "convencao": true
+        }
+      }
+    },
+    {
+      "id": "conv.estilo-identificadores",
+      "categoria": "convencao",
+      "titulo": "Estilo de identificadores por linguagem e tipo",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agente/router.py",
+          "linha": 8,
+          "sha": "27461e13313c5d80",
+          "texto": "class AgenteHarnessRouter:"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agente/router.py",
+          "linha": 10,
+          "sha": "ed9cc1f5e83de4c1",
+          "texto": "def calcular_horario_casado(cls, cliente_id: int) -> str:"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/google/cliente.py",
+          "linha": 49,
+          "sha": "c8ca546b06171c59",
+          "texto": "data_bytes = json.dumps(payload).encode(\"utf-8\")"
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {
+        "parser_indisponivel": [],
+        "python/classe": {
+          "contagem": {
+            "PascalCase": 69
+          },
+          "dominante": "PascalCase",
+          "fracao": 1
+        },
+        "python/funcao": {
+          "contagem": {
+            "snake_case": 187,
+            "minusculo": 45,
+            "camelCase": 6
+          },
+          "dominante": "snake_case",
+          "fracao": 0.97
+        },
+        "python/parametro": {
+          "contagem": {
+            "snake_case": 42,
+            "minusculo": 126
+          },
+          "dominante": "snake_case",
+          "fracao": 1
+        },
+        "python/variavel": {
+          "contagem": {
+            "UPPER_SNAKE": 100,
+            "maiusculo": 49,
+            "minusculo": 378,
+            "snake_case": 151
+          },
+          "dominante": "snake_case",
+          "fracao": 0.6
+        }
+      }
+    },
+    {
+      "id": "conv.idioma-identificadores",
+      "categoria": "convencao",
+      "titulo": "Idioma dos identificadores (pt-BR vs en)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agente/router.py",
+          "linha": 8,
+          "sha": "27461e13313c5d80",
+          "texto": "class AgenteHarnessRouter:"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agente/router.py",
+          "linha": 10,
+          "sha": "ed9cc1f5e83de4c1",
+          "texto": "def calcular_horario_casado(cls, cliente_id: int) -> str:"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/antropic/cliente.py",
+          "linha": 12,
+          "sha": "d219d6a9938489ea",
+          "texto": "PROVIDER_NAME = \"antropic\""
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/google/cliente.py",
+          "linha": 21,
+          "sha": "558a0a3675742163",
+          "texto": "def get_secret(cls) -> Optional[str]:"
+        }
+      ],
+      "evidencias_total": 4,
+      "detalhe": {
+        "python": {
+          "pt": 363,
+          "en": 117,
+          "exemplos_pt": [
+            "AgenteHarnessRouter",
+            "calcular_horario_casado"
+          ],
+          "exemplos_en": [
+            "PROVIDER_NAME",
+            "get_secret"
+          ],
+          "dominante": "pt-BR"
+        },
+        "tokens_casados": 480,
+        "metodo": "lexico da policy (heuristica)"
+      }
+    },
+    {
+      "id": "conv.afixos",
+      "categoria": "convencao",
+      "titulo": "Prefixos, sufixos e nomes repetidos",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/agentes/LLM_Models/antropic/cliente.py"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/pastas_raiz/estudos/i_agora/sql/visao_categoria.sql"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/urls.py"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "archive/INDICE.md"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/schemas/envio-agente.schema.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/sql/medir_t3.py"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/inteirações-cloud/27-09-2026/chat-variavel-1/padrao-retorno.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/inteirações-cloud/27-09-2026/chave-interacao-tela-iai/padrao-envio.json"
+        }
+      ],
+      "evidencias_total": 12,
+      "detalhe": {
+        "afixos": [
+          {
+            "tipo": "prefixo",
+            "afixo": "mapa",
+            "grupo": ".json",
+            "n": 9
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "mapa",
+            "grupo": ".md",
+            "n": 9
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "test",
+            "grupo": ".py",
+            "n": 8
+          },
+          {
+            "tipo": "extensao-secundaria",
+            "afixo": ".schema.json",
+            "grupo": ".json",
+            "n": 7
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "INDICE.md",
+            "grupo": ".md",
+            "n": 6
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "padrao-retorno.json",
+            "grupo": ".json",
+            "n": 6
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "visao",
+            "grupo": ".sql",
+            "n": 6
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "cliente.py",
+            "grupo": ".py",
+            "n": 3
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "padrao-envio.json",
+            "grupo": ".json",
+            "n": 3
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "urls.py",
+            "grupo": ".py",
+            "n": 3
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "chat",
+            "grupo": ".html",
+            "n": 3
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "medir",
+            "grupo": ".py",
+            "n": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "conv.pastas-datadas",
+      "categoria": "convencao",
+      "titulo": "Pastas datadas",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive/2026-09-27"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/estudo-i-agora/medicoes/2026-09-27"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/inteirações-cloud/27-09-2026"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/qualidade-conversa/medicoes/2026-09-27"
+        }
+      ],
+      "evidencias_total": 4,
+      "detalhe": {
+        "formatos": {
+          "AAAA-MM-DD": 3,
+          "DD-MM-AAAA": 1
+        }
+      }
+    },
+    {
+      "id": "conv.archive-indice",
+      "categoria": "convencao",
+      "titulo": "archive/ com INDICE.md",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "archive/INDICE.md"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive/INDICE.md"
+        }
+      ],
+      "evidencias_total": 2,
+      "detalhe": {
+        "archives": [
+          "archive",
+          "docs/archive"
+        ],
+        "com_indice": 2
+      }
+    },
+    {
+      "id": "conv.dependencias-usadas",
+      "categoria": "convencao",
+      "titulo": "Dependencias de runtime declaradas e importadas",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 1,
+          "sha": "1f41717ba18cd468",
+          "texto": "django>=4.2.0,<5.1.0"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 2,
+          "sha": "7043cbf73a30be42",
+          "texto": "djangorestframework>=3.14.0"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 3,
+          "sha": "45b01f8c3f820585",
+          "texto": "django-cors-headers>=4.3.0"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 4,
+          "sha": "dec4228a933b0aa2",
+          "texto": "pandas>=2.0.0"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 5,
+          "sha": "47328abb08bc86b0",
+          "texto": "numpy>=1.24.0"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 10,
+          "sha": "4eabe6a064fe0c9b",
+          "texto": "google-cloud-bigquery>=3.25.0"
+        }
+      ],
+      "evidencias_total": 6,
+      "detalhe": {
+        "usadas": 6,
+        "sem_import": [
+          "pydantic",
+          "python-dotenv"
+        ],
+        "nao_medidas": [],
+        "notebooks_nao_parseados": 2
+      }
+    },
+    {
+      "id": "arq.segredos-leitor-unico",
+      "categoria": "arquitetura",
+      "titulo": "Segredo lido por um unico modulo (.gitignore + *.example)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 6,
+          "sha": "70ba70cdd7a8f1e9",
+          "texto": ".secrets"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/segredos.py",
+          "linha": 21,
+          "sha": "85aaf3134c6157d2",
+          "texto": "ARQUIVO_SEGREDOS = Path(__file__).resolve().parent.parent.parent / \".secrets\""
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/segredos.py",
+          "linha": 54,
+          "sha": "d1c26cbd861f7624",
+          "texto": "valor = os.environ.get(NOME_CHAVE)"
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {
+        "leitores": [
+          "desafio_itau/segredos.py"
+        ],
+        "ficheiros_segredo_referidos": [
+          ".secrets"
+        ],
+        "regras_gitignore": [
+          ".gitignore:6"
+        ],
+        "exemplos_versionados": [],
+        "leitores_em_testes": [
+          "tests/test_primeira_chamada.py",
+          "tests/test_semantica_backend.py"
+        ]
+      }
+    },
+    {
+      "id": "arq.modelos-llm-centralizados",
+      "categoria": "arquitetura",
+      "titulo": "Nomes de modelos LLM num modulo de constantes",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/modelos_llm.py",
+          "linha": 12,
+          "sha": "3c81cf97831612b9",
+          "texto": "MODELO_PRIMEIRA_CHAMADA = \"gemini-3.5-flash-lite\""
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/modelos_llm.py",
+          "linha": 15,
+          "sha": "1fab0af1d34c6b6c",
+          "texto": "MODELO_CONTINGENCIA = \"gemini-3.5-flash-lite\""
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "desafio_itau/modelos_llm.py",
+          "linha": 18,
+          "sha": "495af0fbd6dbab0b",
+          "texto": "MODELOS_GOOGLE = [\"gemini-flash-latest\", \"gemini-3.5-flash-lite\"]"
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {
+        "centro": "desafio_itau/modelos_llm.py",
+        "modelos_no_centro": [
+          "gemini-3.5-flash-lite",
+          "gemini-flash-latest"
+        ],
+        "modulos_com_literal_fora_do_centro": [
+          "apps/context_agent_datadriven/agentes/LLM_Models/antropic/cliente.py",
+          "apps/context_agent_datadriven/agentes/LLM_Models/openIa/cliente.py",
+          "apps/context_agent_datadriven/agentes/agente.py",
+          "apps/context_agent_datadriven/models.py",
+          "apps/context_agent_datadriven/rotas/manager.py",
+          "apps/context_agent_datadriven/services/agente_service.py"
+        ],
+        "literais_fora_do_centro": [
+          "claude-3-5-sonnet",
+          "claude-3-haiku",
+          "gemini-3.5-flash-lite",
+          "gemini-flash-latest",
+          "gpt-4o",
+          "gpt-4o-mini"
+        ],
+        "em_testes": [
+          "tests/test_qualidade_conversa.py",
+          "tests/test_semantica_backend.py"
+        ],
+        "em_migracoes": [
+          "apps/context_agent_datadriven/migrations/0001_initial.py"
+        ],
+        "prefixos": [
+          "gemini",
+          "gpt",
+          "claude",
+          "o1",
+          "o3",
+          "o4",
+          "llama",
+          "mistral"
+        ]
+      }
+    },
+    {
+      "id": "arq.banco-por-migracoes",
+      "categoria": "arquitetura",
+      "titulo": "Banco criado por migracoes (sem SQL cru de schema)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/migrations/0001_initial.py",
+          "linha": 7,
+          "sha": "50eed9a5d37942d7",
+          "texto": "class Migration(migrations.Migration):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/migrations/0001_initial.py",
+          "linha": 6,
+          "sha": "50eed9a5d37942d7",
+          "texto": "class Migration(migrations.Migration):"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "init_database.py",
+          "linha": 142,
+          "sha": "4a1e21c1ad41e8a4",
+          "texto": "call_command(\"migrate\", interactive=False, verbosity=1)"
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {
+        "migracoes": 2,
+        "aplica_migrate_no_codigo": [
+          "init_database.py:142"
+        ],
+        "sql_cru_fora_de_migracoes": 0,
+        "sql_cru_em_testes": [
+          "tests/test_semantica_backend.py:115",
+          "tests/test_semantica_backend.py:116"
+        ]
+      }
+    },
+    {
+      "id": "conv.contratos-datados",
+      "categoria": "convencao",
+      "titulo": "Contratos JSON Schema em pasta datada com INDICE.md",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/inteirações-cloud/27-09-2026/INDICE.md"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/chat-variavel-1/padrao-retorno.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/chave-interacao-tela-iai/padrao-envio.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/chave-interacao-tela-iai/padrao-retorno.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/e-agora/padrao-retorno.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/enviar-mensagem/padrao-envio.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/enviar-mensagem/padrao-retorno.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "docs/inteirações-cloud/27-09-2026/knowledge/evals.schema.json",
+          "linha": 2,
+          "sha": "e9de11f48542ef40",
+          "texto": "\"$schema\": \"https://json-schema.org/draft/2020-12/schema\","
+        }
+      ],
+      "evidencias_total": 13,
+      "detalhe": {
+        "pastas_com_indice": [
+          "docs/inteirações-cloud/27-09-2026"
+        ],
+        "pastas_sem_indice": [],
+        "formatos": [
+          "DD-MM-AAAA"
+        ],
+        "schemas_datados": 12,
+        "schemas_total": 16
+      }
+    }
+  ],
+  "anomalias": [
+    {
+      "id": "anom.camada-fora-da-pasta",
+      "padrao": "arq.camadas-python",
+      "descricao": "apps/recomendacao/services/customer_repository.py: camada repositorio pelo nome, mas vive numa pasta de servicos",
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "apps/recomendacao/services/customer_repository.py"
+        }
+      ]
+    },
+    {
+      "id": "anom.camada-saltada",
+      "padrao": "arq.camadas-python",
+      "descricao": "views importa o repositorio directamente, saltando a camada de servicos que existe",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/recomendacao/views.py",
+          "linha": 15,
+          "sha": "2e5185dcc7ac6586",
+          "texto": "from .services.customer_repository import RepositorioClientes, ClienteForaDoRecorte"
+        }
+      ]
+    },
+    {
+      "id": "anom.caminho-nao-ascii",
+      "padrao": "conv.estilo-nomes-ficheiros",
+      "descricao": "segmento com caracteres fora de ASCII: \"inteirações-cloud\" (quebra ferramentas e URLs sem escape)",
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/inteirações-cloud"
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "pydantic declarada mas nunca importada no codigo parseado (2 notebook(s) .ipynb nao parseados)",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 8,
+          "sha": "e75a46515d3a8cfe",
+          "texto": "pydantic>=2.0.0"
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "python-dotenv declarada mas nunca importada no codigo parseado (2 notebook(s) .ipynb nao parseados)",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "requirements.txt",
+          "linha": 9,
+          "sha": "72ad620f01c93159",
+          "texto": "python-dotenv>=1.0.0"
+        }
+      ]
+    },
+    {
+      "id": "anom.estilo-nome-divergente",
+      "padrao": "conv.estilo-nomes-ficheiros",
+      "descricao": "pastas: convencao kebab-case (61%), 7 nome(s) fogem: context_agent_datadriven, LLM_Models, openIa, pastas_raiz, controles_evals, i_agora",
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/agentes/LLM_Models"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/agentes/LLM_Models/openIa"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/pastas_raiz"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/pastas_raiz/controles_evals"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/pastas_raiz/estudos/i_agora"
+        }
+      ]
+    },
+    {
+      "id": "anom.ficheiro-em-pasta-de-outro-tipo",
+      "padrao": "arvore.papeis-de-diretorio",
+      "descricao": "apps/context_agent_datadriven/templates/context_agent_painel_html.py: codigo dentro de uma pasta templates/ (templates sao marcacao)",
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "apps/context_agent_datadriven/templates/context_agent_painel_html.py"
+        }
+      ]
+    },
+    {
+      "id": "anom.formato-data-misto",
+      "padrao": "conv.pastas-datadas",
+      "descricao": "pastas datadas em 2 formatos: AAAA-MM-DD, DD-MM-AAAA",
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive/2026-09-27"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/inteirações-cloud/27-09-2026"
+        }
+      ]
+    },
+    {
+      "id": "anom.modelo-llm-literal-espalhado",
+      "padrao": "arq.modelos-llm-centralizados",
+      "descricao": "\"claude-3-5-sonnet\" literal em 1 modulo(s) de codigo fora do centro: nem existe em desafio_itau/modelos_llm.py (modelo proprio, fora da fonte unica)",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/antropic/cliente.py",
+          "linha": 13,
+          "sha": "dcb147738b8460e3",
+          "texto": "MODELOS = [\"claude-3-5-sonnet\", \"claude-3-haiku\"]"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/antropic/cliente.py",
+          "linha": 29,
+          "sha": "d6c656a3b56131c0",
+          "texto": "\"modelo\": modelo or \"claude-3-5-sonnet\","
+        }
+      ]
+    },
+    {
+      "id": "anom.modelo-llm-literal-espalhado",
+      "padrao": "arq.modelos-llm-centralizados",
+      "descricao": "\"claude-3-haiku\" literal em 1 modulo(s) de codigo fora do centro: nem existe em desafio_itau/modelos_llm.py (modelo proprio, fora da fonte unica)",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/antropic/cliente.py",
+          "linha": 13,
+          "sha": "dcb147738b8460e3",
+          "texto": "MODELOS = [\"claude-3-5-sonnet\", \"claude-3-haiku\"]"
+        }
+      ]
+    },
+    {
+      "id": "anom.modelo-llm-literal-espalhado",
+      "padrao": "arq.modelos-llm-centralizados",
+      "descricao": "\"gemini-3.5-flash-lite\" literal em 1 modulo(s) de codigo fora do centro: repete o que desafio_itau/modelos_llm.py ja define",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/rotas/manager.py",
+          "linha": 67,
+          "sha": "5b4e0d9aed477b58",
+          "texto": "\"modelo_primario\": \"gemini-3.5-flash-lite\","
+        }
+      ]
+    },
+    {
+      "id": "anom.modelo-llm-literal-espalhado",
+      "padrao": "arq.modelos-llm-centralizados",
+      "descricao": "\"gemini-flash-latest\" literal em 4 modulo(s) de codigo fora do centro: repete o que desafio_itau/modelos_llm.py ja define",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/agente.py",
+          "linha": 60,
+          "sha": "da2f1d270aedf06b",
+          "texto": "modelo_primario = negociacao_cfg.get(\"modelo_primario\", \"gemini-flash-latest\")"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/models.py",
+          "linha": 17,
+          "sha": "c9de4278c50e91e3",
+          "texto": "modelo_padrao = models.CharField(max_length=80, default=\"gemini-flash-latest\")"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/rotas/manager.py",
+          "linha": 33,
+          "sha": "adb5b14bb38a55b0",
+          "texto": "\"modelo_primario\": \"gemini-flash-latest\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/rotas/manager.py",
+          "linha": 50,
+          "sha": "adb5b14bb38a55b0",
+          "texto": "\"modelo_primario\": \"gemini-flash-latest\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/rotas/manager.py",
+          "linha": 84,
+          "sha": "adb5b14bb38a55b0",
+          "texto": "\"modelo_primario\": \"gemini-flash-latest\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/services/agente_service.py",
+          "linha": 112,
+          "sha": "679c28aabbfea0c8",
+          "texto": "\"modelo_padrao\": \"gemini-flash-latest\","
+        }
+      ]
+    },
+    {
+      "id": "anom.modelo-llm-literal-espalhado",
+      "padrao": "arq.modelos-llm-centralizados",
+      "descricao": "\"gpt-4o\" literal em 1 modulo(s) de codigo fora do centro: nem existe em desafio_itau/modelos_llm.py (modelo proprio, fora da fonte unica)",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/openIa/cliente.py",
+          "linha": 13,
+          "sha": "1e9e8ba4316da660",
+          "texto": "MODELOS = [\"gpt-4o\", \"gpt-4o-mini\"]"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/openIa/cliente.py",
+          "linha": 29,
+          "sha": "993b1daa65c01085",
+          "texto": "\"modelo\": modelo or \"gpt-4o\","
+        }
+      ]
+    },
+    {
+      "id": "anom.modelo-llm-literal-espalhado",
+      "padrao": "arq.modelos-llm-centralizados",
+      "descricao": "\"gpt-4o-mini\" literal em 1 modulo(s) de codigo fora do centro: nem existe em desafio_itau/modelos_llm.py (modelo proprio, fora da fonte unica)",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "apps/context_agent_datadriven/agentes/LLM_Models/openIa/cliente.py",
+          "linha": 13,
+          "sha": "1e9e8ba4316da660",
+          "texto": "MODELOS = [\"gpt-4o\", \"gpt-4o-mini\"]"
+        }
+      ]
+    }
+  ]
+}

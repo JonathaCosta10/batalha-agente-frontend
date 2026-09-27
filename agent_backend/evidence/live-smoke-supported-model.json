@@ -1,0 +1,89 @@
+{
+  "kind": "real_gemini_via_local_http",
+  "timestamp": "2026-09-27T06:58:09.139419+00:00",
+  "cases": [
+    {
+      "question": "Quero organizar meu orçamento. Por onde começar?",
+      "http_status": 200,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "810d047c-7733-424d-9ef7-f7955b68bd9f",
+        "message_id": "d7a9d13d-a051-416c-8d47-571b316fdcf7",
+        "status": "needs_clarification",
+        "reply": "Para começar a organizar o seu orçamento, o primeiro passo recomendado é listar todas as suas despesas essenciais e entradas financeiras com calma e sem pressões. Isso ajuda a entender o seu panorama atual de forma clara. Para podermos avançar, você gostaria de compartilhar quais são os principais gastos fixos que possui no mês?",
+        "citations": [],
+        "request_id": "664c8255-d211-4714-82b3-89c3205ade27"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    }
+  ],
+  "billing_project": "not_determined",
+  "provider_quota": "not_determined",
+  "max_provider_calls": 3,
+  "audit": [
+    {
+      "event": "input_guard",
+      "decision": "allow"
+    },
+    {
+      "event": "output_guard",
+      "decision": "release"
+    },
+    {
+      "event": "release",
+      "code": "auth"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    }
+  ],
+  "metrics": [
+    {
+      "stage": "input_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 1576,
+      "outcome": "complete",
+      "input_tokens": 200,
+      "output_tokens": 37,
+      "total_tokens": 237,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "generate",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "e9b4109fa83b70581d5349538123a512621d2cef68777c596af4d5e4597aa1dc",
+      "policy_version": "1.0",
+      "latency_ms": 3468,
+      "outcome": "complete",
+      "input_tokens": 3950,
+      "output_tokens": 136,
+      "total_tokens": 4086,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "output_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "c2ab30c145f2e0b6ca22485695bc0fbe2421c9bd8474eda9fe4014a76ff4481a",
+      "policy_version": "1.0",
+      "latency_ms": 2278,
+      "outcome": "complete",
+      "input_tokens": 3933,
+      "output_tokens": 57,
+      "total_tokens": 3990,
+      "error_type": null,
+      "http_status": null
+    }
+  ],
+  "actual_provider_attempts": 3,
+  "completed_cases": 1,
+  "all_http_ok": true
+}

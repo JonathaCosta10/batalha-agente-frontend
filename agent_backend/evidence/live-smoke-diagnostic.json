@@ -1,0 +1,56 @@
+{
+  "kind": "real_gemini_via_local_http",
+  "timestamp": "2026-09-27T06:52:29.564075+00:00",
+  "cases": [
+    {
+      "question": "Quero organizar meu orçamento. Por onde começar?",
+      "http_status": 503,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "cf83ef49-3944-4e2a-bbc5-6966a44e5956",
+        "message_id": "48b9d8d5-32db-4cac-bed8-c81559fa6339",
+        "status": "unavailable",
+        "reply": "Não consegui validar uma resposta agora. Podemos retomar depois; para organizar o orçamento, comece listando entradas e despesas essenciais, sem enviar identificadores pessoais.",
+        "citations": [],
+        "request_id": "1cf61580-c4e2-4664-84cd-6518cdc78f5c"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    }
+  ],
+  "billing_project": "not_determined",
+  "provider_quota": "not_determined",
+  "max_provider_calls": 3,
+  "audit": [
+    {
+      "event": "provider_failure"
+    },
+    {
+      "event": "release",
+      "code": "technical"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    }
+  ],
+  "metrics": [
+    {
+      "stage": "input_guard",
+      "model": "gemini-2.5-flash-lite",
+      "model_version": null,
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 705,
+      "outcome": "failed_or_uncertain",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "error_type": "ClientError",
+      "http_status": 400
+    }
+  ],
+  "actual_provider_attempts": 1,
+  "completed_cases": 1,
+  "all_http_ok": false
+}

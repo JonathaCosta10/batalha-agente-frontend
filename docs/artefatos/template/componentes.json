@@ -1,0 +1,68 @@
+{
+  "versao_template": "1.0.0",
+  "extraido_de": "docs/artefatos/paginas/batalha-agentes-unificado.html (sha256 6b9d8931, publicada em A v11 1790513132-5921), 27/09/2026 09:50 BRT",
+  "template": "docs/artefatos/template/pagina-base.html",
+  "titulo": {
+    "prefixo": "Hackathon Itaú i.agora",
+    "nota": "O <title> começa pelo prefixo; um sufixo opcional vem depois de ' · '."
+  },
+  "secoes_obrigatorias": {
+    "nota": "Ids de <section> e <details>, na ordem do template. A página pode ter secções extra entre elas, mas estas aparecem todas e nesta ordem (conta a primeira ocorrência).",
+    "ids": [
+      "conclusao", "perfil-sessao", "telas", "decisoes", "resumo", "concluido", "andamento", "futuro",
+      "fluxos", "rotas-integradas", "ambientes", "divergencias", "perfis", "memoria", "mapa",
+      "rotas", "papeis", "caminho", "contexto", "nucleo", "provas", "colab",
+      "interacoes", "backlog", "decisoes-dono", "falta"
+    ]
+  },
+  "navegacao": {
+    "seletor": "nav.toc",
+    "nota": "Obrigatória no <header>; todo href '#id' aponta para um id que existe na página."
+  },
+  "componentes": [
+    {"nome": "chip de estado", "raiz": "chip", "tags": ["span"], "classes": ["chip", "c-ok", "c-warn", "c-bad", "c-plan", "c-div", "c-info", "c-nt", "c-pos"]},
+    {"nome": "selo", "raiz": "seal", "tags": ["span", "div"], "classes": ["seal"]},
+    {"nome": "grade de selos", "raiz": "seals", "tags": ["div"], "classes": ["seals"]},
+    {"nome": "linha de selo", "raiz": "sl", "tags": ["p", "span"], "classes": ["sl"]},
+    {"nome": "carimbo de versão/fonte", "raiz": "stamp", "tags": ["p", "span"], "classes": ["stamp"]},
+    {"nome": "card", "raiz": "card", "tags": ["div"], "classes": ["card"]},
+    {"nome": "tabela", "raiz": "tbl", "tags": ["div"], "classes": ["tbl", "api", "mem"]},
+    {"nome": "moldura de diagrama", "raiz": "diagram", "tags": ["div"], "classes": ["diagram"]},
+    {"nome": "bloco mermaid", "raiz": "mermaid", "tags": ["pre"], "classes": ["mermaid"]},
+    {"nome": "cartão de tela", "raiz": "scr", "tags": ["article"], "classes": ["scr"]},
+    {"nome": "barra de severidade", "raiz": "bar", "tags": ["span"], "classes": ["bar", "ALTA", "MEDIA", "BAIXA"]},
+    {"nome": "barra empilhada", "raiz": "stack", "tags": ["div"], "classes": ["stack"]},
+    {"nome": "gráfico de barras SVG", "raiz": "lat", "tags": ["svg"], "classes": ["lat"]}
+  ],
+  "prefixos_controlados": {
+    "nota": "Qualquer classe com estes prefixos, em qualquer elemento, tem de estar na lista (nada de variantes ad hoc).",
+    "c-": ["c-ok", "c-warn", "c-bad", "c-plan", "c-div", "c-info", "c-nt", "c-pos"],
+    "s-": ["s-ok", "s-bad", "s-nt"]
+  },
+  "estados": {
+    "nota": "Chip cujo texto é exatamente um destes estados usa esta classe.",
+    "OK": "c-ok",
+    "FALHA": "c-bad",
+    "NAO_TESTADO": "c-nt",
+    "NAO_MEDIDO": "c-info",
+    "DIVERGENTE": "c-div"
+  },
+  "tokens_css": {
+    "nota": "'claro' definidos em :root; 'tema' definidos em :root E redefinidos nos dois blocos escuros: @media (prefers-color-scheme:dark){:root:not([data-theme=\"light\"])} e :root[data-theme=\"dark\"].",
+    "so_claro": ["--sans", "--mono"],
+    "tema": [
+      "--bg", "--surface", "--ink", "--muted", "--line", "--accent", "--accent-ink", "--bubble",
+      "--ok", "--ok-bg", "--warn", "--warn-bg", "--bad", "--bad-bg", "--info", "--info-bg",
+      "--plan", "--plan-bg", "--div", "--div-bg"
+    ]
+  },
+  "proibidas": {
+    "nota": "Procuradas em texto, atributos e comentários do DOM, sem diferenciar maiúsculas.",
+    "literais": ["organizesee", "@gmail", "C:\\Desenvolvendo", "C:/Desenvolvendo"],
+    "padroes": ["AIza[0-9A-Za-z_-]{35}", "gh[pousr]_[0-9A-Za-z]{30,}", "sk-[A-Za-z0-9]{30,}", "-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"]
+  },
+  "limites": {
+    "tamanho_max_bytes": 16000000,
+    "template_sem": ["data:image/", "base64,"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "customer": "id_usuario",
+  "period": "anomes",
+  "amount": "vlr",
+  "category": "nom_cate_macro",
+  "direction": "tipo",
+  "inflow_labels": ["e"],
+  "outflow_labels": ["s"],
+  "verified_table": "batalha-time-02-lxof.hackathon_dados.extrato_sintetico",
+  "verification": "Schema and aggregate tipo/negative-count queried with ADC; E/S amounts nonnegative; data spans 202501-202512."
+}

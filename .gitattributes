@@ -1,0 +1,7 @@
+# Os JSON normativos sao verificados por sha256 em knowledge/indice.json.
+# Com core.autocrlf=true (Windows) o checkout virava CRLF e 21 testes falhavam com
+# "Evidence integrity mismatch" (medido 2026-09-27 08:21 BRT). Preservar os bytes.
+agent_backend/conversation/knowledge/*.json -text
+# Paginas publicadas como artefato: o guard compara sha256 dos bytes (tests/test_artefatos_padrao.py).
+docs/artefatos/paginas/*.html -text
+docs/artefatos/template/*.html -text

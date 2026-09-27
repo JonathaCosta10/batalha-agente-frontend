@@ -1,0 +1,87 @@
+{
+  "source": {
+    "name": "Itaú / Biblioteca de componentes — referência do app",
+    "fileKey": "ISsm9UXQTnRUwfKqnNoBWX",
+    "format": "fig-kiwi",
+    "formatVersion": 106,
+    "scope": "Entire user-provided .fig export, not just the cover accessible from the Figma file listing",
+    "status": "extracted",
+    "variableCount": 61,
+    "textStyleCount": 10,
+    "colorMode": "Claro",
+    "note": "Independent study library; approximate visual values, not official Itaú tokens."
+  },
+  "collections": {
+    "01 Primitivos": {
+      "mode": "Valor",
+      "colors": {
+        "orange/500": "#ff6200",
+        "orange/700": "#c94c00",
+        "blue/500": "#1428f5",
+        "blue/700": "#315f99",
+        "neutral/0": "#ffffff",
+        "neutral/50": "#f1f2f4",
+        "neutral/200": "#d1d2d4",
+        "neutral/400": "#8c8d8f",
+        "neutral/600": "#505154",
+        "neutral/800": "#353638",
+        "neutral/950": "#111111",
+        "yellow/400": "#ffd23f",
+        "red/600": "#c8202c"
+      }
+    },
+    "02 Cores": {
+      "mode": "Claro",
+      "aliases": {
+        "surface/canvas": "neutral/50",
+        "surface/card": "neutral/0",
+        "surface/brand": "orange/500",
+        "surface/avatar": "neutral/800",
+        "surface/badge-info": "blue/700",
+        "surface/badge-warning": "yellow/400",
+        "surface/badge-neutral": "neutral/600",
+        "text/primary": "neutral/950",
+        "text/secondary": "neutral/600",
+        "text/muted": "neutral/400",
+        "text/inverse": "neutral/0",
+        "text/brand": "orange/700",
+        "text/danger": "red/600",
+        "icon/default": "neutral/800",
+        "icon/accent": "blue/500",
+        "icon/brand": "orange/700",
+        "icon/inverse": "neutral/0",
+        "border/default": "neutral/200",
+        "border/brand": "orange/500",
+        "indicator/active": "blue/500"
+      }
+    },
+    "03 Medidas": {
+      "mode": "Valor",
+      "spacePx": {
+        "0": 0, "2": 2, "4": 4, "8": 8, "12": 12, "16": 16,
+        "20": 20, "24": 24, "32": 32, "40": 40, "48": 48, "64": 64
+      },
+      "radiusPx": {
+        "0": 0, "4": 4, "8": 8, "12": 12,
+        "16": 16, "20": 20, "24": 24, "999": 999
+      },
+      "fontSizePx": {
+        "12": 12, "14": 14, "16": 16, "18": 18,
+        "20": 20, "24": 24, "32": 32, "48": 48
+      }
+    }
+  },
+  "textStyles": {
+    "Display":  { "fontFamily": "Open Sans", "fontWeight": 700, "fontSizePx": 32, "lineHeightPx": 40, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Titulo/L": { "fontFamily": "Open Sans", "fontWeight": 700, "fontSizePx": 24, "lineHeightPx": 32, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Titulo/M": { "fontFamily": "Open Sans", "fontWeight": 600, "fontSizePx": 20, "lineHeightPx": 28, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Titulo/S": { "fontFamily": "Open Sans", "fontWeight": 600, "fontSizePx": 18, "lineHeightPx": 24, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Corpo/L": { "fontFamily": "Open Sans", "fontWeight": 400, "fontSizePx": 18, "lineHeightPx": 26, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Corpo/M": { "fontFamily": "Open Sans", "fontWeight": 400, "fontSizePx": 16, "lineHeightPx": 24, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Corpo/S": { "fontFamily": "Open Sans", "fontWeight": 400, "fontSizePx": 14, "lineHeightPx": 20, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Rotulo/M": { "fontFamily": "Open Sans", "fontWeight": 600, "fontSizePx": 16, "lineHeightPx": 24, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Rotulo/S": { "fontFamily": "Open Sans", "fontWeight": 600, "fontSizePx": 14, "lineHeightPx": 20, "letterSpacing": { "value": 0, "unit": "PERCENT" } },
+    "Legenda":  { "fontFamily": "Open Sans", "fontWeight": 400, "fontSizePx": 12, "lineHeightPx": 16, "letterSpacing": { "value": 0, "unit": "PERCENT" } }
+  },
+  "webSyntax": "Figma's WEB syntax is var(--<variable name with / replaced by ->), e.g. surface/canvas -> var(--surface-canvas). Dimensions are numeric in Figma and should be given px units in CSS."
+}

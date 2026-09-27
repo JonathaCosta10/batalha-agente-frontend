@@ -1,0 +1,132 @@
+{
+  "source": "User-provided Itaú study-library .fig export",
+  "totalSymbols": 52,
+  "iconCount": 20,
+  "nonIconSymbolCount": 32,
+  "icons": [
+    { "name": "Icon/Início", "nodeId": "5:8", "svg": "references/itau/icons/inicio.svg" },
+    { "name": "Icon/Extrato", "nodeId": "5:13", "svg": "references/itau/icons/extrato.svg" },
+    { "name": "Icon/Transferir", "nodeId": "5:18", "svg": "references/itau/icons/transferir.svg" },
+    { "name": "Icon/Cartão", "nodeId": "5:23", "svg": "references/itau/icons/cartao.svg" },
+    { "name": "Icon/Boleto", "nodeId": "5:28", "svg": "references/itau/icons/boleto.svg" },
+    { "name": "Icon/Presente", "nodeId": "5:34", "svg": "references/itau/icons/presente.svg" },
+    { "name": "Icon/Menu", "nodeId": "5:39", "svg": "references/itau/icons/menu.svg" },
+    { "name": "Icon/Ajuda", "nodeId": "5:44", "svg": "references/itau/icons/ajuda.svg" },
+    { "name": "Icon/Olho", "nodeId": "5:49", "svg": "references/itau/icons/olho.svg" },
+    { "name": "Icon/Voltar", "nodeId": "5:54", "svg": "references/itau/icons/voltar.svg" },
+    { "name": "Icon/Avançar", "nodeId": "5:60", "svg": "references/itau/icons/avancar.svg" },
+    { "name": "Icon/Cadeado", "nodeId": "5:65", "svg": "references/itau/icons/cadeado.svg" },
+    { "name": "Icon/Calendário", "nodeId": "5:70", "svg": "references/itau/icons/calendario.svg" },
+    { "name": "Icon/Alerta", "nodeId": "5:75", "svg": "references/itau/icons/alerta.svg" },
+    { "name": "Icon/Busca", "nodeId": "5:80", "svg": "references/itau/icons/busca.svg" },
+    { "name": "Icon/Download", "nodeId": "5:86", "svg": "references/itau/icons/download.svg" },
+    { "name": "Icon/Sacola", "nodeId": "5:91", "svg": "references/itau/icons/sacola.svg" },
+    { "name": "Icon/Relógio", "nodeId": "5:96", "svg": "references/itau/icons/relogio.svg" },
+    { "name": "Icon/Pix", "nodeId": "5:101", "svg": "references/itau/icons/pix.svg" },
+    { "name": "Icon/Globo", "nodeId": "5:106", "svg": "references/itau/icons/globo.svg" }
+  ],
+  "families": [
+    {
+      "name": "Button", "page": "04 Botões",
+      "properties": { "Rótulo": "TEXT", "Estilo": "VARIANT", "Tamanho": "VARIANT" },
+      "variants": [
+        { "name": "Estilo=Primário, Tamanho=Compacto", "nodeId": "5:114", "size": [160, 44] },
+        { "name": "Estilo=Primário, Tamanho=Regular", "nodeId": "5:116", "size": [345, 48] },
+        { "name": "Estilo=Contorno, Tamanho=Compacto", "nodeId": "5:118", "size": [160, 44] },
+        { "name": "Estilo=Contorno, Tamanho=Regular", "nodeId": "5:120", "size": [345, 48] }
+      ]
+    },
+    {
+      "name": "IconButton", "page": "04 Botões", "properties": { "Ícone": "INSTANCE_SWAP" },
+      "variants": [{ "name": "IconButton", "nodeId": "5:124", "size": [44, 44] }]
+    },
+    {
+      "name": "Avatar", "page": "05 Identificação", "properties": { "Iniciais": "TEXT" },
+      "variants": [{ "name": "Avatar", "nodeId": "5:132", "size": [32, 32] }]
+    },
+    {
+      "name": "Badge", "page": "05 Identificação", "properties": { "Texto": "TEXT", "Tipo": "VARIANT" },
+      "variants": [
+        { "name": "Tipo=Informativo", "nodeId": "5:134", "size": [52, 24] },
+        { "name": "Tipo=Neutro", "nodeId": "5:136", "size": [112, 24] },
+        { "name": "Tipo=Atenção", "nodeId": "5:138", "size": [24, 24] },
+        { "name": "Tipo=Seleção", "nodeId": "5:140", "size": [24, 24] }
+      ]
+    },
+    {
+      "name": "Shortcut", "page": "06 Atalhos e cartões",
+      "properties": { "Rótulo": "TEXT", "Ícone": "INSTANCE_SWAP", "Formato": "VARIANT" },
+      "variants": [
+        { "name": "Formato=Compacto", "nodeId": "6:6", "size": [72, 100] },
+        { "name": "Formato=Médio", "nodeId": "6:12", "size": [174, 174] },
+        { "name": "Formato=Largo", "nodeId": "6:17", "size": [357, 174] }
+      ]
+    },
+    {
+      "name": "ContentCard", "page": "06 Atalhos e cartões",
+      "properties": { "Título": "TEXT", "Descrição": "TEXT", "Destaque": "TEXT", "Superfície": "VARIANT" },
+      "variants": [
+        { "name": "Superfície=Preenchido", "nodeId": "6:24", "size": [349, 137] },
+        { "name": "Superfície=Contorno", "nodeId": "6:29", "size": [349, 139] }
+      ]
+    },
+    {
+      "name": "ListItem", "page": "07 Listas",
+      "properties": { "Título": "TEXT", "Complemento": "TEXT", "Ícone": "INSTANCE_SWAP", "Mostrar seta": "BOOL", "Conteúdo": "VARIANT" },
+      "variants": [
+        { "name": "Conteúdo=Simples", "nodeId": "7:6", "size": [349, 57] },
+        { "name": "Conteúdo=Valor", "nodeId": "7:18", "size": [349, 85] },
+        { "name": "Conteúdo=Descrição", "nodeId": "7:30", "size": [349, 81] }
+      ]
+    },
+    {
+      "name": "Tab", "page": "08 Navegação",
+      "properties": { "Rótulo": "TEXT", "Selecionado": "VARIANT" },
+      "variants": [
+        { "name": "Selecionado=false", "nodeId": "8:6", "size": [120, 48] },
+        { "name": "Selecionado=true", "nodeId": "8:9", "size": [120, 48] }
+      ]
+    },
+    {
+      "name": "BottomNavItem", "page": "08 Navegação",
+      "properties": { "Rótulo": "TEXT", "Ícone": "INSTANCE_SWAP", "Selecionado": "VARIANT" },
+      "variants": [
+        { "name": "Selecionado=false", "nodeId": "8:13", "size": [78.6, 72] },
+        { "name": "Selecionado=true", "nodeId": "8:19", "size": [78.6, 72] }
+      ]
+    },
+    {
+      "name": "BottomNavigation", "page": "08 Navegação", "properties": { "Ativo": "VARIANT" },
+      "variants": [
+        { "name": "Ativo=Início", "nodeId": "8:27", "size": [393, 82] },
+        { "name": "Ativo=Extrato", "nodeId": "8:70", "size": [393, 82] },
+        { "name": "Ativo=Pagamentos", "nodeId": "8:113", "size": [393, 82] },
+        { "name": "Ativo=Pra você", "nodeId": "8:156", "size": [393, 82] },
+        { "name": "Ativo=Menu", "nodeId": "8:199", "size": [393, 82] }
+      ]
+    },
+    {
+      "name": "Notice", "page": "09 Avisos",
+      "properties": { "Ícone": "INSTANCE_SWAP", "Título": "TEXT", "Descrição": "TEXT" },
+      "variants": [{ "name": "Notice", "nodeId": "8:247", "size": [349, 88] }]
+    },
+    {
+      "name": "EmptyState", "page": "09 Avisos",
+      "properties": { "Ícone": "INSTANCE_SWAP", "Mensagem": "TEXT" },
+      "variants": [{ "name": "EmptyState", "nodeId": "8:254", "size": [349, 164] }]
+    },
+    {
+      "name": "TopBar", "page": "10 Cabeçalhos",
+      "properties": { "Título": "TEXT", "Tipo": "VARIANT" },
+      "variants": [
+        { "name": "Tipo=Voltar", "nodeId": "9:6", "size": [393, 64] },
+        { "name": "Tipo=Ações", "nodeId": "9:16", "size": [393, 64] }
+      ]
+    },
+    {
+      "name": "AccountHeader", "page": "10 Cabeçalhos",
+      "properties": { "Saudação": "TEXT", "Conta": "TEXT" },
+      "variants": [{ "name": "AccountHeader", "nodeId": "9:31", "size": [393, 88] }]
+    }
+  ]
+}

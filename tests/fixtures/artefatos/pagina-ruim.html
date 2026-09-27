@@ -1,0 +1,54 @@
+<title>Página qualquer</title>
+<style>
+:root{
+  --bg:#f6f4f1; --surface:#fff; --ink:#1d1a17; --muted:#6b635c; --line:#e3ddd6; --accent:#ec7000; --accent-ink:#b35400;
+  --ok:#1f7a4d; --ok-bg:#e3f3ea; --warn:#9a6700; --warn-bg:#fbf0d6; --bad:#b42318; --bad-bg:#fbe4e1; --info:#1d4ed8; --info-bg:#e4ebfb;
+  --bubble:#efe9e2; --plan:#4b5563; --plan-bg:#eceef1; --div:#6b3fa0; --div-bg:#f0e8fa;
+  --sans:system-ui;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#171411; --surface:#211d19; --ink:#f2ede7; --muted:#a79d93; --line:#3a332c; --accent:#ff8a1f; --accent-ink:#ffae63;
+  --ok:#5fd39a; --ok-bg:#16301f; --warn:#f0c15a; --warn-bg:#352a10; --bad-bg:#3a1a16; --info:#8fb0ff; --info-bg:#18223d;
+  --bubble:#2c2621; --plan:#b5bdc9; --plan-bg:#242d3d; --div:#c7a6f2; --div-bg:#2c2040;}}
+:root[data-theme="dark"]{
+  --bg:#171411; --surface:#211d19; --ink:#f2ede7; --muted:#a79d93; --line:#3a332c; --accent:#ff8a1f; --accent-ink:#ffae63;
+  --ok:#5fd39a; --ok-bg:#16301f; --warn:#f0c15a; --warn-bg:#352a10; --bad-bg:#3a1a16; --info:#8fb0ff; --info-bg:#18223d;
+  --bubble:#2c2621; --plan:#b5bdc9; --plan-bg:#242d3d; --div:#c7a6f2; --div-bg:#2c2040;}
+</style>
+<!-- Página RUIM sintética: prova negativa do guard tests/test_artefatos_padrao.py.
+     Defeitos plantados: título sem prefixo; falta a secção 'falta'; 'telas' antes de 'perfil-sessao';
+     id repetido; link do nav sem alvo; classes ad hoc (card-destaque, c-okay); chip DIVERGENTE com c-ok;
+     :root sem --mono; blocos escuros sem --bad; strings proibidas (organizesee, e-mail @gmail). -->
+<div class="wrap">
+<header>
+  <h1>Página ruim</h1>
+  <nav class="toc"><a href="#conclusao">Conclusão</a><a href="#inexistente">Some</a></nav>
+</header>
+<section id="conclusao"><span class="chip c-ok">DIVERGENTE</span><span class="chip c-okay">OK</span></section>
+<section id="telas"><div class="card card-destaque">cartão</div></section>
+<section id="perfil-sessao"><p>contato: fulano@gmail.com · projeto organizesee</p></section>
+<section id="decisoes"></section>
+<section id="resumo"></section>
+<section id="concluido"></section>
+<section id="andamento"></section>
+<section id="futuro"></section>
+<section id="fluxos"></section>
+<section id="rotas-integradas"></section>
+<section id="ambientes"></section>
+<section id="divergencias"></section>
+<section id="perfis"></section>
+<section id="memoria"></section>
+<details id="mapa">
+<section id="rotas"></section>
+<section id="papeis"></section>
+<section id="caminho"></section>
+<section id="contexto"></section>
+<section id="nucleo"></section>
+<section id="provas"></section>
+<section id="colab"></section>
+</details>
+<section id="interacoes"></section>
+<section id="backlog"></section>
+<section id="decisoes-dono"></section>
+<div id="backlog"></div>
+</div>

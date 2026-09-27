@@ -1,0 +1,320 @@
+{
+  "kind": "real_gemini_via_local_http",
+  "timestamp": "2026-09-27T06:59:49.292656+00:00",
+  "cases": [
+    {
+      "question": "Quero organizar meu orçamento. Por onde começar?",
+      "http_status": 200,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "fc5fa9c2-8e3e-4cfd-bcd3-dd18968fac3b",
+        "message_id": "384c3b77-0ab2-45ba-a43c-2973768ee7aa",
+        "status": "needs_clarification",
+        "reply": "Para organizar o seu orçamento, o primeiro passo é mapear as suas despesas essenciais e as suas preferências explícitas, listando tudo o que entra e sai ao longo do período para entender a sua realidade financeira sem julgamentos ou pressões comerciais.",
+        "citations": [
+          {
+            "id": "RC-08-2023:art-2",
+            "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=8&tipo=Resolu%C3%A7%C3%A3o%20Conjunta",
+            "excerpt": "Art. 2º As instituições financeiras e demais instituições autorizadas a funcionar pelo Banco Central do Brasil devem adotar medidas de educação financeira direcionadas a seus clientes e usuários pessoas naturais, incluindo empresários individuais.\n§ 1º As medidas de que trata o caput incluem as que contribuem para:\nI - organização e planejamento do orçamento pessoal e familiar;\nII - formação de poupança e resiliência financeira;\nIII - prevenção ao inadimplemento de operações e ao superendividamento.\n§ 2º Para fins desta Resolução Conjunta, o consorciado de administradora de consórcio é considerado cliente.\n\n",
+            "limitations": [
+              "Não autenticado contra cópia certificada do BCB/Imprensa Nacional nesta conversão.",
+              "Extração prévia pode não preservar diagramação e pode conter erros; hashes provam integridade local, não autenticidade legal.",
+              "Cadeia de alterações não certificada como exaustiva."
+            ],
+            "status": "current_according_to_research"
+          }
+        ],
+        "request_id": "fe99a581-487f-48a7-9d4c-fbdab23db692"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    },
+    {
+      "question": "Meu fluxo do mês foi negativo. Isso significa que estou inadimplente?",
+      "http_status": 200,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "fc5fa9c2-8e3e-4cfd-bcd3-dd18968fac3b",
+        "message_id": "13424904-8bd5-438b-b94f-6669423cab58",
+        "status": "needs_clarification",
+        "reply": "Não, fluxo financeiro negativo não significa obrigatoriamente saldo negativo, dívida ou atraso. Ele indica apenas que, em determinado período, as saídas foram maiores do que as entradas, o que pode acontecer por despesas pontuais ou sazonais. Para entender melhor a sua situação, as suas contas e compromissos estão em dia?",
+        "citations": [],
+        "request_id": "70658b76-cbb5-47fb-8665-ec3f507ec008"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    },
+    {
+      "question": "Não tenho pagamentos atrasados. Recebi uma entrada extraordinária, não é renda recorrente. Quero uma reserva.",
+      "http_status": 200,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "fc5fa9c2-8e3e-4cfd-bcd3-dd18968fac3b",
+        "message_id": "0789b694-5e63-4795-9150-10b7c9889d67",
+        "status": "ok",
+        "reply": "Receber uma entrada extraordinária que não faz parte da renda recorrente é um ótimo momento para fortalecer a sua resiliência financeira. Como você mencionou que não tem pagamentos atrasados, podemos direcionar parte desse valor para a formação de uma reserva, considerando as suas despesas essenciais e os seus objetivos. Para começarmos a estruturar essa reserva de forma personalizada, você saberia me dizer qual é o valor aproximado dessa entrada extraordinária e quais são os seus planos de prazo para esse dinheiro?",
+        "citations": [],
+        "request_id": "8ba0030e-9d51-4da2-88ce-2f6e3bc332c6"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    },
+    {
+      "question": "O que o Código de Ética do Itaú diz sobre discriminação por religião?",
+      "http_status": 503,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "fc5fa9c2-8e3e-4cfd-bcd3-dd18968fac3b",
+        "message_id": "3f2ed1ee-623f-4d4e-99ee-01ad951dfa4a",
+        "status": "unavailable",
+        "reply": "Não consegui validar uma resposta agora. Podemos retomar depois; para organizar o orçamento, comece listando entradas e despesas essenciais, sem enviar identificadores pessoais.",
+        "citations": [],
+        "request_id": "78935f89-ba8c-47a4-adf8-c19cec4dae51"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    }
+  ],
+  "billing_project": "not_determined",
+  "provider_quota": "not_determined",
+  "max_provider_calls": 18,
+  "audit": [
+    {
+      "event": "input_guard",
+      "decision": "allow"
+    },
+    {
+      "event": "output_guard",
+      "decision": "release"
+    },
+    {
+      "event": "release",
+      "code": "auth"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    },
+    {
+      "event": "input_guard",
+      "decision": "allow"
+    },
+    {
+      "event": "output_guard",
+      "decision": "release"
+    },
+    {
+      "event": "release",
+      "code": "auth"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    },
+    {
+      "event": "input_guard",
+      "decision": "allow"
+    },
+    {
+      "event": "output_guard",
+      "decision": "release"
+    },
+    {
+      "event": "release",
+      "code": "auth"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    },
+    {
+      "event": "input_guard",
+      "decision": "allow"
+    },
+    {
+      "event": "output_guard",
+      "decision": "replace"
+    },
+    {
+      "event": "release",
+      "code": "technical"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    }
+  ],
+  "metrics": [
+    {
+      "stage": "input_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 1562,
+      "outcome": "complete",
+      "input_tokens": 200,
+      "output_tokens": 21,
+      "total_tokens": 221,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "generate",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "e9b4109fa83b70581d5349538123a512621d2cef68777c596af4d5e4597aa1dc",
+      "policy_version": "1.0",
+      "latency_ms": 3219,
+      "outcome": "complete",
+      "input_tokens": 3950,
+      "output_tokens": 190,
+      "total_tokens": 4140,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "output_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "c2ab30c145f2e0b6ca22485695bc0fbe2421c9bd8474eda9fe4014a76ff4481a",
+      "policy_version": "1.0",
+      "latency_ms": 2257,
+      "outcome": "complete",
+      "input_tokens": 3976,
+      "output_tokens": 66,
+      "total_tokens": 4042,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "input_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 1889,
+      "outcome": "complete",
+      "input_tokens": 287,
+      "output_tokens": 21,
+      "total_tokens": 308,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "generate",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "e9b4109fa83b70581d5349538123a512621d2cef68777c596af4d5e4597aa1dc",
+      "policy_version": "1.0",
+      "latency_ms": 3138,
+      "outcome": "complete",
+      "input_tokens": 4038,
+      "output_tokens": 156,
+      "total_tokens": 4194,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "output_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "c2ab30c145f2e0b6ca22485695bc0fbe2421c9bd8474eda9fe4014a76ff4481a",
+      "policy_version": "1.0",
+      "latency_ms": 1823,
+      "outcome": "complete",
+      "input_tokens": 3952,
+      "output_tokens": 57,
+      "total_tokens": 4009,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "input_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 1833,
+      "outcome": "complete",
+      "input_tokens": 405,
+      "output_tokens": 26,
+      "total_tokens": 431,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "generate",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "e9b4109fa83b70581d5349538123a512621d2cef68777c596af4d5e4597aa1dc",
+      "policy_version": "1.0",
+      "latency_ms": 2581,
+      "outcome": "complete",
+      "input_tokens": 4156,
+      "output_tokens": 195,
+      "total_tokens": 4351,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "output_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "c2ab30c145f2e0b6ca22485695bc0fbe2421c9bd8474eda9fe4014a76ff4481a",
+      "policy_version": "1.0",
+      "latency_ms": 6331,
+      "outcome": "complete",
+      "input_tokens": 4000,
+      "output_tokens": 45,
+      "total_tokens": 4045,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "input_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 1803,
+      "outcome": "complete",
+      "input_tokens": 464,
+      "output_tokens": 26,
+      "total_tokens": 490,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "generate",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "e9b4109fa83b70581d5349538123a512621d2cef68777c596af4d5e4597aa1dc",
+      "policy_version": "1.0",
+      "latency_ms": 2813,
+      "outcome": "complete",
+      "input_tokens": 4298,
+      "output_tokens": 228,
+      "total_tokens": 4526,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "output_guard",
+      "model": "gemini-3.5-flash-lite",
+      "model_version": "gemini-3.5-flash-lite",
+      "prompt_sha256": "c2ab30c145f2e0b6ca22485695bc0fbe2421c9bd8474eda9fe4014a76ff4481a",
+      "policy_version": "1.0",
+      "latency_ms": 3093,
+      "outcome": "complete",
+      "input_tokens": 4025,
+      "output_tokens": 59,
+      "total_tokens": 4084,
+      "error_type": null,
+      "http_status": null
+    }
+  ],
+  "actual_provider_attempts": 12,
+  "completed_cases": 4,
+  "all_http_ok": false
+}

@@ -1,0 +1,20 @@
+node_modules/
+desafio-itau-batalha-de-agentes-time2/
+.venv/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env*
+!.env.example
+.secrets
+!.secrets.example
+*.local.md
+i-agora-codigo.zip
+
+# configuracao local do Claude Code (nao versionar)
+.claude/

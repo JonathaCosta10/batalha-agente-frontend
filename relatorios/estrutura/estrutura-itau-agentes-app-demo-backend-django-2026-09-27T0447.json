@@ -1,0 +1,2501 @@
+{
+  "versao": "mapa_estrutura/0.2.0",
+  "gerado_em": "2026-09-27T07:47:59.134Z",
+  "alvo": {
+    "nome": "itaú-agentes---app-demo-&-backend-django",
+    "caminho": "C:/Users/ACER/Desktop/itaú-agentes---app-demo-&-backend-django",
+    "listagem": "git",
+    "excluido_da_listagem": "relatorios/estrutura",
+    "fora_dos_padroes": [],
+    "git": {
+      "e_repo": true,
+      "topo_igual_ao_alvo": true,
+      "cabeca": "5369add4c5c1822f267fc576e702e2fc1b6d9ebe"
+    }
+  },
+  "instrumentos": [
+    {
+      "id": "listagem",
+      "estado": "MEDIDO",
+      "detalhe": "git ls-files -co --exclude-standard; ignorados por git check-ignore -v",
+      "ficheiros": 298
+    },
+    {
+      "id": "python-ast",
+      "estado": "SEM_ALVO",
+      "detalhe": "0 ficheiros .py",
+      "ficheiros": 0,
+      "falhas": []
+    },
+    {
+      "id": "typescript-ast",
+      "estado": "MEDIDO",
+      "detalhe": "typescript 7.0.2 (API sync) em C:\\Users\\ACER\\Desktop\\itaú-agentes---app-demo-&-backend-django\\node_modules\\typescript",
+      "ficheiros": 163,
+      "falhas": []
+    }
+  ],
+  "resumo": {
+    "ficheiros": 298,
+    "por_extensao": {
+      "(sem)": 7,
+      ".css": 4,
+      ".example": 2,
+      ".html": 3,
+      ".json": 35,
+      ".jsonl": 1,
+      ".md": 15,
+      ".mjs": 1,
+      ".png": 21,
+      ".sh": 1,
+      ".svg": 38,
+      ".toml": 3,
+      ".ts": 33,
+      ".tsx": 129,
+      ".txt": 1,
+      ".yaml": 3,
+      ".zip": 1
+    },
+    "detectados": 23,
+    "ausentes": 13,
+    "nao_medidos": 0,
+    "anomalias": 12
+  },
+  "fronteiras": [
+    {
+      "caminho": "desafio-itau-batalha-de-agentes-time2",
+      "tipo": "repo-aninhado",
+      "ignorado": true,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "desafio-itau-batalha-de-agentes-time2/.git"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 2,
+          "sha": "9c76c29a8a6b719b",
+          "texto": "desafio-itau-batalha-de-agentes-time2/"
+        }
+      ]
+    }
+  ],
+  "arvore": {
+    "diretorios": [
+      {
+        "caminho": ".",
+        "ficheiros": 298,
+        "papeis": [
+          "codigo",
+          "config",
+          "entrada"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "."
+          }
+        ]
+      },
+      {
+        "caminho": "docs",
+        "ficheiros": 7,
+        "papeis": [
+          "docs"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/archive",
+        "ficheiros": 2,
+        "papeis": [
+          "archive"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/archive"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/archive/2026-09-27",
+        "ficheiros": 1,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/archive/2026-09-27"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/bcb-8",
+        "ficheiros": 3,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/bcb-8"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo",
+        "ficheiros": 253,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "i-agora-codigo"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo",
+        "ficheiros": 253,
+        "papeis": [
+          "config"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "i-agora-codigo/i-agora-codigo"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo/artifacts",
+        "ficheiros": 175,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "i-agora-codigo/i-agora-codigo/artifacts"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo/assets",
+        "ficheiros": 7,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "i-agora-codigo/i-agora-codigo/assets"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo/attached_assets",
+        "ficheiros": 1,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "i-agora-codigo/i-agora-codigo/attached_assets"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo/docs",
+        "ficheiros": 36,
+        "papeis": [
+          "docs"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "i-agora-codigo/i-agora-codigo/docs"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo/lib",
+        "ficheiros": 20,
+        "papeis": [
+          "codigo"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "i-agora-codigo/i-agora-codigo/lib"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo/scripts",
+        "ficheiros": 4,
+        "papeis": [
+          "config"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "i-agora-codigo/i-agora-codigo/scripts"
+          }
+        ]
+      },
+      {
+        "caminho": "relatorios",
+        "ficheiros": 13,
+        "papeis": [
+          "relatorios"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "relatorios"
+          }
+        ]
+      },
+      {
+        "caminho": "relatorios/skills",
+        "ficheiros": 13,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "relatorios/skills"
+          }
+        ]
+      },
+      {
+        "caminho": "src",
+        "ficheiros": 14,
+        "papeis": [
+          "codigo",
+          "entrada"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src"
+          }
+        ]
+      },
+      {
+        "caminho": "src/components",
+        "ficheiros": 8,
+        "papeis": [
+          "componentes"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/components"
+          }
+        ]
+      },
+      {
+        "caminho": "src/components/screens",
+        "ficheiros": 4,
+        "papeis": [
+          "telas"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/components/screens"
+          }
+        ]
+      },
+      {
+        "caminho": "src/data",
+        "ficheiros": 1,
+        "papeis": [
+          "codigo",
+          "dados"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/data"
+          }
+        ]
+      },
+      {
+        "caminho": "src/services",
+        "ficheiros": 1,
+        "papeis": [
+          "servicos"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/services"
+          }
+        ]
+      },
+      {
+        "caminho": "src/types",
+        "ficheiros": 1,
+        "papeis": [
+          "tipos"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/types"
+          }
+        ]
+      }
+    ],
+    "ignorados": [
+      {
+        "caminho": ".claude",
+        "tipo": "pasta",
+        "fonte": ".gitignore:17",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 17,
+            "sha": "59a0facf5498d52e",
+            "texto": ".claude/"
+          }
+        ]
+      },
+      {
+        "caminho": ".secrets",
+        "tipo": "ficheiro",
+        "fonte": ".gitignore:14",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 14,
+            "sha": "70ba70cdd7a8f1e9",
+            "texto": ".secrets"
+          }
+        ]
+      },
+      {
+        "caminho": ".venv",
+        "tipo": "pasta",
+        "fonte": ".gitignore:3",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 3,
+            "sha": "1d2571705c711780",
+            "texto": ".venv/"
+          }
+        ]
+      },
+      {
+        "caminho": "desafio-itau-batalha-de-agentes-time2",
+        "tipo": "pasta",
+        "fonte": ".gitignore:2",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 2,
+            "sha": "9c76c29a8a6b719b",
+            "texto": "desafio-itau-batalha-de-agentes-time2/"
+          }
+        ]
+      },
+      {
+        "caminho": "dist",
+        "tipo": "pasta",
+        "fonte": ".gitignore:5",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 5,
+            "sha": "887f42eeae4276a8",
+            "texto": "dist/"
+          }
+        ]
+      },
+      {
+        "caminho": "handoff-2026-09-27T0418.local.md",
+        "tipo": "ficheiro",
+        "fonte": ".gitignore:16",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 16,
+            "sha": "4060992b82d6d475",
+            "texto": "*.local.md"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo/artifacts/api-server/.tsbuildinfo",
+        "tipo": "ficheiro",
+        "fonte": "i-agora-codigo/i-agora-codigo/.gitignore:7",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "i-agora-codigo/i-agora-codigo/.gitignore",
+            "linha": 7,
+            "sha": "732c6958b05bef50",
+            "texto": "*.tsbuildinfo"
+          }
+        ]
+      },
+      {
+        "caminho": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/.tsbuildinfo",
+        "tipo": "ficheiro",
+        "fonte": "i-agora-codigo/i-agora-codigo/.gitignore:7",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": "i-agora-codigo/i-agora-codigo/.gitignore",
+            "linha": 7,
+            "sha": "732c6958b05bef50",
+            "texto": "*.tsbuildinfo"
+          }
+        ]
+      },
+      {
+        "caminho": "node_modules",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "f1a9a09b226cf8e9",
+            "texto": "node_modules/"
+          }
+        ]
+      },
+      {
+        "caminho": "secrets.contrato.local.md",
+        "tipo": "ficheiro",
+        "fonte": ".gitignore:16",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 16,
+            "sha": "4060992b82d6d475",
+            "texto": "*.local.md"
+          }
+        ]
+      }
+    ]
+  },
+  "stack": [
+    {
+      "id": "express",
+      "versao": "^5.2.1",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 18,
+          "sha": "f2c52b1f379baa8d",
+          "texto": "\"express\": \"^5.2.1\","
+        }
+      ]
+    },
+    {
+      "id": "react",
+      "versao": "catalog:",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+          "linha": 61,
+          "sha": "4f437f7f6b9f0b26",
+          "texto": "\"react\": \"catalog:\","
+        }
+      ]
+    },
+    {
+      "id": "react-dom",
+      "versao": "catalog:",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+          "linha": 63,
+          "sha": "828d6de6cac941f6",
+          "texto": "\"react-dom\": \"catalog:\","
+        }
+      ]
+    },
+    {
+      "id": "tailwindcss",
+      "versao": "catalog:",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+          "linha": 70,
+          "sha": "ff22bec265e68eaa",
+          "texto": "\"tailwindcss\": \"catalog:\","
+        }
+      ]
+    },
+    {
+      "id": "vite",
+      "versao": "catalog:",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+          "linha": 73,
+          "sha": "57fe58adba6aa1fc",
+          "texto": "\"vite\": \"catalog:\","
+        }
+      ]
+    },
+    {
+      "id": "react",
+      "versao": "catalog:",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+          "linha": 59,
+          "sha": "4f437f7f6b9f0b26",
+          "texto": "\"react\": \"catalog:\","
+        }
+      ]
+    },
+    {
+      "id": "react-dom",
+      "versao": "catalog:",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+          "linha": 61,
+          "sha": "828d6de6cac941f6",
+          "texto": "\"react-dom\": \"catalog:\","
+        }
+      ]
+    },
+    {
+      "id": "tailwindcss",
+      "versao": "catalog:",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+          "linha": 67,
+          "sha": "ff22bec265e68eaa",
+          "texto": "\"tailwindcss\": \"catalog:\","
+        }
+      ]
+    },
+    {
+      "id": "vite",
+      "versao": "catalog:",
+      "manifesto": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+          "linha": 71,
+          "sha": "57fe58adba6aa1fc",
+          "texto": "\"vite\": \"catalog:\","
+        }
+      ]
+    },
+    {
+      "id": "typescript",
+      "versao": "~5.9.3",
+      "manifesto": "i-agora-codigo/i-agora-codigo/package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/package.json",
+          "linha": 17,
+          "sha": "c607ee19336816c9",
+          "texto": "\"typescript\": \"~5.9.3\""
+        }
+      ]
+    },
+    {
+      "id": "express",
+      "versao": "^4.21.2",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 21,
+          "sha": "5711f0ea8000d868",
+          "texto": "\"express\": \"^4.21.2\","
+        }
+      ]
+    },
+    {
+      "id": "react",
+      "versao": "^19.0.1",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 18,
+          "sha": "b36b951cb7d2a40a",
+          "texto": "\"react\": \"^19.0.1\","
+        }
+      ]
+    },
+    {
+      "id": "react-dom",
+      "versao": "^19.0.1",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 19,
+          "sha": "4f67c6848e332cc0",
+          "texto": "\"react-dom\": \"^19.0.1\","
+        }
+      ]
+    },
+    {
+      "id": "tailwindcss",
+      "versao": "^4.3.3",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 31,
+          "sha": "afb0510e898776f2",
+          "texto": "\"tailwindcss\": \"^4.3.3\","
+        }
+      ]
+    },
+    {
+      "id": "typescript",
+      "versao": "^7.0.2",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 33,
+          "sha": "701edfd6d1e5dbc6",
+          "texto": "\"typescript\": \"^7.0.2\","
+        }
+      ]
+    },
+    {
+      "id": "vite",
+      "versao": "^8.3.0",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 20,
+          "sha": "f5a201e83b1f6623",
+          "texto": "\"vite\": \"^8.3.0\","
+        }
+      ]
+    }
+  ],
+  "padroes": [
+    {
+      "id": "arvore.papeis-de-diretorio",
+      "categoria": "arvore",
+      "titulo": "Papeis de diretorio (entrada, codigo, testes, docs, config...)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "."
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/docs"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/lib"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/scripts"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "relatorios"
+        }
+      ],
+      "evidencias_total": 14,
+      "detalhe": {
+        "codigo": [
+          ".",
+          "i-agora-codigo/i-agora-codigo/lib",
+          "src",
+          "src/data"
+        ],
+        "config": [
+          ".",
+          "i-agora-codigo/i-agora-codigo",
+          "i-agora-codigo/i-agora-codigo/scripts"
+        ],
+        "entrada": [
+          ".",
+          "src"
+        ],
+        "docs": [
+          "docs",
+          "i-agora-codigo/i-agora-codigo/docs"
+        ],
+        "archive": [
+          "docs/archive"
+        ],
+        "relatorios": [
+          "relatorios"
+        ],
+        "componentes": [
+          "src/components"
+        ],
+        "telas": [
+          "src/components/screens"
+        ],
+        "dados": [
+          "src/data"
+        ],
+        "servicos": [
+          "src/services"
+        ],
+        "tipos": [
+          "src/types"
+        ]
+      }
+    },
+    {
+      "id": "arvore.entradas",
+      "categoria": "arvore",
+      "titulo": "Pontos de entrada",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 7,
+          "sha": "0a897c16460bb08b",
+          "texto": "\"dev\": \"export NODE_ENV=development && pnpm run build && pnpm run start\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 9,
+          "sha": "8cacb7a364c5a216",
+          "texto": "\"start\": \"node --enable-source-maps ./dist/index.mjs\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+          "linha": 7,
+          "sha": "e96a8db316dd85bb",
+          "texto": "\"dev\": \"vite --config vite.config.ts --host 0.0.0.0\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/main.tsx",
+          "linha": 8,
+          "sha": "b7831b9da1efb827",
+          "texto": "createRoot(document.getElementById('root')!, {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+          "linha": 7,
+          "sha": "280edfe73c6cc539",
+          "texto": "\"dev\": \"vite dev\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/src/main.tsx",
+          "linha": 5,
+          "sha": "ba3eb72fbb537cd1",
+          "texto": "createRoot(document.getElementById(\"root\")!).render(<App />);"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "index.html",
+          "linha": 15,
+          "sha": "5b8f8842201e19a0",
+          "texto": "<script type=\"module\" src=\"/src/main.tsx\"></script>"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 7,
+          "sha": "20b8021b947ae9d9",
+          "texto": "\"dev\": \"node node_modules/vite/bin/vite.js --port=3000 --host=0.0.0.0\","
+        }
+      ],
+      "evidencias_total": 9,
+      "detalhe": {
+        "parser_indisponivel": []
+      }
+    },
+    {
+      "id": "arvore.ignorados",
+      "categoria": "arvore",
+      "titulo": "Gerado/ignorado presente no disco (.gitignore)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 1,
+          "sha": "f1a9a09b226cf8e9",
+          "texto": "node_modules/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 2,
+          "sha": "9c76c29a8a6b719b",
+          "texto": "desafio-itau-batalha-de-agentes-time2/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 3,
+          "sha": "1d2571705c711780",
+          "texto": ".venv/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 5,
+          "sha": "887f42eeae4276a8",
+          "texto": "dist/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 14,
+          "sha": "70ba70cdd7a8f1e9",
+          "texto": ".secrets"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 16,
+          "sha": "4060992b82d6d475",
+          "texto": "*.local.md"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 17,
+          "sha": "59a0facf5498d52e",
+          "texto": ".claude/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/.gitignore",
+          "linha": 7,
+          "sha": "732c6958b05bef50",
+          "texto": "*.tsbuildinfo"
+        }
+      ],
+      "evidencias_total": 8,
+      "detalhe": {
+        "caminhos": [
+          ".claude/ <- .gitignore:17",
+          ".secrets <- .gitignore:14",
+          ".venv/ <- .gitignore:3",
+          "desafio-itau-batalha-de-agentes-time2/ <- .gitignore:2",
+          "dist/ <- .gitignore:5",
+          "handoff-2026-09-27T0418.local.md <- .gitignore:16",
+          "i-agora-codigo/i-agora-codigo/artifacts/api-server/.tsbuildinfo <- i-agora-codigo/i-agora-codigo/.gitignore:7",
+          "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/.tsbuildinfo <- i-agora-codigo/i-agora-codigo/.gitignore:7",
+          "node_modules/ <- .gitignore:1",
+          "secrets.contrato.local.md <- .gitignore:16"
+        ]
+      }
+    },
+    {
+      "id": "arvore.fronteiras-git",
+      "categoria": "arvore",
+      "titulo": "Repos Git aninhados (fronteiras, nao misturados)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 2,
+          "sha": "9c76c29a8a6b719b",
+          "texto": "desafio-itau-batalha-de-agentes-time2/"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "desafio-itau-batalha-de-agentes-time2/.git"
+        }
+      ],
+      "evidencias_total": 2,
+      "detalhe": {
+        "fronteiras": [
+          "desafio-itau-batalha-de-agentes-time2 (repo-aninhado, ignorado)"
+        ]
+      }
+    },
+    {
+      "id": "stack.manifestos",
+      "categoria": "stack",
+      "titulo": "Manifestos de stack",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/lib/api-client-react/package.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/lib/api-spec/package.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/lib/api-zod/package.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/lib/db/package.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/package.json"
+        }
+      ],
+      "evidencias_total": 10,
+      "detalhe": {
+        "manifestos": [
+          "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/package.json",
+          "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/package.json",
+          "i-agora-codigo/i-agora-codigo/lib/api-client-react/package.json",
+          "i-agora-codigo/i-agora-codigo/lib/api-spec/package.json",
+          "i-agora-codigo/i-agora-codigo/lib/api-zod/package.json",
+          "i-agora-codigo/i-agora-codigo/lib/db/package.json",
+          "i-agora-codigo/i-agora-codigo/package.json",
+          "i-agora-codigo/i-agora-codigo/scripts/package.json",
+          "package.json"
+        ],
+        "conhecidas": [
+          "express",
+          "react",
+          "react-dom",
+          "tailwindcss",
+          "typescript",
+          "vite"
+        ]
+      }
+    },
+    {
+      "id": "arq.django-projeto",
+      "categoria": "arquitetura",
+      "titulo": "Projeto Django (settings + manage.py)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.django-apps",
+      "categoria": "arquitetura",
+      "titulo": "Apps Django (AppConfig)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.mvt",
+      "categoria": "arquitetura",
+      "titulo": "Django MVT por app (models, views, urls, templates)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.camadas-python",
+      "categoria": "arquitetura",
+      "titulo": "Camadas Python (views -> services -> repositories -> models)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.rotas-django",
+      "categoria": "arquitetura",
+      "titulo": "Rotas Django (urlpatterns, path, include)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.api-drf",
+      "categoria": "arquitetura",
+      "titulo": "API Django REST Framework",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.migracoes",
+      "categoria": "arquitetura",
+      "titulo": "Migracoes versionadas",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.react-componentes",
+      "categoria": "arquitetura",
+      "titulo": "Componentes React (funcao PascalCase que devolve JSX)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/App.tsx",
+          "linha": 14,
+          "sha": "56fae54a6c7d6428",
+          "texto": "function InviteCopy({text}:{text:string}) {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/App.tsx",
+          "linha": 17,
+          "sha": "484bc8647b4f8cb6",
+          "texto": "function Button({children,onClick,variant='primary',disabled,testId}:{children:ReactNode;onClick:()=>void;variant?:'prim"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/App.tsx",
+          "linha": 20,
+          "sha": "3241c8295f50e62f",
+          "texto": "function SharePreview({plan,index}:{plan:Plan;index:number}) {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/App.tsx",
+          "linha": 26,
+          "sha": "47f14c2779469a39",
+          "texto": "function App() {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/FollowUpScreen.tsx",
+          "linha": 29,
+          "sha": "f8ffbb926e16d15e",
+          "texto": "export function FollowUpScreen({ plan, onBack, onOpenChat }: FollowUpScreenProps) {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/IntroCarousel.tsx",
+          "linha": 16,
+          "sha": "00793cda0516c2be",
+          "texto": "export function IntroCarousel({active,onActiveChange}:{active:number;onActiveChange:(index:number)=>void}) {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/components/error-boundary.tsx",
+          "linha": 38,
+          "sha": "1cd8cd65176ae5e2",
+          "texto": "function DefaultFallback({ error, resetError }: ErrorFallbackProps) {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/components/ui/alert-dialog.tsx",
+          "linha": 45,
+          "sha": "b1caac1172e3e42d",
+          "texto": "const AlertDialogHeader = ({"
+        }
+      ],
+      "evidencias_total": 214,
+      "detalhe": {
+        "componentes": 214,
+        "por_pasta": {
+          "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src": 6,
+          "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/components": 1,
+          "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/components/ui": 97,
+          "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/pages": 1,
+          "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/src": 3,
+          "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/src/components/ui": 97,
+          "src": 1,
+          "src/components": 3,
+          "src/components/screens": 5
+        }
+      }
+    },
+    {
+      "id": "arq.react-telas",
+      "categoria": "arquitetura",
+      "titulo": "Telas (screens/pages) como componentes",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/FollowUpScreen.tsx",
+          "linha": 29,
+          "sha": "f8ffbb926e16d15e",
+          "texto": "export function FollowUpScreen({ plan, onBack, onOpenChat }: FollowUpScreenProps) {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/pages/not-found.tsx",
+          "linha": 4,
+          "sha": "ee802f62de27e991",
+          "texto": "export default function NotFound() {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/LazyShimmerFrames.tsx",
+          "linha": 3,
+          "sha": "47da004c14da2596",
+          "texto": "export const Screen1Skeleton: React.FC = () => {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/LazyShimmerFrames.tsx",
+          "linha": 59,
+          "sha": "9146638f738bba9c",
+          "texto": "export const Screen2Skeleton: React.FC = () => {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/Screen1ItauHome.tsx",
+          "linha": 21,
+          "sha": "c4dad9f5878e1cc7",
+          "texto": "export const Screen1ItauHome: React.FC<Screen1ItauHomeProps> = ({"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/Screen2Chat.tsx",
+          "linha": 22,
+          "sha": "83a33844bf5e966c",
+          "texto": "export const Screen2Chat: React.FC<Screen2ChatProps> = ({"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/Screen3Communication.tsx",
+          "linha": 29,
+          "sha": "38b89e2769b70bd4",
+          "texto": "export const Screen3Communication: React.FC<Screen3CommunicationProps> = ({"
+        }
+      ],
+      "evidencias_total": 7,
+      "detalhe": {
+        "telas": [
+          "FollowUpScreen",
+          "NotFound",
+          "Screen1ItauHome",
+          "Screen1Skeleton",
+          "Screen2Chat",
+          "Screen2Skeleton",
+          "Screen3Communication"
+        ]
+      }
+    },
+    {
+      "id": "arq.ts-tipos",
+      "categoria": "arquitetura",
+      "titulo": "Tipos centralizados (types/)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/lib/api-zod/src/generated/types/healthStatus.ts",
+          "linha": 9,
+          "sha": "dbbb7c6f8c385f6a",
+          "texto": "export interface HealthStatus {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 1,
+          "sha": "04e06b30b7cf8bde",
+          "texto": "export type Gender = 'F' | 'M';"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 3,
+          "sha": "4e7a1afc2900bea8",
+          "texto": "export type IndexCutoffLevel = 'ALTA_PROPENSAO' | 'MEDIA_PROPENSAO' | 'BAIXA_PROPENSAO';"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 5,
+          "sha": "d0e2f86437f49e62",
+          "texto": "export interface Customer {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 22,
+          "sha": "2bf68d86ba26d040",
+          "texto": "export interface ChatVariable1 {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 52,
+          "sha": "8faa8a13101da011",
+          "texto": "export interface SpreadsheetProductItem {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 67,
+          "sha": "b9ac19ed56a23491",
+          "texto": "export interface AgentContext {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 78,
+          "sha": "0f39dfa0e29686b6",
+          "texto": "export interface Template3Response {"
+        }
+      ],
+      "evidencias_total": 9,
+      "detalhe": {
+        "centralizados": 9,
+        "exportados_fora": 19
+      }
+    },
+    {
+      "id": "arq.ts-servicos",
+      "categoria": "arquitetura",
+      "titulo": "Servicos TS (services/)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/services/behavioralEngine.ts",
+          "linha": 75,
+          "sha": "06b1af40f6073b9f",
+          "texto": "export function calculateAgentContext(customer: Customer): AgentContext {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/services/behavioralEngine.ts",
+          "linha": 131,
+          "sha": "bbaf3d3ee04dcdd2",
+          "texto": "export function generateChatVariable1("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/services/behavioralEngine.ts",
+          "linha": 203,
+          "sha": "b2b8e86770ab81b1",
+          "texto": "export function generateTemplate3Response(customer: Customer): Template3Response {"
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.barrel-index",
+      "categoria": "arquitetura",
+      "titulo": "Barrel index (index.ts so com re-exports)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/lib/api-client-react/src/index.ts",
+          "linha": 1,
+          "sha": "535746fa8a2aa58e",
+          "texto": "export * from \"./generated/api\";"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/lib/api-zod/src/generated/types/index.ts",
+          "linha": 9,
+          "sha": "88fdd94bccf18e22",
+          "texto": "export * from \"./healthStatus\";"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/lib/api-zod/src/index.ts",
+          "linha": 1,
+          "sha": "535746fa8a2aa58e",
+          "texto": "export * from \"./generated/api\";"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/index.ts",
+          "linha": 2,
+          "sha": "757fc4373741ef67",
+          "texto": "export { AndroidFrame } from './AndroidFrame';"
+        }
+      ],
+      "evidencias_total": 4,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.roteamento-front",
+      "categoria": "arquitetura",
+      "titulo": "Roteamento do front (router vs maquina de estados)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 23,
+          "sha": "8ea97f4366e9d4fe",
+          "texto": "const [activeScreen, setActiveScreen] = useState<ScreenType>('home');"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 195,
+          "sha": "7ad41a30d4ac468d",
+          "texto": "if (activeScreen === 'communication') {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 198,
+          "sha": "d15da05e35dc0ae5",
+          "texto": "} else if (activeScreen === 'chat') {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 207,
+          "sha": "c19b50759f9360ae",
+          "texto": "activeScreen === 'home' ? ("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 215,
+          "sha": "eab66c962cbe6755",
+          "texto": "{activeScreen === 'home' && ("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 226,
+          "sha": "a1bdcfc51a4521c9",
+          "texto": "{activeScreen === 'chat' && ("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 244,
+          "sha": "7fd9413eddd39b87",
+          "texto": "{activeScreen === 'communication' && ("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/AndroidFrame.tsx",
+          "linha": 35,
+          "sha": "56389641d14e2b84",
+          "texto": "{activeScreen === 'home' && 'Tela 1: Home Itaú'}"
+        }
+      ],
+      "evidencias_total": 14,
+      "detalhe": {
+        "modo": "maquina-de-estados",
+        "tipos": [
+          "ScreenType"
+        ],
+        "estados": [
+          "chat",
+          "communication",
+          "home"
+        ]
+      }
+    },
+    {
+      "id": "arq.cliente-api",
+      "categoria": "arquitetura",
+      "titulo": "Cliente de API (fetch/axios/requests)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/DjangoArchitectureDrawer.tsx",
+          "linha": 60,
+          "sha": "0a43d09a63f485e6",
+          "texto": "const response = await fetch('/api/v1/context-agent/primeira-chamada/', {"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "endpoints": [
+          "/api/v1/context-agent/primeira-chamada/"
+        ]
+      }
+    },
+    {
+      "id": "arq.proxy-dev",
+      "categoria": "arquitetura",
+      "titulo": "Proxy de desenvolvimento para a API",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "vite.config.ts",
+          "linha": 15,
+          "sha": "e59a4517c22687bc",
+          "texto": "proxy: {"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "prefixos": [
+          "/api/v1/context-agent"
+        ]
+      }
+    },
+    {
+      "id": "arq.contratos-json-schema",
+      "categoria": "arquitetura",
+      "titulo": "Contratos em JSON Schema",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/components.json",
+          "linha": 2,
+          "sha": "4b0cdfbb4daed67d",
+          "texto": "\"$schema\": \"https://ui.shadcn.com/schema.json\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/components.json",
+          "linha": 2,
+          "sha": "4b0cdfbb4daed67d",
+          "texto": "\"$schema\": \"https://ui.shadcn.com/schema.json\","
+        }
+      ],
+      "evidencias_total": 2,
+      "detalhe": {
+        "ficheiros": 2,
+        "dialetos": [
+          "https://ui.shadcn.com/schema.json"
+        ]
+      }
+    },
+    {
+      "id": "arq.contratos-openapi",
+      "categoria": "arquitetura",
+      "titulo": "Contratos OpenAPI/Swagger",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/lib/api-spec/openapi.yaml",
+          "linha": 1,
+          "sha": "2fb0d1c2b023895b",
+          "texto": "openapi: 3.1.0"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.contratos-exemplos",
+      "categoria": "arquitetura",
+      "titulo": "Exemplos de payload versionados com a documentacao",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/bcb-8/indice.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/bcb-8/resolucao-conjunta-08-2023.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/bcb-8/resolucao-conjunta-20-2026.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/docs/figma-itau-components.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/docs/figma-itau-design-system.tokens.json"
+        }
+      ],
+      "evidencias_total": 5,
+      "detalhe": {
+        "ficheiros": 5
+      }
+    },
+    {
+      "id": "testes.python",
+      "categoria": "testes",
+      "titulo": "Testes Python (framework, local, nomes)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "testes.ts",
+      "categoria": "testes",
+      "titulo": "Testes TS/JS (framework, local, nomes)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros *.test.* / *.spec.* / __tests__/",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "conv.estilo-nomes-ficheiros",
+      "categoria": "convencao",
+      "titulo": "Estilo de nomes de ficheiros e pastas",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/bcb-8"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/public/brand/i-agora.png"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/public/brand/ia-i-original.png"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/components/error-boundary.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/components/ui/alert-dialog.tsx"
+        }
+      ],
+      "evidencias_total": 6,
+      "detalhe": {
+        ".css": {
+          "contagem": {
+            "kebab-case": 1,
+            "minusculo": 3
+          },
+          "dominante": "kebab-case",
+          "fracao": 1,
+          "convencao": false
+        },
+        ".html": {
+          "contagem": {
+            "minusculo": 3
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".json": {
+          "contagem": {
+            "minusculo": 24,
+            "kebab-case": 5,
+            "misto": 6
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.45,
+          "convencao": false
+        },
+        ".jsonl": {
+          "contagem": {
+            "minusculo": 1
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".md": {
+          "contagem": {
+            "maiusculo": 5,
+            "minusculo": 2,
+            "misto": 7,
+            "kebab-case": 1
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.13,
+          "convencao": false
+        },
+        ".mjs": {
+          "contagem": {
+            "minusculo": 1
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".png": {
+          "contagem": {
+            "kebab-case": 19,
+            "minusculo": 1,
+            "snake_case": 1
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.95,
+          "convencao": true
+        },
+        ".sh": {
+          "contagem": {
+            "kebab-case": 1
+          },
+          "dominante": "kebab-case",
+          "fracao": 1,
+          "convencao": false
+        },
+        ".svg": {
+          "contagem": {
+            "minusculo": 37,
+            "kebab-case": 1
+          },
+          "dominante": "kebab-case",
+          "fracao": 1,
+          "convencao": false
+        },
+        ".toml": {
+          "contagem": {
+            "minusculo": 3
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".ts": {
+          "contagem": {
+            "minusculo": 24,
+            "kebab-case": 5,
+            "camelCase": 4
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.56,
+          "convencao": false
+        },
+        ".tsx": {
+          "contagem": {
+            "PascalCase": 12,
+            "kebab-case": 28,
+            "minusculo": 89
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.7,
+          "convencao": true
+        },
+        ".txt": {
+          "contagem": {
+            "minusculo": 1
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".yaml": {
+          "contagem": {
+            "minusculo": 1,
+            "kebab-case": 2
+          },
+          "dominante": "kebab-case",
+          "fracao": 1,
+          "convencao": false
+        },
+        ".zip": {
+          "contagem": {
+            "kebab-case": 1
+          },
+          "dominante": "kebab-case",
+          "fracao": 1,
+          "convencao": false
+        },
+        "pastas": {
+          "contagem": {
+            "minusculo": 46,
+            "kebab-case": 9,
+            "snake_case": 1
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.9,
+          "convencao": true
+        }
+      }
+    },
+    {
+      "id": "conv.estilo-identificadores",
+      "categoria": "convencao",
+      "titulo": "Estilo de identificadores por linguagem e tipo",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/build.mjs",
+          "linha": 11,
+          "sha": "7a47d70a38264eeb",
+          "texto": "const artifactDir = path.dirname(fileURLToPath(import.meta.url));"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/build.mjs",
+          "linha": 13,
+          "sha": "0999d2653a0d53dd",
+          "texto": "async function buildAll() {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/App.tsx",
+          "linha": 14,
+          "sha": "56fae54a6c7d6428",
+          "texto": "function InviteCopy({text}:{text:string}) {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/App.tsx",
+          "linha": 15,
+          "sha": "a92d2222760d4ee6",
+          "texto": "return <div className=\"invite-copy\">{text.split('\\n\\n').map((paragraph,index)=><p key={index}>{paragraph.split(/(\\*[^*]+"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/FollowUpScreen.tsx",
+          "linha": 6,
+          "sha": "3f187d33cf2deead",
+          "texto": "type FollowUpScreenProps = {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/components/error-boundary.tsx",
+          "linha": 67,
+          "sha": "a3cc7dc431ea7e77",
+          "texto": "export class ErrorBoundary extends Component<"
+        }
+      ],
+      "evidencias_total": 6,
+      "detalhe": {
+        "parser_indisponivel": [],
+        "ts/classe": {
+          "contagem": {
+            "PascalCase": 3
+          },
+          "dominante": "PascalCase",
+          "fracao": 1
+        },
+        "ts/componente": {
+          "contagem": {
+            "PascalCase": 214
+          },
+          "dominante": "PascalCase",
+          "fracao": 1
+        },
+        "ts/funcao": {
+          "contagem": {
+            "camelCase": 107,
+            "minusculo": 25,
+            "maiusculo": 1
+          },
+          "dominante": "camelCase",
+          "fracao": 1
+        },
+        "ts/parametro": {
+          "contagem": {
+            "minusculo": 219,
+            "camelCase": 20
+          },
+          "dominante": "camelCase",
+          "fracao": 1
+        },
+        "ts/tipo": {
+          "contagem": {
+            "PascalCase": 84
+          },
+          "dominante": "PascalCase",
+          "fracao": 1
+        },
+        "ts/variavel": {
+          "contagem": {
+            "camelCase": 490,
+            "minusculo": 486,
+            "UPPER_SNAKE": 31,
+            "PascalCase": 405,
+            "maiusculo": 7
+          },
+          "dominante": "camelCase",
+          "fracao": 0.53
+        }
+      }
+    },
+    {
+      "id": "conv.idioma-identificadores",
+      "categoria": "convencao",
+      "titulo": "Idioma dos identificadores (pt-BR vs en)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/build.mjs",
+          "linha": 13,
+          "sha": "0999d2653a0d53dd",
+          "texto": "async function buildAll() {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/src/routes/health.ts",
+          "linha": 7,
+          "sha": "6a2cba9c7393500e",
+          "texto": "const data = HealthCheckResponse.parse({ status: \"ok\" });"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 29,
+          "sha": "d9958498f3a2b0d2",
+          "texto": "const [isChaveAtiva, setIsChaveAtiva] = useState<boolean>(true);"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/DjangoArchitectureDrawer.tsx",
+          "linha": 45,
+          "sha": "26831c87bc855931",
+          "texto": "const [modeloUsado, setModeloUsado] = useState<string>('');"
+        }
+      ],
+      "evidencias_total": 4,
+      "detalhe": {
+        "ts": {
+          "pt": 37,
+          "en": 809,
+          "exemplos_pt": [
+            "isChaveAtiva",
+            "modeloUsado"
+          ],
+          "exemplos_en": [
+            "buildAll",
+            "data"
+          ],
+          "dominante": "en"
+        },
+        "tokens_casados": 846,
+        "metodo": "lexico da policy (heuristica)"
+      }
+    },
+    {
+      "id": "conv.afixos",
+      "categoria": "convencao",
+      "titulo": "Prefixos, sufixos e nomes repetidos",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "README.md"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/api-server/.replit-artifact/artifact.toml"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/api-server/tsconfig.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/index.html"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/App.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/components/ui/button-group.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/index.css"
+        }
+      ],
+      "evidencias_total": 12,
+      "detalhe": {
+        "afixos": [
+          {
+            "tipo": "nome-repetido",
+            "afixo": "package.json",
+            "grupo": ".json",
+            "n": 10
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "tsconfig.json",
+            "grupo": ".json",
+            "n": 9
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "mapa",
+            "grupo": ".json",
+            "n": 6
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "mapa",
+            "grupo": ".md",
+            "n": 6
+          },
+          {
+            "tipo": "extensao-secundaria",
+            "afixo": ".config.ts",
+            "grupo": ".ts",
+            "n": 5
+          },
+          {
+            "tipo": "sufixo",
+            "afixo": "group",
+            "grupo": ".tsx",
+            "n": 4
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "App.tsx",
+            "grupo": ".tsx",
+            "n": 3
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "README.md",
+            "grupo": ".md",
+            "n": 3
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "artifact.toml",
+            "grupo": ".toml",
+            "n": 3
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "index.css",
+            "grupo": ".css",
+            "n": 3
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "index.html",
+            "grupo": ".html",
+            "n": 3
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "main.tsx",
+            "grupo": ".tsx",
+            "n": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "conv.pastas-datadas",
+      "categoria": "convencao",
+      "titulo": "Pastas datadas",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive/2026-09-27"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "formatos": {
+          "AAAA-MM-DD": 1
+        }
+      }
+    },
+    {
+      "id": "conv.archive-indice",
+      "categoria": "convencao",
+      "titulo": "archive/ com INDICE.md",
+      "estado": "DETECTADO",
+      "confianca": "baixa",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive/INDICE.md"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "archives": [
+          "docs/archive"
+        ],
+        "com_indice": 1
+      }
+    },
+    {
+      "id": "conv.dependencias-usadas",
+      "categoria": "convencao",
+      "titulo": "Dependencias de runtime declaradas e importadas",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 13,
+          "sha": "73c748168ff6f7ac",
+          "texto": "\"@workspace/api-zod\": \"workspace:*\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 16,
+          "sha": "1f97a4cdb2eb84fe",
+          "texto": "\"cors\": \"^2.8.6\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 17,
+          "sha": "4088f70ad5a8dff5",
+          "texto": "\"drizzle-orm\": \"catalog:\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 18,
+          "sha": "f2c52b1f379baa8d",
+          "texto": "\"express\": \"^5.2.1\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 19,
+          "sha": "8696b2fba025bc50",
+          "texto": "\"pino\": \"^9.14.0\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 20,
+          "sha": "a6b435e2b2f16951",
+          "texto": "\"pino-http\": \"^10.5.0\""
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/lib/api-client-react/package.json",
+          "linha": 10,
+          "sha": "c219f42ef8f22a2e",
+          "texto": "\"@tanstack/react-query\": \"catalog:\""
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/lib/api-zod/package.json",
+          "linha": 10,
+          "sha": "cbf7f817f3daf4cf",
+          "texto": "\"zod\": \"catalog:\""
+        }
+      ],
+      "evidencias_total": 18,
+      "detalhe": {
+        "usadas": 18,
+        "sem_import": [
+          "@google/genai",
+          "@replit/connectors-sdk",
+          "@workspace/db",
+          "cookie-parser",
+          "dotenv",
+          "drizzle-zod",
+          "motion"
+        ],
+        "nao_medidas": [],
+        "notebooks_nao_parseados": 0
+      }
+    },
+    {
+      "id": "arq.segredos-leitor-unico",
+      "categoria": "arquitetura",
+      "titulo": "Segredo lido por um unico modulo (.gitignore + *.example)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "nenhuma leitura de segredo em codigo fora de testes (AST: ambiente com nome de chave/segredo ou literal .secrets/.env)",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {
+        "leitores": [],
+        "ficheiros_segredo_referidos": [],
+        "regras_gitignore": [],
+        "exemplos_versionados": [
+          ".env.example",
+          ".secrets.example"
+        ],
+        "leitores_em_testes": []
+      }
+    },
+    {
+      "id": "arq.modelos-llm-centralizados",
+      "categoria": "arquitetura",
+      "titulo": "Nomes de modelos LLM num modulo de constantes",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "literais de modelo em 1 modulo(s) e nenhum modulo com >= 2 constantes de modelo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {
+        "centro": null,
+        "modelos_no_centro": [],
+        "modulos_com_literal_fora_do_centro": [
+          "src/components/DjangoArchitectureDrawer.tsx"
+        ],
+        "literais_fora_do_centro": [
+          "gemini-3.5-flash-lite"
+        ],
+        "em_testes": [],
+        "em_migracoes": [],
+        "prefixos": [
+          "gemini",
+          "gpt",
+          "claude",
+          "o1",
+          "o3",
+          "o4",
+          "llama",
+          "mistral"
+        ]
+      }
+    },
+    {
+      "id": "arq.banco-por-migracoes",
+      "categoria": "arquitetura",
+      "titulo": "Banco criado por migracoes (sem SQL cru de schema)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "sem migracoes versionadas",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {
+        "migracoes": 0,
+        "aplica_migrate_no_codigo": [],
+        "sql_cru_fora_de_migracoes": 0,
+        "sql_cru_em_testes": []
+      }
+    },
+    {
+      "id": "conv.contratos-datados",
+      "categoria": "convencao",
+      "titulo": "Contratos JSON Schema em pasta datada com INDICE.md",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "2 JSON Schema(s), nenhum dentro de pasta datada",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {
+        "pastas_com_indice": [],
+        "pastas_sem_indice": [],
+        "formatos": [],
+        "schemas_datados": 0,
+        "schemas_total": 2
+      }
+    }
+  ],
+  "anomalias": [
+    {
+      "id": "anom.componente-fora-da-pasta",
+      "padrao": "arq.react-componentes",
+      "descricao": "FollowUpScreen (i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/FollowUpScreen.tsx) fora das pastas de componentes/telas",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/FollowUpScreen.tsx",
+          "linha": 29,
+          "sha": "f8ffbb926e16d15e",
+          "texto": "export function FollowUpScreen({ plan, onBack, onOpenChat }: FollowUpScreenProps) {"
+        }
+      ]
+    },
+    {
+      "id": "anom.componente-fora-da-pasta",
+      "padrao": "arq.react-componentes",
+      "descricao": "IntroCarousel (i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/IntroCarousel.tsx) fora das pastas de componentes/telas",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/IntroCarousel.tsx",
+          "linha": 16,
+          "sha": "00793cda0516c2be",
+          "texto": "export function IntroCarousel({active,onActiveChange}:{active:number;onActiveChange:(index:number)=>void}) {"
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "@google/genai declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 14,
+          "sha": "6a06bd8f156a0eab",
+          "texto": "\"@google/genai\": \"^2.4.0\","
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "@replit/connectors-sdk declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/package.json",
+          "linha": 13,
+          "sha": "9a78a1fc5e85bc6f",
+          "texto": "\"@replit/connectors-sdk\": \"^0.4.3\""
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "@workspace/db declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 14,
+          "sha": "84baf31037add5ae",
+          "texto": "\"@workspace/db\": \"workspace:*\","
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "cookie-parser declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/artifacts/api-server/package.json",
+          "linha": 15,
+          "sha": "69bed292bf5c71ff",
+          "texto": "\"cookie-parser\": \"^1.4.7\","
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "dotenv declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 22,
+          "sha": "cbd75380bdf633f9",
+          "texto": "\"dotenv\": \"^17.2.3\","
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "drizzle-zod declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "i-agora-codigo/i-agora-codigo/lib/db/package.json",
+          "linha": 16,
+          "sha": "56d64cc6fc8350c1",
+          "texto": "\"drizzle-zod\": \"^0.8.3\","
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "motion declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 23,
+          "sha": "bc9e45e3cd901338",
+          "texto": "\"motion\": \"^12.23.24\""
+        }
+      ]
+    },
+    {
+      "id": "anom.estilo-nome-divergente",
+      "padrao": "conv.estilo-nomes-ficheiros",
+      "descricao": ".png: convencao kebab-case (95%), 1 nome(s) fogem: image_1790491967224.png",
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/attached_assets/image_1790491967224.png"
+        }
+      ]
+    },
+    {
+      "id": "anom.estilo-nome-divergente",
+      "padrao": "conv.estilo-nomes-ficheiros",
+      "descricao": ".tsx: convencao kebab-case (70%), 12 nome(s) fogem: App.tsx, FollowUpScreen.tsx, IntroCarousel.tsx, App.tsx, App.tsx, AndroidFrame.tsx",
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/App.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/FollowUpScreen.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/i-agora-prototipo/src/IntroCarousel.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/artifacts/mockup-sandbox/src/App.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "src/App.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "src/components/AndroidFrame.tsx"
+        }
+      ]
+    },
+    {
+      "id": "anom.estilo-nome-divergente",
+      "padrao": "conv.estilo-nomes-ficheiros",
+      "descricao": "pastas: convencao kebab-case (90%), 1 nome(s) fogem: attached_assets",
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "i-agora-codigo/i-agora-codigo/attached_assets"
+        }
+      ]
+    }
+  ]
+}

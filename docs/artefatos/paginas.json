@@ -1,0 +1,41 @@
+{
+  "nota": "Registo das páginas publicadas como artefato claude.ai. Atualize 'ultima_versao_publicada' e 'sha256_conteudo_publicado' logo depois de cada publicação (ver docs/artefatos/README.md). 'sha256_conteudo_publicado' é o sha256 do conteúdo lido de volta pelo Artifact read, sem o invólucro que a plataforma acrescenta (o prefixo <!doctype…<body> e o runtime do mermaid).",
+  "template": {
+    "pagina": "docs/artefatos/template/pagina-base.html",
+    "componentes": "docs/artefatos/template/componentes.json",
+    "versao": "1.0.0"
+  },
+  "grupos_iguais": [
+    {
+      "nome": "batalha-agentes-unificado",
+      "paginas": [
+        "A",
+        "B"
+      ]
+    }
+  ],
+  "paginas": [
+    {
+      "id": "A",
+      "url": "https://claude.ai/artifact/98dNfUXcSrCzcudqDwpTcX",
+      "acesso": "público: qualquer pessoa com o link",
+      "fonte": "docs/artefatos/paginas/batalha-agentes-unificado.html",
+      "versao_template": "1.0.0",
+      "ultima_versao_publicada": "1790514596-5c3e",
+      "rotulo": "v13",
+      "sha256_conteudo_publicado": "a4f6f53be410f3e480bb6cdc30b5601b32a9e730ea0cf8c89c7fd096665d676b",
+      "lido_em": "NAO_MEDIDO: sha256 da fonte local publicada a 2026-09-27 ~10:10 BRT; sem leitura de volta pelo Artifact read"
+    },
+    {
+      "id": "B",
+      "url": "https://claude.ai/artifact/Su18p6bHUYKcGKgfSvd4Qz",
+      "acesso": "NAO_MEDIDO",
+      "fonte": "docs/artefatos/paginas/batalha-agentes-unificado.html",
+      "versao_template": "1.0.0",
+      "ultima_versao_publicada": "1790514632-d76d",
+      "rotulo": "v14",
+      "sha256_conteudo_publicado": "a4f6f53be410f3e480bb6cdc30b5601b32a9e730ea0cf8c89c7fd096665d676b",
+      "lido_em": "NAO_MEDIDO: sha256 da fonte local publicada a 2026-09-27 ~10:10 BRT; sem leitura de volta pelo Artifact read"
+    }
+  ]
+}

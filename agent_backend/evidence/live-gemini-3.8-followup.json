@@ -1,0 +1,56 @@
+{
+  "kind": "real_gemini_via_local_http",
+  "timestamp": "2026-09-27T07:12:18.819147+00:00",
+  "cases": [
+    {
+      "question": "Meu fluxo do mês foi negativo. Isso significa que estou inadimplente?",
+      "http_status": 503,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "d4cbcab8-fef7-4329-9bbd-6c92e26cfe54",
+        "message_id": "30176b51-b95f-4994-bf73-aff81d33bdf8",
+        "status": "unavailable",
+        "reply": "Não consegui validar uma resposta agora. Podemos retomar depois; para organizar o orçamento, comece listando entradas e despesas essenciais, sem enviar identificadores pessoais.",
+        "citations": [],
+        "request_id": "2f9d2d85-4feb-4854-8e1a-d611766b6ac2"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    }
+  ],
+  "billing_project": "not_determined",
+  "provider_quota": "not_determined",
+  "max_provider_calls": 15,
+  "audit": [
+    {
+      "event": "provider_failure"
+    },
+    {
+      "event": "release",
+      "code": "technical"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    }
+  ],
+  "metrics": [
+    {
+      "stage": "input_guard",
+      "model": "gemini-3.8-flash",
+      "model_version": null,
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 3629,
+      "outcome": "failed_or_uncertain",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "error_type": "ServerError",
+      "http_status": 503
+    }
+  ],
+  "actual_provider_attempts": 1,
+  "completed_cases": 1,
+  "all_http_ok": false
+}

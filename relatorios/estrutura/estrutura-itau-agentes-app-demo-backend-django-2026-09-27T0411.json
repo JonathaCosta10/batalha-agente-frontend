@@ -1,0 +1,1639 @@
+{
+  "versao": "mapa_estrutura/0.1.0",
+  "gerado_em": "2026-09-27T07:11:36.705Z",
+  "alvo": {
+    "nome": "itaú-agentes---app-demo-&-backend-django",
+    "caminho": "C:/Users/ACER/Desktop/itaú-agentes---app-demo-&-backend-django",
+    "listagem": "git",
+    "excluido_da_listagem": "relatorios/estrutura",
+    "fora_dos_padroes": [
+      ".claude"
+    ],
+    "git": {
+      "e_repo": true,
+      "topo_igual_ao_alvo": true,
+      "cabeca": "927bc60a1de43ba03932312ee255460824e151a3"
+    }
+  },
+  "instrumentos": [
+    {
+      "id": "listagem",
+      "estado": "MEDIDO",
+      "detalhe": "git ls-files -co --exclude-standard; ignorados por git check-ignore -v",
+      "ficheiros": 39
+    },
+    {
+      "id": "python-ast",
+      "estado": "SEM_ALVO",
+      "detalhe": "0 ficheiros .py",
+      "ficheiros": 0,
+      "falhas": []
+    },
+    {
+      "id": "typescript-ast",
+      "estado": "MEDIDO",
+      "detalhe": "typescript 7.0.2 (API sync) em C:\\Users\\ACER\\Desktop\\itaú-agentes---app-demo-&-backend-django\\node_modules\\typescript",
+      "ficheiros": 14,
+      "falhas": []
+    }
+  ],
+  "resumo": {
+    "ficheiros": 114,
+    "por_extensao": {
+      "(sem)": 1,
+      ".css": 1,
+      ".example": 2,
+      ".html": 1,
+      ".json": 9,
+      ".jsonl": 1,
+      ".md": 10,
+      ".ts": 5,
+      ".tsx": 9
+    },
+    "detectados": 20,
+    "ausentes": 12,
+    "nao_medidos": 0,
+    "anomalias": 4
+  },
+  "fronteiras": [
+    {
+      "caminho": "desafio-itau-batalha-de-agentes-time2",
+      "tipo": "repo-aninhado",
+      "ignorado": true,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "desafio-itau-batalha-de-agentes-time2/.git"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 2,
+          "sha": "9c76c29a8a6b719b",
+          "texto": "desafio-itau-batalha-de-agentes-time2/"
+        }
+      ]
+    }
+  ],
+  "arvore": {
+    "diretorios": [
+      {
+        "caminho": ".",
+        "ficheiros": 114,
+        "papeis": [
+          "codigo",
+          "config",
+          "entrada"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "."
+          }
+        ]
+      },
+      {
+        "caminho": ".claude",
+        "ficheiros": 75,
+        "papeis": [
+          "contexto-agente"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": ".claude"
+          }
+        ]
+      },
+      {
+        "caminho": ".claude/skills",
+        "ficheiros": 75,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": ".claude/skills"
+          }
+        ]
+      },
+      {
+        "caminho": ".claude/skills/descoberta-de-estrutura",
+        "ficheiros": 75,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": ".claude/skills/descoberta-de-estrutura"
+          }
+        ]
+      },
+      {
+        "caminho": "docs",
+        "ficheiros": 4,
+        "papeis": [
+          "docs"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/archive",
+        "ficheiros": 2,
+        "papeis": [
+          "archive"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/archive"
+          }
+        ]
+      },
+      {
+        "caminho": "docs/archive/2026-09-27",
+        "ficheiros": 1,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "docs/archive/2026-09-27"
+          }
+        ]
+      },
+      {
+        "caminho": "relatorios",
+        "ficheiros": 11,
+        "papeis": [
+          "relatorios"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "relatorios"
+          }
+        ]
+      },
+      {
+        "caminho": "relatorios/skills",
+        "ficheiros": 11,
+        "papeis": [],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "relatorios/skills"
+          }
+        ]
+      },
+      {
+        "caminho": "src",
+        "ficheiros": 14,
+        "papeis": [
+          "codigo",
+          "entrada"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src"
+          }
+        ]
+      },
+      {
+        "caminho": "src/components",
+        "ficheiros": 8,
+        "papeis": [
+          "componentes"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/components"
+          }
+        ]
+      },
+      {
+        "caminho": "src/components/screens",
+        "ficheiros": 4,
+        "papeis": [
+          "telas"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/components/screens"
+          }
+        ]
+      },
+      {
+        "caminho": "src/data",
+        "ficheiros": 1,
+        "papeis": [
+          "codigo",
+          "dados"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/data"
+          }
+        ]
+      },
+      {
+        "caminho": "src/services",
+        "ficheiros": 1,
+        "papeis": [
+          "servicos"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/services"
+          }
+        ]
+      },
+      {
+        "caminho": "src/types",
+        "ficheiros": 1,
+        "papeis": [
+          "tipos"
+        ],
+        "evidencias": [
+          {
+            "tipo": "caminho",
+            "caminho": "src/types"
+          }
+        ]
+      }
+    ],
+    "ignorados": [
+      {
+        "caminho": ".secrets",
+        "tipo": "ficheiro",
+        "fonte": ".gitignore:14",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 14,
+            "sha": "70ba70cdd7a8f1e9",
+            "texto": ".secrets"
+          }
+        ]
+      },
+      {
+        "caminho": ".venv",
+        "tipo": "pasta",
+        "fonte": ".gitignore:3",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 3,
+            "sha": "1d2571705c711780",
+            "texto": ".venv/"
+          }
+        ]
+      },
+      {
+        "caminho": "desafio-itau-batalha-de-agentes-time2",
+        "tipo": "pasta",
+        "fonte": ".gitignore:2",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 2,
+            "sha": "9c76c29a8a6b719b",
+            "texto": "desafio-itau-batalha-de-agentes-time2/"
+          }
+        ]
+      },
+      {
+        "caminho": "dist",
+        "tipo": "pasta",
+        "fonte": ".gitignore:5",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 5,
+            "sha": "887f42eeae4276a8",
+            "texto": "dist/"
+          }
+        ]
+      },
+      {
+        "caminho": "node_modules",
+        "tipo": "pasta",
+        "fonte": ".gitignore:1",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 1,
+            "sha": "f1a9a09b226cf8e9",
+            "texto": "node_modules/"
+          }
+        ]
+      },
+      {
+        "caminho": "secrets.contrato.local.md",
+        "tipo": "ficheiro",
+        "fonte": ".gitignore:16",
+        "evidencias": [
+          {
+            "tipo": "linha",
+            "ficheiro": ".gitignore",
+            "linha": 16,
+            "sha": "4060992b82d6d475",
+            "texto": "*.local.md"
+          }
+        ]
+      }
+    ]
+  },
+  "stack": [
+    {
+      "id": "express",
+      "versao": "^4.21.2",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 21,
+          "sha": "5711f0ea8000d868",
+          "texto": "\"express\": \"^4.21.2\","
+        }
+      ]
+    },
+    {
+      "id": "react",
+      "versao": "^19.0.1",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 18,
+          "sha": "b36b951cb7d2a40a",
+          "texto": "\"react\": \"^19.0.1\","
+        }
+      ]
+    },
+    {
+      "id": "react-dom",
+      "versao": "^19.0.1",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 19,
+          "sha": "4f67c6848e332cc0",
+          "texto": "\"react-dom\": \"^19.0.1\","
+        }
+      ]
+    },
+    {
+      "id": "tailwindcss",
+      "versao": "^4.3.3",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 31,
+          "sha": "afb0510e898776f2",
+          "texto": "\"tailwindcss\": \"^4.3.3\","
+        }
+      ]
+    },
+    {
+      "id": "typescript",
+      "versao": "^7.0.2",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 33,
+          "sha": "701edfd6d1e5dbc6",
+          "texto": "\"typescript\": \"^7.0.2\","
+        }
+      ]
+    },
+    {
+      "id": "vite",
+      "versao": "^8.3.0",
+      "manifesto": "package.json",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 20,
+          "sha": "f5a201e83b1f6623",
+          "texto": "\"vite\": \"^8.3.0\","
+        }
+      ]
+    }
+  ],
+  "padroes": [
+    {
+      "id": "arvore.papeis-de-diretorio",
+      "categoria": "arvore",
+      "titulo": "Papeis de diretorio (entrada, codigo, testes, docs, config...)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "."
+        },
+        {
+          "tipo": "caminho",
+          "caminho": ".claude"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "relatorios"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "src"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "src/components"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "src/components/screens"
+        }
+      ],
+      "evidencias_total": 11,
+      "detalhe": {
+        "codigo": [
+          ".",
+          "src",
+          "src/data"
+        ],
+        "config": [
+          "."
+        ],
+        "entrada": [
+          ".",
+          "src"
+        ],
+        "contexto-agente": [
+          ".claude"
+        ],
+        "docs": [
+          "docs"
+        ],
+        "archive": [
+          "docs/archive"
+        ],
+        "relatorios": [
+          "relatorios"
+        ],
+        "componentes": [
+          "src/components"
+        ],
+        "telas": [
+          "src/components/screens"
+        ],
+        "dados": [
+          "src/data"
+        ],
+        "servicos": [
+          "src/services"
+        ],
+        "tipos": [
+          "src/types"
+        ]
+      }
+    },
+    {
+      "id": "arvore.entradas",
+      "categoria": "arvore",
+      "titulo": "Pontos de entrada",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "index.html",
+          "linha": 15,
+          "sha": "5b8f8842201e19a0",
+          "texto": "<script type=\"module\" src=\"/src/main.tsx\"></script>"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 7,
+          "sha": "20b8021b947ae9d9",
+          "texto": "\"dev\": \"node node_modules/vite/bin/vite.js --port=3000 --host=0.0.0.0\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/main.tsx",
+          "linha": 6,
+          "sha": "bdd0ad0f8e89672c",
+          "texto": "createRoot(document.getElementById('root')!).render("
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {
+        "parser_indisponivel": []
+      }
+    },
+    {
+      "id": "arvore.ignorados",
+      "categoria": "arvore",
+      "titulo": "Gerado/ignorado presente no disco (.gitignore)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 1,
+          "sha": "f1a9a09b226cf8e9",
+          "texto": "node_modules/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 2,
+          "sha": "9c76c29a8a6b719b",
+          "texto": "desafio-itau-batalha-de-agentes-time2/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 3,
+          "sha": "1d2571705c711780",
+          "texto": ".venv/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 5,
+          "sha": "887f42eeae4276a8",
+          "texto": "dist/"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 14,
+          "sha": "70ba70cdd7a8f1e9",
+          "texto": ".secrets"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 16,
+          "sha": "4060992b82d6d475",
+          "texto": "*.local.md"
+        }
+      ],
+      "evidencias_total": 6,
+      "detalhe": {
+        "caminhos": [
+          ".secrets <- .gitignore:14",
+          ".venv/ <- .gitignore:3",
+          "desafio-itau-batalha-de-agentes-time2/ <- .gitignore:2",
+          "dist/ <- .gitignore:5",
+          "node_modules/ <- .gitignore:1",
+          "secrets.contrato.local.md <- .gitignore:16"
+        ]
+      }
+    },
+    {
+      "id": "arvore.fronteiras-git",
+      "categoria": "arvore",
+      "titulo": "Repos Git aninhados (fronteiras, nao misturados)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": ".gitignore",
+          "linha": 2,
+          "sha": "9c76c29a8a6b719b",
+          "texto": "desafio-itau-batalha-de-agentes-time2/"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "desafio-itau-batalha-de-agentes-time2/.git"
+        }
+      ],
+      "evidencias_total": 2,
+      "detalhe": {
+        "fronteiras": [
+          "desafio-itau-batalha-de-agentes-time2 (repo-aninhado, ignorado)"
+        ]
+      }
+    },
+    {
+      "id": "stack.manifestos",
+      "categoria": "stack",
+      "titulo": "Manifestos de stack",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "package.json"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "manifestos": [
+          "package.json"
+        ],
+        "conhecidas": [
+          "express",
+          "react",
+          "react-dom",
+          "tailwindcss",
+          "typescript",
+          "vite"
+        ]
+      }
+    },
+    {
+      "id": "arq.django-projeto",
+      "categoria": "arquitetura",
+      "titulo": "Projeto Django (settings + manage.py)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.django-apps",
+      "categoria": "arquitetura",
+      "titulo": "Apps Django (AppConfig)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.mvt",
+      "categoria": "arquitetura",
+      "titulo": "Django MVT por app (models, views, urls, templates)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.camadas-python",
+      "categoria": "arquitetura",
+      "titulo": "Camadas Python (views -> services -> repositories -> models)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.rotas-django",
+      "categoria": "arquitetura",
+      "titulo": "Rotas Django (urlpatterns, path, include)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.api-drf",
+      "categoria": "arquitetura",
+      "titulo": "API Django REST Framework",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.migracoes",
+      "categoria": "arquitetura",
+      "titulo": "Migracoes versionadas",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.react-componentes",
+      "categoria": "arquitetura",
+      "titulo": "Componentes React (funcao PascalCase que devolve JSX)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 22,
+          "sha": "9b15f943d5e45c62",
+          "texto": "export default function App() {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/AndroidFrame.tsx",
+          "linha": 13,
+          "sha": "432564da81fa7fba",
+          "texto": "export const AndroidFrame: React.FC<AndroidFrameProps> = ({"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/CustomerSelectorBar.tsx",
+          "linha": 25,
+          "sha": "e76c52225fc21be1",
+          "texto": "export const CustomerSelectorBar: React.FC<CustomerSelectorBarProps> = ({"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/DjangoArchitectureDrawer.tsx",
+          "linha": 24,
+          "sha": "2e9d3a52da37f6bd",
+          "texto": "export const DjangoArchitectureDrawer: React.FC<DjangoArchitectureDrawerProps> = ({"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/LazyShimmerFrames.tsx",
+          "linha": 3,
+          "sha": "47da004c14da2596",
+          "texto": "export const Screen1Skeleton: React.FC = () => {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/LazyShimmerFrames.tsx",
+          "linha": 59,
+          "sha": "9146638f738bba9c",
+          "texto": "export const Screen2Skeleton: React.FC = () => {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/Screen1ItauHome.tsx",
+          "linha": 21,
+          "sha": "c4dad9f5878e1cc7",
+          "texto": "export const Screen1ItauHome: React.FC<Screen1ItauHomeProps> = ({"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/Screen2Chat.tsx",
+          "linha": 22,
+          "sha": "83a33844bf5e966c",
+          "texto": "export const Screen2Chat: React.FC<Screen2ChatProps> = ({"
+        }
+      ],
+      "evidencias_total": 9,
+      "detalhe": {
+        "componentes": 9,
+        "por_pasta": {
+          "src": 1,
+          "src/components": 3,
+          "src/components/screens": 5
+        }
+      }
+    },
+    {
+      "id": "arq.react-telas",
+      "categoria": "arquitetura",
+      "titulo": "Telas (screens/pages) como componentes",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/LazyShimmerFrames.tsx",
+          "linha": 3,
+          "sha": "47da004c14da2596",
+          "texto": "export const Screen1Skeleton: React.FC = () => {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/LazyShimmerFrames.tsx",
+          "linha": 59,
+          "sha": "9146638f738bba9c",
+          "texto": "export const Screen2Skeleton: React.FC = () => {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/Screen1ItauHome.tsx",
+          "linha": 21,
+          "sha": "c4dad9f5878e1cc7",
+          "texto": "export const Screen1ItauHome: React.FC<Screen1ItauHomeProps> = ({"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/Screen2Chat.tsx",
+          "linha": 22,
+          "sha": "83a33844bf5e966c",
+          "texto": "export const Screen2Chat: React.FC<Screen2ChatProps> = ({"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/screens/Screen3Communication.tsx",
+          "linha": 29,
+          "sha": "38b89e2769b70bd4",
+          "texto": "export const Screen3Communication: React.FC<Screen3CommunicationProps> = ({"
+        }
+      ],
+      "evidencias_total": 5,
+      "detalhe": {
+        "telas": [
+          "Screen1ItauHome",
+          "Screen1Skeleton",
+          "Screen2Chat",
+          "Screen2Skeleton",
+          "Screen3Communication"
+        ]
+      }
+    },
+    {
+      "id": "arq.ts-tipos",
+      "categoria": "arquitetura",
+      "titulo": "Tipos centralizados (types/)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 1,
+          "sha": "04e06b30b7cf8bde",
+          "texto": "export type Gender = 'F' | 'M';"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 3,
+          "sha": "4e7a1afc2900bea8",
+          "texto": "export type IndexCutoffLevel = 'ALTA_PROPENSAO' | 'MEDIA_PROPENSAO' | 'BAIXA_PROPENSAO';"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 5,
+          "sha": "d0e2f86437f49e62",
+          "texto": "export interface Customer {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 22,
+          "sha": "2bf68d86ba26d040",
+          "texto": "export interface ChatVariable1 {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 52,
+          "sha": "8faa8a13101da011",
+          "texto": "export interface SpreadsheetProductItem {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 67,
+          "sha": "b9ac19ed56a23491",
+          "texto": "export interface AgentContext {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 78,
+          "sha": "0f39dfa0e29686b6",
+          "texto": "export interface Template3Response {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/types/index.ts",
+          "linha": 92,
+          "sha": "488b3ec103d56f7c",
+          "texto": "export type ScreenType = 'home' | 'chat' | 'communication';"
+        }
+      ],
+      "evidencias_total": 8,
+      "detalhe": {
+        "centralizados": 8,
+        "exportados_fora": 0
+      }
+    },
+    {
+      "id": "arq.ts-servicos",
+      "categoria": "arquitetura",
+      "titulo": "Servicos TS (services/)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/services/behavioralEngine.ts",
+          "linha": 75,
+          "sha": "06b1af40f6073b9f",
+          "texto": "export function calculateAgentContext(customer: Customer): AgentContext {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/services/behavioralEngine.ts",
+          "linha": 131,
+          "sha": "bbaf3d3ee04dcdd2",
+          "texto": "export function generateChatVariable1("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/services/behavioralEngine.ts",
+          "linha": 203,
+          "sha": "b2b8e86770ab81b1",
+          "texto": "export function generateTemplate3Response(customer: Customer): Template3Response {"
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.barrel-index",
+      "categoria": "arquitetura",
+      "titulo": "Barrel index (index.ts so com re-exports)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/index.ts",
+          "linha": 2,
+          "sha": "757fc4373741ef67",
+          "texto": "export { AndroidFrame } from './AndroidFrame';"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.roteamento-front",
+      "categoria": "arquitetura",
+      "titulo": "Roteamento do front (router vs maquina de estados)",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 23,
+          "sha": "8ea97f4366e9d4fe",
+          "texto": "const [activeScreen, setActiveScreen] = useState<ScreenType>('home');"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 195,
+          "sha": "7ad41a30d4ac468d",
+          "texto": "if (activeScreen === 'communication') {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 198,
+          "sha": "d15da05e35dc0ae5",
+          "texto": "} else if (activeScreen === 'chat') {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 207,
+          "sha": "c19b50759f9360ae",
+          "texto": "activeScreen === 'home' ? ("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 215,
+          "sha": "eab66c962cbe6755",
+          "texto": "{activeScreen === 'home' && ("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 226,
+          "sha": "a1bdcfc51a4521c9",
+          "texto": "{activeScreen === 'chat' && ("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 244,
+          "sha": "7fd9413eddd39b87",
+          "texto": "{activeScreen === 'communication' && ("
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/AndroidFrame.tsx",
+          "linha": 35,
+          "sha": "56389641d14e2b84",
+          "texto": "{activeScreen === 'home' && 'Tela 1: Home Itaú'}"
+        }
+      ],
+      "evidencias_total": 14,
+      "detalhe": {
+        "modo": "maquina-de-estados",
+        "tipos": [
+          "ScreenType"
+        ],
+        "estados": [
+          "chat",
+          "communication",
+          "home"
+        ]
+      }
+    },
+    {
+      "id": "arq.cliente-api",
+      "categoria": "arquitetura",
+      "titulo": "Cliente de API (fetch/axios/requests)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/DjangoArchitectureDrawer.tsx",
+          "linha": 60,
+          "sha": "0a43d09a63f485e6",
+          "texto": "const response = await fetch('/api/v1/context-agent/primeira-chamada/', {"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "endpoints": [
+          "/api/v1/context-agent/primeira-chamada/"
+        ]
+      }
+    },
+    {
+      "id": "arq.proxy-dev",
+      "categoria": "arquitetura",
+      "titulo": "Proxy de desenvolvimento para a API",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "vite.config.ts",
+          "linha": 15,
+          "sha": "e59a4517c22687bc",
+          "texto": "proxy: {"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "prefixos": [
+          "/api/v1/context-agent"
+        ]
+      }
+    },
+    {
+      "id": "arq.contratos-json-schema",
+      "categoria": "arquitetura",
+      "titulo": "Contratos em JSON Schema",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "nenhum .json com chave \"$schema\" no topo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.contratos-openapi",
+      "categoria": "arquitetura",
+      "titulo": "Contratos OpenAPI/Swagger",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "nenhum ficheiro com chave openapi/swagger no topo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "arq.contratos-exemplos",
+      "categoria": "arquitetura",
+      "titulo": "Exemplos de payload versionados com a documentacao",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "nenhum .json de dados em docs/ ou contracts/",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "testes.python",
+      "categoria": "testes",
+      "titulo": "Testes Python (framework, local, nomes)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros Python no alvo",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "testes.ts",
+      "categoria": "testes",
+      "titulo": "Testes TS/JS (framework, local, nomes)",
+      "estado": "AUSENTE",
+      "confianca": null,
+      "motivo": "0 ficheiros *.test.* / *.spec.* / __tests__/",
+      "evidencias": [],
+      "evidencias_total": 0,
+      "detalhe": {}
+    },
+    {
+      "id": "conv.estilo-nomes-ficheiros",
+      "categoria": "convencao",
+      "titulo": "Estilo de nomes de ficheiros e pastas",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "src/App.tsx"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "src/components/AndroidFrame.tsx"
+        }
+      ],
+      "evidencias_total": 2,
+      "detalhe": {
+        ".css": {
+          "contagem": {
+            "minusculo": 1
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".html": {
+          "contagem": {
+            "minusculo": 1
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".json": {
+          "contagem": {
+            "minusculo": 3,
+            "kebab-case": 1,
+            "misto": 5
+          },
+          "dominante": "kebab-case",
+          "fracao": 0.17,
+          "convencao": false
+        },
+        ".jsonl": {
+          "contagem": {
+            "minusculo": 1
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".md": {
+          "contagem": {
+            "maiusculo": 3,
+            "minusculo": 1,
+            "misto": 6
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        },
+        ".ts": {
+          "contagem": {
+            "minusculo": 3,
+            "camelCase": 2
+          },
+          "dominante": "camelCase",
+          "fracao": 1,
+          "convencao": false
+        },
+        ".tsx": {
+          "contagem": {
+            "PascalCase": 8,
+            "minusculo": 1
+          },
+          "dominante": "PascalCase",
+          "fracao": 1,
+          "convencao": true
+        },
+        "pastas": {
+          "contagem": {
+            "minusculo": 10
+          },
+          "dominante": null,
+          "fracao": 0,
+          "convencao": false
+        }
+      }
+    },
+    {
+      "id": "conv.estilo-identificadores",
+      "categoria": "convencao",
+      "titulo": "Estilo de identificadores por linguagem e tipo",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 22,
+          "sha": "9b15f943d5e45c62",
+          "texto": "export default function App() {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 23,
+          "sha": "8ea97f4366e9d4fe",
+          "texto": "const [activeScreen, setActiveScreen] = useState<ScreenType>('home');"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 40,
+          "sha": "c002db8bd7d6bb74",
+          "texto": "const triggerLazingAnimation = () => {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/AndroidFrame.tsx",
+          "linha": 4,
+          "sha": "d786ea3080d71425",
+          "texto": "interface AndroidFrameProps {"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/DjangoArchitectureDrawer.tsx",
+          "linha": 385,
+          "sha": "11f91fb0a6743bc9",
+          "texto": "{Object.keys(fileContents).map((fileKey) => ("
+        }
+      ],
+      "evidencias_total": 5,
+      "detalhe": {
+        "parser_indisponivel": [],
+        "ts/componente": {
+          "contagem": {
+            "PascalCase": 9
+          },
+          "dominante": "PascalCase",
+          "fracao": 1
+        },
+        "ts/funcao": {
+          "contagem": {
+            "camelCase": 18
+          },
+          "dominante": "camelCase",
+          "fracao": 1
+        },
+        "ts/parametro": {
+          "contagem": {
+            "minusculo": 15,
+            "camelCase": 2
+          },
+          "dominante": "camelCase",
+          "fracao": 1
+        },
+        "ts/tipo": {
+          "contagem": {
+            "PascalCase": 15
+          },
+          "dominante": "PascalCase",
+          "fracao": 1
+        },
+        "ts/variavel": {
+          "contagem": {
+            "camelCase": 127,
+            "minusculo": 21,
+            "UPPER_SNAKE": 5,
+            "maiusculo": 1
+          },
+          "dominante": "camelCase",
+          "fracao": 0.96
+        }
+      }
+    },
+    {
+      "id": "conv.idioma-identificadores",
+      "categoria": "convencao",
+      "titulo": "Idioma dos identificadores (pt-BR vs en)",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 23,
+          "sha": "8ea97f4366e9d4fe",
+          "texto": "const [activeScreen, setActiveScreen] = useState<ScreenType>('home');"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/App.tsx",
+          "linha": 29,
+          "sha": "d9958498f3a2b0d2",
+          "texto": "const [isChaveAtiva, setIsChaveAtiva] = useState<boolean>(true);"
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "src/components/DjangoArchitectureDrawer.tsx",
+          "linha": 45,
+          "sha": "26831c87bc855931",
+          "texto": "const [modeloUsado, setModeloUsado] = useState<string>('');"
+        }
+      ],
+      "evidencias_total": 3,
+      "detalhe": {
+        "ts": {
+          "pt": 37,
+          "en": 174,
+          "exemplos_pt": [
+            "isChaveAtiva",
+            "modeloUsado"
+          ],
+          "exemplos_en": [
+            "activeScreen",
+            "setActiveScreen"
+          ],
+          "dominante": "en"
+        },
+        "tokens_casados": 211,
+        "metodo": "lexico da policy (heuristica)"
+      }
+    },
+    {
+      "id": "conv.afixos",
+      "categoria": "convencao",
+      "titulo": "Prefixos, sufixos e nomes repetidos",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/INDICE.md"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "relatorios/skills/mapa-2026-09-27T0331.json"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "relatorios/skills/mapa-2026-09-27T0331.md"
+        },
+        {
+          "tipo": "caminho",
+          "caminho": "src/components/screens/Screen1ItauHome.tsx"
+        }
+      ],
+      "evidencias_total": 4,
+      "detalhe": {
+        "afixos": [
+          {
+            "tipo": "prefixo",
+            "afixo": "mapa",
+            "grupo": ".json",
+            "n": 5
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "mapa",
+            "grupo": ".md",
+            "n": 5
+          },
+          {
+            "tipo": "prefixo",
+            "afixo": "screen",
+            "grupo": ".tsx",
+            "n": 3
+          },
+          {
+            "tipo": "nome-repetido",
+            "afixo": "INDICE.md",
+            "grupo": ".md",
+            "n": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "conv.pastas-datadas",
+      "categoria": "convencao",
+      "titulo": "Pastas datadas",
+      "estado": "DETECTADO",
+      "confianca": "alta",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive/2026-09-27"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "formatos": {
+          "AAAA-MM-DD": 1
+        }
+      }
+    },
+    {
+      "id": "conv.archive-indice",
+      "categoria": "convencao",
+      "titulo": "archive/ com INDICE.md",
+      "estado": "DETECTADO",
+      "confianca": "baixa",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "caminho",
+          "caminho": "docs/archive/INDICE.md"
+        }
+      ],
+      "evidencias_total": 1,
+      "detalhe": {
+        "archives": [
+          "docs/archive"
+        ],
+        "com_indice": 1
+      }
+    },
+    {
+      "id": "conv.dependencias-usadas",
+      "categoria": "convencao",
+      "titulo": "Dependencias de runtime declaradas e importadas",
+      "estado": "DETECTADO",
+      "confianca": "media",
+      "motivo": null,
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 15,
+          "sha": "1b8172a8c69a60aa",
+          "texto": "\"@tailwindcss/vite\": \"^4.3.3\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 16,
+          "sha": "6c137f2779a9ad6e",
+          "texto": "\"@vitejs/plugin-react\": \"^6.1.1\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 17,
+          "sha": "d63b98fb1bcc7404",
+          "texto": "\"lucide-react\": \"^0.546.0\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 18,
+          "sha": "b36b951cb7d2a40a",
+          "texto": "\"react\": \"^19.0.1\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 19,
+          "sha": "4f67c6848e332cc0",
+          "texto": "\"react-dom\": \"^19.0.1\","
+        },
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 20,
+          "sha": "f5a201e83b1f6623",
+          "texto": "\"vite\": \"^8.3.0\","
+        }
+      ],
+      "evidencias_total": 6,
+      "detalhe": {
+        "usadas": 6,
+        "sem_import": [
+          "@google/genai",
+          "dotenv",
+          "express",
+          "motion"
+        ],
+        "nao_medidas": [],
+        "notebooks_nao_parseados": 0
+      }
+    }
+  ],
+  "anomalias": [
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "@google/genai declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 14,
+          "sha": "6a06bd8f156a0eab",
+          "texto": "\"@google/genai\": \"^2.4.0\","
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "dotenv declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 22,
+          "sha": "cbd75380bdf633f9",
+          "texto": "\"dotenv\": \"^17.2.3\","
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "express declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 21,
+          "sha": "5711f0ea8000d868",
+          "texto": "\"express\": \"^4.21.2\","
+        }
+      ]
+    },
+    {
+      "id": "anom.dependencia-sem-import",
+      "padrao": "conv.dependencias-usadas",
+      "descricao": "motion declarada mas nunca importada no codigo parseado",
+      "evidencias": [
+        {
+          "tipo": "linha",
+          "ficheiro": "package.json",
+          "linha": 23,
+          "sha": "bc9e45e3cd901338",
+          "texto": "\"motion\": \"^12.23.24\""
+        }
+      ]
+    }
+  ]
+}

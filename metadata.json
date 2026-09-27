@@ -1,0 +1,6 @@
+{
+  "name": "Itaú Agentes - App Demo & Backend Django",
+  "description": "Demonstração mobile Android de 3 telas Itaú com acionamento por estrela, conversa pré-preenchida, botão 'E agora?' e comunicação orientada a dados comportamentais com Django.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

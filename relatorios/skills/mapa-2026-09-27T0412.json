@@ -1,0 +1,752 @@
+{
+  "skills": [
+    {
+      "nome": "descoberta-de-estrutura",
+      "repo": "itaú-agentes---app-demo-&-backend-django",
+      "dir": "C:\\Users\\ACER\\Desktop\\itaú-agentes---app-demo-&-backend-django\\.claude\\skills\\descoberta-de-estrutura",
+      "ficheiros": [
+        {
+          "caminho": "evals/adversarial/comentario-nao-conta/arvore/loja/apps.py",
+          "bytes": 245,
+          "sha256": "58dcb8fcc8b332451c8473cf2119e38234f3cc6112bf2a63e6e7c5dc7df2c011",
+          "mtime": "2026-09-27T07:06:27.114Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/comentario-nao-conta/arvore/loja/settings.py",
+          "bytes": 80,
+          "sha256": "bf8a89726485b0a1345e8b9b72476da3b2ec153dbfdcaadfb39326dff02df8c0",
+          "mtime": "2026-09-27T07:06:27.321Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/comentario-nao-conta/arvore/loja/urls.py",
+          "bytes": 95,
+          "sha256": "15ee2582b243c4681c289188a71a011091f2bccff8d1a880f2886352a8c9bd50",
+          "mtime": "2026-09-27T07:06:27.499Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/comentario-nao-conta/arvore/src/App.tsx",
+          "bytes": 228,
+          "sha256": "db4b2b1835a3c226a8196d45c539c6fdc107b34fa2a2c2d370e5538791415b30",
+          "mtime": "2026-09-27T07:06:27.672Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/comentario-nao-conta/caso.json",
+          "bytes": 1285,
+          "sha256": "aaf035f6446bc4232be404293830730838ec17496d37e832067258c5ad1e6d93",
+          "mtime": "2026-09-27T07:06:27.855Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/gitignore-nao-entra/arvore/_gitignore",
+          "bytes": 25,
+          "sha256": "83bce858dc47385eea7ca4dede4f27fa07f7d986d4e1a4fa257ecf9bdcccde8c",
+          "mtime": "2026-09-27T07:06:28.044Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/gitignore-nao-entra/arvore/app/principal.py",
+          "bytes": 30,
+          "sha256": "d12dacca48f7895985d7cda4e87d29c8cb0c3fec3b8dad75a7819169173c07d0",
+          "mtime": "2026-09-27T07:06:28.664Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/gitignore-nao-entra/arvore/gerado_local.py",
+          "bytes": 29,
+          "sha256": "d0da3937caa2d0863212fa70a5f851af2ecbc5aec9f4ace3eb2a32c5c036966f",
+          "mtime": "2026-09-27T07:06:28.481Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/gitignore-nao-entra/arvore/segredo/apps.py",
+          "bytes": 89,
+          "sha256": "7c67c35b6b6254eddaa4dba0dd1f6d3a50af97c8cdee8e7a94b5d5916ec39d1d",
+          "mtime": "2026-09-27T07:06:28.233Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/gitignore-nao-entra/caso.json",
+          "bytes": 1035,
+          "sha256": "5faec126e4121c67d010fd5e170817cdabe8b23aa56476476de34e25a3f30957",
+          "mtime": "2026-09-27T07:06:28.850Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/repo-aninhado-separado/arvore/backend/_git_init",
+          "bytes": 113,
+          "sha256": "fc9c509fbdf9b22474047254f32322c5a13fff0a360e0bc2a339ffa781d57be4",
+          "mtime": "2026-09-27T07:06:29.205Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/repo-aninhado-separado/arvore/backend/core/apps.py",
+          "bytes": 83,
+          "sha256": "d7d980357c1682d447dad3666cb3197469428faacb0049768901daa0282cfa6f",
+          "mtime": "2026-09-27T07:06:29.713Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/repo-aninhado-separado/arvore/backend/core/settings.py",
+          "bytes": 26,
+          "sha256": "cfcc2dba5e11c138bf0049324e62bb643adb4795b4c6b5148f3b7f20b2a6f247",
+          "mtime": "2026-09-27T07:06:29.540Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/repo-aninhado-separado/arvore/backend/manage.py",
+          "bytes": 92,
+          "sha256": "c5d897621ef099528f9626efa50424720576784d8aca6217fe896c4ecf18ec1b",
+          "mtime": "2026-09-27T07:06:29.375Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/repo-aninhado-separado/arvore/src/App.tsx",
+          "bytes": 55,
+          "sha256": "c65c35c1a6654e261e5aa568b8413ef575d0d54e08f1859cc1980543296422ed",
+          "mtime": "2026-09-27T07:06:29.022Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/repo-aninhado-separado/caso.json",
+          "bytes": 937,
+          "sha256": "5f1a6cfe1330c63673b10c8fe84a0a7332fc48156bd9673114c84496890d3f8e",
+          "mtime": "2026-09-27T07:06:29.895Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/sem-parser-python-nao-e-ausente/caso.json",
+          "bytes": 766,
+          "sha256": "d934776e1bf07f658cb501d3d997a55ca60033e500051db7f5510db18a79d49a",
+          "mtime": "2026-09-27T07:06:56.250Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/sem-parser-ts-nao-e-ausente/caso.json",
+          "bytes": 962,
+          "sha256": "d4f05d0209166377bff75b333785776aec5e4f5c6811508a71b2ca44a77b46ce",
+          "mtime": "2026-09-27T07:06:55.986Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/verificador-detectado-sem-evidencia/caso.json",
+          "bytes": 340,
+          "sha256": "e7a88e8c5488c8ba5f790ec5023fbd1a14c8ef160147dda9dac7465b5d7b48ce",
+          "mtime": "2026-09-27T07:06:55.387Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/verificador-fora-do-alvo/caso.json",
+          "bytes": 385,
+          "sha256": "8d12672ecff802ffa9690340a594e1fdeedde2eae0fefb2e11d28fde8db3d278",
+          "mtime": "2026-09-27T07:06:55.197Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/verificador-linha-deslocada/caso.json",
+          "bytes": 411,
+          "sha256": "61c71c87b53068ee3a8f401b5b0031a84c5a2bc8cd1c3870d8a8bc683d77a692",
+          "mtime": "2026-09-27T07:06:55.006Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/verificador-linha-inexistente/caso.json",
+          "bytes": 448,
+          "sha256": "bf27744e7cd760d03963b4539f6a332876572936dd1f6217500e52c71021ab0a",
+          "mtime": "2026-09-27T07:06:54.740Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/verificador-nao-medido-sem-motivo/caso.json",
+          "bytes": 344,
+          "sha256": "b4e05b4a242682b2d2eeef3f94225f8d4f951e2057a8497d34bd3eede71f134f",
+          "mtime": "2026-09-27T07:06:55.780Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/adversarial/verificador-padrao-omitido/caso.json",
+          "bytes": 391,
+          "sha256": "831a70967db5957f8614899f57d6ca32bb1595a949ebe7fa515235a832c7b3d9",
+          "mtime": "2026-09-27T07:06:55.590Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/loja/__init__.py",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime": "2026-09-27T07:04:40.541Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/loja/settings.py",
+          "bytes": 163,
+          "sha256": "b88beeedb39832db1558666ff2ba79d1bebc8e25fbba86c95d11fcd0ef19d8b1",
+          "mtime": "2026-09-27T07:04:40.072Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/loja/urls.py",
+          "bytes": 104,
+          "sha256": "248ad8842ce3fcb995e2e0c3cccbef119c784f9566f5c37c95d14ae7efa7f960",
+          "mtime": "2026-09-27T07:04:40.283Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/manage.py",
+          "bytes": 249,
+          "sha256": "5a7ecb3bd8028edcd384943a0119af2a9c1c91b49bbe876b56ded1b03a2efeb5",
+          "mtime": "2026-09-27T07:04:39.878Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/__init__.py",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime": "2026-09-27T07:04:40.730Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/apps.py",
+          "bytes": 89,
+          "sha256": "f212c67aaa19d177f95914077c69f9eff01c5a53b2e0bcebaf05c19d90d35407",
+          "mtime": "2026-09-27T07:04:40.921Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/migrations/__init__.py",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime": "2026-09-27T07:04:42.928Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/migrations/0001_inicial.py",
+          "bytes": 249,
+          "sha256": "d25795aaa4d043e7c3c8b9f771bc0908285ee6e8a74bf69111bd5cc6b5016958",
+          "mtime": "2026-09-27T07:04:42.741Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/models.py",
+          "bytes": 175,
+          "sha256": "227ce6b7bddccbce8f586f4588d209620bce3d560b3fb06a047273c05cd99684",
+          "mtime": "2026-09-27T07:04:41.128Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/repositories/__init__.py",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime": "2026-09-27T07:04:42.551Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/repositories/pedido_repository.py",
+          "bytes": 192,
+          "sha256": "29a4e37147c84719a216ff38a372cff081407fdf081028e2a87be24190912276",
+          "mtime": "2026-09-27T07:04:42.337Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/services/__init__.py",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime": "2026-09-27T07:04:42.082Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/services/pedido_service.py",
+          "bytes": 148,
+          "sha256": "e94e070ebf11c2ab20309d7799dbf450b19af658e813644cd5afe79307f7951d",
+          "mtime": "2026-09-27T07:04:41.808Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/urls.py",
+          "bytes": 172,
+          "sha256": "12168a8d78f71558b596607d0b821bb091295e267c471975f1660ca91886cfb0",
+          "mtime": "2026-09-27T07:04:41.579Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/pedidos/views.py",
+          "bytes": 513,
+          "sha256": "6a5ca721f9ce1f3f2428826395ed3674519906ab6603fd579647ec2b13251481",
+          "mtime": "2026-09-27T07:04:41.368Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/requirements.txt",
+          "bytes": 43,
+          "sha256": "df7918ddf97e67b6e69ca582bd0a58d103b0f189e760efea2d5607d2144f1569",
+          "mtime": "2026-09-27T07:04:43.580Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/templates/pedidos/lista.html",
+          "bytes": 67,
+          "sha256": "59580a7901b39675233233d80dd8a416d44555e51a998bb9d3e4a49b78236a72",
+          "mtime": "2026-09-27T07:04:43.118Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/arvore/tests/test_pedidos.py",
+          "bytes": 144,
+          "sha256": "2f89b57b72fc4d54c209d67287ede718eddc89b429057baf34566e7ee3d134c9",
+          "mtime": "2026-09-27T07:04:43.314Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/django-camadas/caso.json",
+          "bytes": 1919,
+          "sha256": "bc2efee0f5bbb0c03dc3af15ba19f7378013cdc4a05238e33f0bb57f30b8f279",
+          "mtime": "2026-09-27T07:04:56.546Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/contracts/cliente.schema.json",
+          "bytes": 144,
+          "sha256": "3d8e35c3261537a0f0fa4119cda94b68de6f09aa0dd5b0d6ade677e7370b86a9",
+          "mtime": "2026-09-27T07:05:19.056Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/index.html",
+          "bytes": 145,
+          "sha256": "5775cf0b390f53cf2c010d7750a3fc21686e39a985d1cafa7bdbcffd28c5e66d",
+          "mtime": "2026-09-27T07:05:16.809Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/package.json",
+          "bytes": 284,
+          "sha256": "05815f7c5d8735dd8b5e61fdab7e43dfa4fc1075297154fd852f34b8bbc092f4",
+          "mtime": "2026-09-27T07:05:16.547Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/src/App.tsx",
+          "bytes": 406,
+          "sha256": "318ed6d2d5b75b01b9d315a04d7a7c266d5ed2404748243d1ebb213b12b62399",
+          "mtime": "2026-09-27T07:05:17.379Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/src/components/Cabecalho.tsx",
+          "bytes": 64,
+          "sha256": "d4b7e48c14881da6afe1d7724db2a3922f2d0f7006be4445fae06223b3b5f16c",
+          "mtime": "2026-09-27T07:05:17.837Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/src/components/index.ts",
+          "bytes": 143,
+          "sha256": "bcc30f103b49e8dc14e485ceb2f05b393f854d12aaeb4fd169afc2f8221e3488",
+          "mtime": "2026-09-27T07:05:17.563Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/src/components/screens/TelaInicio.tsx",
+          "bytes": 435,
+          "sha256": "18d2049981adeb9eab0f0efb46d40d57013fea8e606a7d87041ef5797343edf2",
+          "mtime": "2026-09-27T07:05:18.072Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/src/components/screens/TelaPerfil.tsx",
+          "bytes": 73,
+          "sha256": "e5b97573210a0b1f9f6cb8fa0f61058adfcbebadf242c31a809be9b0cd80a7dc",
+          "mtime": "2026-09-27T07:05:18.389Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/src/main.tsx",
+          "bytes": 135,
+          "sha256": "3d77c5a45443a484ac5fa59994e04d522251fdd3f9d378f64f732f94f05df015",
+          "mtime": "2026-09-27T07:05:17.184Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/src/services/api.ts",
+          "bytes": 189,
+          "sha256": "c2a6cc8a968e5e05a4af43c51c3fac534a53a738a8606bbe6acefbcfc6d466d7",
+          "mtime": "2026-09-27T07:05:18.796Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/src/types/index.ts",
+          "bytes": 100,
+          "sha256": "e6a2d33598995226a084cd532999832e952e5c449baee7f5566b17d3aec90450",
+          "mtime": "2026-09-27T07:05:18.598Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/arvore/vite.config.ts",
+          "bytes": 148,
+          "sha256": "9f7b47958a09c4e39d0ac63faf658d01585002d88ac2c3b4ab5a3087025f9a3f",
+          "mtime": "2026-09-27T07:05:17.002Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "evals/golden/react-front/caso.json",
+          "bytes": 1992,
+          "sha256": "4b3b0630d6887a0da1388616bcba103b3b0b9e426b2ce844c64023c3c13224c1",
+          "mtime": "2026-09-27T07:05:32.841Z",
+          "classe": "ci"
+        },
+        {
+          "caminho": "manifest.yaml",
+          "bytes": 898,
+          "sha256": "3d49436b101cb67b6518a286c372604de86315cd827c6a06ef718faef1fcea22",
+          "mtime": "2026-09-27T07:09:23.732Z",
+          "classe": "sempre"
+        },
+        {
+          "caminho": "policies/gates.yaml",
+          "bytes": 4463,
+          "sha256": "fa402647c013bd870937269557b20f827df64b99550b04a1f9a5948620583914",
+          "mtime": "2026-09-27T07:02:41.294Z",
+          "classe": "rota"
+        },
+        {
+          "caminho": "routes/router.yaml",
+          "bytes": 1139,
+          "sha256": "e5e56c9c299cc566c228e4bc2f8da0da88bf447c61fd981b63e547f4f3e6c283",
+          "mtime": "2026-09-27T07:09:23.904Z",
+          "classe": "sempre"
+        },
+        {
+          "caminho": "schemas/mapa-estrutura.schema.json",
+          "bytes": 9072,
+          "sha256": "b4af5f47a2c4c73b9e9789f3119e95d8b9d2bf6da9ed23aa2f802d95d35c1021",
+          "mtime": "2026-09-27T07:02:41.293Z",
+          "classe": "rota"
+        },
+        {
+          "caminho": "SKILL.md",
+          "bytes": 2700,
+          "sha256": "59ac7bc69ba907d41947de0a35d48bceee81beaf9b0df594e81fa7130c3db119",
+          "mtime": "2026-09-27T07:09:23.557Z",
+          "classe": "sempre"
+        },
+        {
+          "caminho": "templates/relatorio.md",
+          "bytes": 1164,
+          "sha256": "eba7803e2e029b03d3c9cbf06131d82417320b3f06965116e81771c8dd7c8d33",
+          "mtime": "2026-09-27T07:00:08.984Z",
+          "classe": "saida"
+        },
+        {
+          "caminho": "tools/ast-python.py",
+          "bytes": 6184,
+          "sha256": "fd20032f6e50ca509586cd3e32b9ff210b3d1f48b2ed6f1ad838bc9aa7179f8b",
+          "mtime": "2026-09-27T06:51:41.166Z",
+          "classe": "outro"
+        },
+        {
+          "caminho": "tools/descobrir-estrutura.mjs",
+          "bytes": 11797,
+          "sha256": "76618e77ef0e14562846b46178cd669b8296529fd15bd7d7b2984dd782e0fd98",
+          "mtime": "2026-09-27T07:02:41.293Z",
+          "classe": "zero_token"
+        },
+        {
+          "caminho": "tools/evals.mjs",
+          "bytes": 9939,
+          "sha256": "d2a32cbbe92b7542004f8d0bd27f6cb9e2cf5e3c03c1012a00e1f89756e68719",
+          "mtime": "2026-09-27T07:08:33.632Z",
+          "classe": "zero_token"
+        },
+        {
+          "caminho": "tools/lib/ast-ts.mjs",
+          "bytes": 8292,
+          "sha256": "c3688d6c632094ec85852107573e5a07578bf08e4fe69cbbd1337088995bd19a",
+          "mtime": "2026-09-27T06:54:19.572Z",
+          "classe": "zero_token"
+        },
+        {
+          "caminho": "tools/lib/comum.mjs",
+          "bytes": 4630,
+          "sha256": "8eb3e17402b838b30bf58e0cbf7514529189fb52a7c79a952c053bc0bd23eb63",
+          "mtime": "2026-09-27T07:03:34.225Z",
+          "classe": "zero_token"
+        },
+        {
+          "caminho": "tools/lib/detectores.mjs",
+          "bytes": 48830,
+          "sha256": "8a11fefca8e2c9ebb19e89f450a73ab53a6ba92af5d1a21b073b50d094d4e808",
+          "mtime": "2026-09-27T07:02:41.292Z",
+          "classe": "zero_token"
+        },
+        {
+          "caminho": "tools/lib/esquema.mjs",
+          "bytes": 4322,
+          "sha256": "835b2d07d57a4ebe6d0567801eccb0a2b8249ac69e68b9b63bb4aa4a76d714a7",
+          "mtime": "2026-09-27T06:55:12.509Z",
+          "classe": "zero_token"
+        },
+        {
+          "caminho": "tools/lib/listagem.mjs",
+          "bytes": 7926,
+          "sha256": "16a64cf6d58794ff21dd026faf3349460f5df98c85016144abc175cfe8830f2f",
+          "mtime": "2026-09-27T06:53:37.951Z",
+          "classe": "zero_token"
+        },
+        {
+          "caminho": "tools/verificar-mapa.mjs",
+          "bytes": 6126,
+          "sha256": "b1913636d4f401991ad337e5022324c39e43648ed3493a31ad51a2052da1e4cc",
+          "mtime": "2026-09-27T07:03:22.342Z",
+          "classe": "zero_token"
+        },
+        {
+          "caminho": "workflows/comparar.md",
+          "bytes": 670,
+          "sha256": "2cadcd9897de065d921439bd36fef3afd60bf781f78f51626fa0f6aba97d033d",
+          "mtime": "2026-09-27T07:09:24.485Z",
+          "classe": "rota"
+        },
+        {
+          "caminho": "workflows/descobrir.md",
+          "bytes": 1268,
+          "sha256": "4527c7854a7a8a3a47c6701811e37a6850a53da31fce9822035fa4980b8e3f14",
+          "mtime": "2026-09-27T07:09:24.072Z",
+          "classe": "rota"
+        },
+        {
+          "caminho": "workflows/entregar-contexto.md",
+          "bytes": 1011,
+          "sha256": "5bf62775a2b31d6a9fd5998ee8e65858337b6b8ea1220b5607f1dd1a342f50a6",
+          "mtime": "2026-09-27T07:09:24.652Z",
+          "classe": "rota"
+        },
+        {
+          "caminho": "workflows/verificar.md",
+          "bytes": 999,
+          "sha256": "f5cc30bfd9cc7ff5ebb5c9a0d0951945ed97173459fa0a0a6b7268046e37e286",
+          "mtime": "2026-09-27T07:09:24.311Z",
+          "classe": "rota"
+        }
+      ],
+      "total_bytes": 148409,
+      "sempre_bytes": 4737,
+      "enderecavel_bytes": 24831,
+      "zero_token_bytes": 101862,
+      "tokens_carregaveis": 7394,
+      "rotas": [
+        {
+          "id": "estrutura.descobrir",
+          "workflow": "workflows/descobrir.md",
+          "loads": [
+            "policies/gates.yaml",
+            "templates/relatorio.md"
+          ],
+          "loads_em_falta": [],
+          "bytes": 6895
+        },
+        {
+          "id": "estrutura.verificar",
+          "workflow": "workflows/verificar.md",
+          "loads": [
+            "schemas/mapa-estrutura.schema.json",
+            "policies/gates.yaml"
+          ],
+          "loads_em_falta": [],
+          "bytes": 14534
+        },
+        {
+          "id": "estrutura.comparar",
+          "workflow": "workflows/comparar.md",
+          "loads": [
+            "schemas/mapa-estrutura.schema.json"
+          ],
+          "loads_em_falta": [],
+          "bytes": 9742
+        },
+        {
+          "id": "estrutura.entregar-contexto",
+          "workflow": "workflows/entregar-contexto.md",
+          "loads": [
+            "schemas/mapa-estrutura.schema.json"
+          ],
+          "loads_em_falta": [],
+          "bytes": 10083
+        }
+      ],
+      "ambiguity_rule": "ask which folder is the target and whether nested repos are wanted as separate targets, do not choose",
+      "fallback": "for stack size, existing rules or a context architecture use mapear-contexto-do-repositorio",
+      "frontmatter": {
+        "campos": [
+          "name",
+          "description",
+          "triggers",
+          "allowed-tools",
+          "state",
+          "version",
+          "owner",
+          "escopo",
+          "grupo"
+        ],
+        "name": "descoberta-de-estrutura",
+        "description": "Detect a codebase's project PATTERNS by AST (directory roles, Django apps and layers, React components and routing, contracts, tests, naming conventions and deviations), each with file:line evidence. Use when adopting a codebase or before planning its context.",
+        "desc_chars": 260,
+        "triggers": [
+          "discover project structure",
+          "detect project patterns",
+          "directory roles",
+          "naming conventions",
+          "architecture layers",
+          "descoberta de estrutura",
+          "padroes de projeto"
+        ],
+        "allowed_tools": [
+          "Read",
+          "Bash"
+        ]
+      },
+      "partes": {
+        "routes": true,
+        "workflows": true,
+        "schemas": true,
+        "policies": true,
+        "templates": true,
+        "tools": true,
+        "evals": true
+      },
+      "omissoes_declaradas": [
+        "references",
+        "examples",
+        "docs"
+      ],
+      "evals": {
+        "golden": 32,
+        "adversariais": 24
+      },
+      "dimensoes": {
+        "custo": {
+          "nota": 100,
+          "motivos": []
+        },
+        "router": {
+          "nota": 100,
+          "motivos": []
+        },
+        "frontmatter": {
+          "nota": 100,
+          "motivos": []
+        },
+        "colisao": {
+          "nota": 100,
+          "motivos": []
+        },
+        "anatomia": {
+          "nota": 100,
+          "motivos": []
+        },
+        "verificacao": {
+          "nota": 100,
+          "motivos": []
+        },
+        "kernel": {
+          "nota": 65,
+          "motivos": [
+            "Reusar schemas/ em vez de duplicar o schema em tools/evals.mjs, tools/lib/listagem.mjs."
+          ]
+        }
+      },
+      "nota": 97,
+      "correcoes": [
+        "Reusar schemas/ em vez de duplicar o schema em tools/evals.mjs, tools/lib/listagem.mjs."
+      ],
+      "fonte": "ferramentas/avaliador-skills.mjs; fs.readFileSync, fs.statSync e REGUA",
+      "medido_em": "2026-09-27T07:12:01.712Z",
+      "tokens_reais": "NAO_MEDIDO",
+      "tokens_reais_motivo": "Estimativa ceil(bytes/4); nao houve chamada a modelo.",
+      "gates_executados": "NAO_MEDIDO",
+      "gates_executados_motivo": "Inspeccao estatica; os tools e evals nao foram executados."
+    }
+  ],
+  "colisoes": [],
+  "gerado_em": "2026-09-27T07:12:01.713Z",
+  "regua": {
+    "pesos": {
+      "custo": 10,
+      "router": 25,
+      "frontmatter": 15,
+      "colisao": 10,
+      "anatomia": 10,
+      "verificacao": 20,
+      "kernel": 10
+    },
+    "sempre_ideal": 6144,
+    "sempre_teto": 49152,
+    "desc_min_chars": 40,
+    "desc_max_chars": 300,
+    "desc_min_palavras": 6,
+    "limiar_colisao": 0.5,
+    "router": {
+      "rotas": 20,
+      "workflow": 20,
+      "loads": 20,
+      "existentes": 20,
+      "ambiguity_rule": 10,
+      "fallback": 10
+    },
+    "frontmatter": {
+      "name": 20,
+      "description": 40,
+      "triggers": 20,
+      "allowed_tools": 20
+    },
+    "triggers_parciais": 0.5,
+    "partes": [
+      "routes",
+      "workflows",
+      "schemas",
+      "policies",
+      "templates",
+      "tools",
+      "evals"
+    ],
+    "verificacao": {
+      "tools": 40,
+      "golden": 30,
+      "adversariais": 30
+    },
+    "kernel": {
+      "policy": 35,
+      "schema": 35,
+      "docs": 30
+    },
+    "policy_min_linhas": 2,
+    "schema_min_linhas": 3,
+    "colisao_penalidade": 100,
+    "palavras_genericas": [
+      "help",
+      "helps",
+      "helper",
+      "assist",
+      "assistant",
+      "tasks",
+      "task",
+      "general",
+      "generic",
+      "useful",
+      "various",
+      "things",
+      "stuff",
+      "ajuda",
+      "ajudar",
+      "assistente",
+      "tarefas",
+      "tarefa",
+      "geral",
+      "generico",
+      "diversas",
+      "coisas"
+    ]
+  }
+}

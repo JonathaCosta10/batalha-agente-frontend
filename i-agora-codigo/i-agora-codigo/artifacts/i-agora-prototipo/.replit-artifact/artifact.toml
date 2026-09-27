@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "i.agora — acompanhe seu janeiro"
+description = "Planejamento financeiro com i.ai e i.agora: compromissos de janeiro, card compartilhável e espaço para atualizações do acompanhamento."
+version = "1.0.0"
+id = "artifacts/i-agora-prototipo"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23101
+
+[services.development]
+run = "pnpm --filter @workspace/i-agora-prototipo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/i-agora-prototipo", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/i-agora-prototipo/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23101"
+BASE_PATH = "/"

@@ -1,0 +1,329 @@
+{
+  "base": "http://127.0.0.1:8001",
+  "mode": null,
+  "commit": "2fe71fb",
+  "started_at": "2026-09-27T09:49:18-03:00",
+  "finished_at": "2026-09-27T09:49:53-03:00",
+  "calls": [
+    {
+      "nome": "bootstrap",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/conversas/sessao/",
+      "corpo": null,
+      "status": null,
+      "latency_ms": 2041,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:18",
+      "gatilho": "usePlanConversation.ts:50 loadProfile (montagem do App; botão \"Atualizar\" App.tsx:57)",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA"
+    },
+    {
+      "nome": "profile",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/perfil/",
+      "corpo": null,
+      "status": null,
+      "latency_ms": 2047,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:19",
+      "gatilho": "usePlanConversation.ts:51 loadProfile, logo após bootstrap",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA",
+      "nota": "Primeira leitura pode ir ao BigQuery (cache 900 s por cliente)."
+    },
+    {
+      "nome": "state",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/plano/",
+      "corpo": null,
+      "status": null,
+      "latency_ms": 2042,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:20",
+      "gatilho": "usePlanConversation.ts:86 sendText, após cada resposta do chat",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA"
+    },
+    {
+      "nome": "open",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/sessao/abertura/",
+      "corpo": {
+        "origem": "fab",
+        "next": false
+      },
+      "status": null,
+      "latency_ms": 2038,
+      "esperado": [
+        201
+      ],
+      "front": "src/services/backend.ts:21",
+      "gatilho": "usePlanConversation.ts:71 open ← startWith: App.tsx:30 startChat (FAB/atalho Planejamento) e App.tsx:84 next=true",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA"
+    },
+    {
+      "nome": "chat",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/conversas/mensagens/",
+      "corpo": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "client_message_id": "2851dcdf-bab9-4349-a948-6fb9bd03e840",
+        "message": "Quero juntar dinheiro para uma viagem no fim do ano."
+      },
+      "status": null,
+      "latency_ms": 2058,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:27",
+      "gatilho": "usePlanConversation.ts:85 sendText ← ChatScreen onSend (App.tsx:70)",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA",
+      "fala": 1
+    },
+    {
+      "nome": "state",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/plano/",
+      "corpo": null,
+      "status": null,
+      "latency_ms": 2044,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:20",
+      "gatilho": "usePlanConversation.ts:86 sendText, após cada resposta do chat",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA"
+    },
+    {
+      "nome": "propose",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/plano/proposta/",
+      "corpo": {
+        "clientRequestId": "9f481128-ff01-4333-8a28-66beef5c41ee"
+      },
+      "status": null,
+      "latency_ms": 2052,
+      "esperado": [
+        409
+      ],
+      "front": "src/services/backend.ts:22",
+      "gatilho": "SÓ planApi.ts:40 fetchProposal — não importado por nenhum componente (código morto)",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA",
+      "nota": "Sem commitmentCase (o chat não produziu caso fundamentado): 409 esperado, \"Ainda não há proposta para aprovar\"."
+    },
+    {
+      "nome": "confirm",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/plano/confirmar/",
+      "corpo": {
+        "version": 0,
+        "plan": {},
+        "clientRequestId": "3a84d806-0436-414b-a092-973460326f6a"
+      },
+      "status": null,
+      "latency_ms": 2044,
+      "esperado": [
+        409
+      ],
+      "front": "src/services/backend.ts:23",
+      "gatilho": "usePlanConversation.ts:77 assumeCommitments ← CommitmentsPanel onAssume (App.tsx:73)",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA",
+      "nota": "BLOQUEADO: nenhum commitmentCase no estado após o chat — em modo demo o chat é resposta fixa (service.py:141-142, gateway=None) e nunca chama on_commitment_proposed. Sonda: 409 \"Ainda não há uma proposta construída na conversa\"."
+    },
+    {
+      "nome": "confirm (replay)",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/plano/confirmar/",
+      "status": null,
+      "latency_ms": null,
+      "front": "src/services/backend.ts:23",
+      "gatilho": "usePlanConversation.ts:77 assumeCommitments ← CommitmentsPanel onAssume (App.tsx:73)",
+      "resultado": "BLOQUEADO",
+      "nota": "BLOQUEADO: nenhum commitmentCase no estado após o chat — em modo demo o chat é resposta fixa (service.py:141-142, gateway=None) e nunca chama on_commitment_proposed. Replay não executável sem 1.ª confirmação."
+    },
+    {
+      "nome": "progress",
+      "metodo": "PATCH",
+      "caminho": "/api/v1/context-agent/i-agora/plano/",
+      "corpo": {
+        "version": 0,
+        "stage": "card",
+        "phraseIndex": 1
+      },
+      "status": null,
+      "latency_ms": 2056,
+      "esperado": [
+        400
+      ],
+      "front": "src/services/backend.ts:24",
+      "gatilho": "usePlanConversation.ts:80 progress ← finish (useCardExport, App.tsx:17) e nextPhrase (App.tsx:75)",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA",
+      "nota": "Sem plano confirmado: 400 \"Confirme o plano antes de avançar\" esperado."
+    },
+    {
+      "nome": "acompanhamento",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/acompanhamento/",
+      "corpo": null,
+      "status": null,
+      "latency_ms": 2056,
+      "esperado": [
+        404
+      ],
+      "front": "—",
+      "gatilho": "nenhum: o front não chama i-agora/acompanhamento/",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA",
+      "nota": "Sem plano confirmado: 404 \"Nenhum objetivo confirmado\" esperado. Rota não usada pelo front."
+    },
+    {
+      "nome": "withdraw",
+      "metodo": "DELETE",
+      "caminho": "/api/v1/context-agent/i-agora/plano/proposta/",
+      "corpo": null,
+      "status": null,
+      "latency_ms": 2045,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:25",
+      "gatilho": "usePlanConversation.ts:79 adjustValues ← CommitmentsPanel onAdjust (App.tsx:73)",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA"
+    },
+    {
+      "nome": "reset",
+      "metodo": "DELETE",
+      "caminho": "/api/v1/context-agent/i-agora/plano/",
+      "corpo": null,
+      "status": null,
+      "latency_ms": 2049,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:26",
+      "gatilho": "usePlanConversation.ts:88 reset ← \"Recomeçar planejamento\" (PlanSheet.tsx:23 / ChatScreen onRestart App.tsx:70,80)",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA"
+    },
+    {
+      "nome": "open",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/sessao/abertura/",
+      "corpo": {
+        "origem": "fab",
+        "next": true
+      },
+      "status": null,
+      "latency_ms": 2057,
+      "esperado": [
+        201
+      ],
+      "front": "src/services/backend.ts:21",
+      "gatilho": "usePlanConversation.ts:71 open ← startWith: App.tsx:30 startChat (FAB/atalho Planejamento) e App.tsx:84 next=true",
+      "erro_transporte": "URLError",
+      "resultado": "FALHA",
+      "nota": "next=true (botão \"Testar próximo perfil\").",
+      "pessoa_antes_depois": [
+        null,
+        null
+      ]
+    }
+  ],
+  "negatives": [
+    {
+      "nome": "POST sem X-CSRFToken",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/sessao/abertura/",
+      "status": null,
+      "esperado": 403,
+      "latency_ms": 2042,
+      "resultado": "NAO_FALHOU_COMO_ESPERADO"
+    },
+    {
+      "nome": "POST com Origin http://evil.example",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/sessao/abertura/",
+      "status": null,
+      "esperado": 403,
+      "latency_ms": 2053,
+      "resultado": "NAO_FALHOU_COMO_ESPERADO"
+    },
+    {
+      "nome": "perfil sem cookie de sessão",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/perfil/",
+      "status": null,
+      "esperado": 401,
+      "latency_ms": 2052,
+      "resultado": "NAO_FALHOU_COMO_ESPERADO"
+    },
+    {
+      "nome": "chat com CSRF válido e sem cookie de sessão",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/conversas/mensagens/",
+      "status": null,
+      "esperado": 401,
+      "latency_ms": 2045,
+      "resultado": "NAO_FALHOU_COMO_ESPERADO"
+    }
+  ],
+  "encaixe": [
+    {
+      "id": "measuredAt",
+      "achado": "referencePeriod.seal.measuredAt presente: False; só planApi.ts:16 (código morto) o lê — a UI não mostra selo/data.",
+      "front": "planApi.ts:16"
+    },
+    {
+      "id": "commitmentCase",
+      "achado": "commitmentCase no estado após o chat: False. Sem caso: painel de confirmação (CommitmentsPanel) não é exercitável neste modo.",
+      "front": "usePlanConversation.ts:31; CommitmentsPanel.tsx:12-17; FollowUpScreen.tsx:33"
+    }
+  ],
+  "summary": {
+    "chamadas": 14,
+    "por_resultado": {
+      "BLOQUEADO": 1,
+      "FALHA": 13
+    },
+    "negativas_ok": 0,
+    "negativas_total": 4,
+    "falhas": [
+      "bootstrap GET /api/v1/context-agent/conversas/sessao/ status=None",
+      "profile GET /api/v1/context-agent/i-agora/perfil/ status=None",
+      "state GET /api/v1/context-agent/i-agora/plano/ status=None",
+      "open POST /api/v1/context-agent/i-agora/sessao/abertura/ status=None",
+      "chat POST /api/v1/context-agent/conversas/mensagens/ status=None",
+      "state GET /api/v1/context-agent/i-agora/plano/ status=None",
+      "propose POST /api/v1/context-agent/i-agora/plano/proposta/ status=None",
+      "confirm POST /api/v1/context-agent/i-agora/plano/confirmar/ status=None",
+      "progress PATCH /api/v1/context-agent/i-agora/plano/ status=None",
+      "acompanhamento GET /api/v1/context-agent/i-agora/acompanhamento/ status=None",
+      "withdraw DELETE /api/v1/context-agent/i-agora/plano/proposta/ status=None",
+      "reset DELETE /api/v1/context-agent/i-agora/plano/ status=None",
+      "open POST /api/v1/context-agent/i-agora/sessao/abertura/ status=None"
+    ],
+    "negativas_que_nao_falharam": [
+      "POST sem X-CSRFToken",
+      "POST com Origin http://evil.example",
+      "perfil sem cookie de sessão",
+      "chat com CSRF válido e sem cookie de sessão"
+    ],
+    "commitment_case": false,
+    "latencia_total_ms": 26629
+  }
+}

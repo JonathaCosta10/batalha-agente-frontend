@@ -1,0 +1,588 @@
+{
+  "base": "http://127.0.0.1:3000",
+  "mode": "demo",
+  "commit": "2fe71fb",
+  "started_at": "2026-09-27T09:47:48-03:00",
+  "finished_at": "2026-09-27T09:47:54-03:00",
+  "calls": [
+    {
+      "nome": "bootstrap",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/conversas/sessao/",
+      "corpo": null,
+      "status": 200,
+      "latency_ms": 30,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:18",
+      "gatilho": "usePlanConversation.ts:50 loadProfile (montagem do App; botão \"Atualizar\" App.tsx:57)",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.schema_version",
+          "$.conversation_id",
+          "$.message_id",
+          "$.status",
+          "$.reply",
+          "$.citations",
+          "$.request_id"
+        ],
+        "opcionais_ausentes": [],
+        "ok": true
+      },
+      "resultado": "OK"
+    },
+    {
+      "nome": "profile",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/perfil/",
+      "corpo": null,
+      "status": 200,
+      "latency_ms": 3558,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:19",
+      "gatilho": "usePlanConversation.ts:51 loadProfile, logo após bootstrap",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome",
+          "$.person",
+          "$.referencePeriod",
+          "$.planPeriod",
+          "$.situation",
+          "$.arrears",
+          "$.debt",
+          "$.recurringIncome"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "OK",
+      "nota": "Primeira leitura pode ir ao BigQuery (cache 900 s por cliente)."
+    },
+    {
+      "nome": "state",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/plano/",
+      "corpo": null,
+      "status": 200,
+      "latency_ms": 27,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:20",
+      "gatilho": "usePlanConversation.ts:86 sendText, após cada resposta do chat",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "OK"
+    },
+    {
+      "nome": "open",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/sessao/abertura/",
+      "corpo": {
+        "origem": "fab",
+        "next": false
+      },
+      "status": 201,
+      "latency_ms": 10,
+      "esperado": [
+        201
+      ],
+      "front": "src/services/backend.ts:21",
+      "gatilho": "usePlanConversation.ts:71 open ← startWith: App.tsx:30 startChat (FAB/atalho Planejamento) e App.tsx:84 next=true",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome",
+          "$.person"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "OK"
+    },
+    {
+      "nome": "chat",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/conversas/mensagens/",
+      "corpo": {
+        "schema_version": "1.0",
+        "conversation_id": null,
+        "client_message_id": "2163f627-f258-41c2-a4c8-c7a1b3ef42c9",
+        "message": "Quero organizar meu orçamento do mês."
+      },
+      "status": 200,
+      "latency_ms": 22,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:27",
+      "gatilho": "usePlanConversation.ts:85 sendText ← ChatScreen onSend (App.tsx:70)",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.schema_version",
+          "$.message_id",
+          "$.citations",
+          "$.request_id"
+        ],
+        "opcionais_ausentes": [],
+        "ok": true
+      },
+      "resultado": "OK",
+      "resposta_resumo": {
+        "status": "ok",
+        "reply_chars": 274
+      },
+      "fala": 1
+    },
+    {
+      "nome": "state",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/plano/",
+      "corpo": null,
+      "status": 200,
+      "latency_ms": 30,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:20",
+      "gatilho": "usePlanConversation.ts:86 sendText, após cada resposta do chat",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "OK"
+    },
+    {
+      "nome": "propose",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/plano/proposta/",
+      "corpo": {
+        "clientRequestId": "e9ad4fc6-d7ad-4ffc-8624-389ea4a1e5ce"
+      },
+      "status": 409,
+      "latency_ms": 6,
+      "esperado": [
+        409
+      ],
+      "front": "src/services/backend.ts:22",
+      "gatilho": "SÓ planApi.ts:40 fetchProposal — não importado por nenhum componente (código morto)",
+      "forma_erro": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome",
+          "$.codigo"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "BLOQUEADO",
+      "nota": "Sem commitmentCase (o chat não produziu caso fundamentado): 409 esperado, \"Ainda não há proposta para aprovar\"."
+    },
+    {
+      "nome": "confirm",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/plano/confirmar/",
+      "corpo": {
+        "version": 1,
+        "plan": {
+          "income": 9639.7,
+          "expenses": 11852.59,
+          "deliveryCurrent": 0.0,
+          "deliveryTarget": 0.0,
+          "shoppingCurrent": 1298.69,
+          "shoppingTarget": 1298.69,
+          "otherCut": 0,
+          "reserveTarget": 0,
+          "selected": [],
+          "period": "2026-01"
+        },
+        "clientRequestId": "51c80c16-7ed6-46ba-b444-111d6786928a"
+      },
+      "status": 409,
+      "latency_ms": 7,
+      "esperado": [
+        409
+      ],
+      "front": "src/services/backend.ts:23",
+      "gatilho": "usePlanConversation.ts:77 assumeCommitments ← CommitmentsPanel onAssume (App.tsx:73)",
+      "forma_erro": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome",
+          "$.codigo"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "BLOQUEADO",
+      "nota": "BLOQUEADO: nenhum commitmentCase no estado após o chat — em modo demo o chat é resposta fixa (service.py:141-142, gateway=None) e nunca chama on_commitment_proposed. Sonda: 409 \"Ainda não há uma proposta construída na conversa\"."
+    },
+    {
+      "nome": "confirm (replay)",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/plano/confirmar/",
+      "status": null,
+      "latency_ms": null,
+      "front": "src/services/backend.ts:23",
+      "gatilho": "usePlanConversation.ts:77 assumeCommitments ← CommitmentsPanel onAssume (App.tsx:73)",
+      "resultado": "BLOQUEADO",
+      "nota": "BLOQUEADO: nenhum commitmentCase no estado após o chat — em modo demo o chat é resposta fixa (service.py:141-142, gateway=None) e nunca chama on_commitment_proposed. Replay não executável sem 1.ª confirmação."
+    },
+    {
+      "nome": "progress",
+      "metodo": "PATCH",
+      "caminho": "/api/v1/context-agent/i-agora/plano/",
+      "corpo": {
+        "version": 1,
+        "stage": "card",
+        "phraseIndex": 1
+      },
+      "status": 400,
+      "latency_ms": 5,
+      "esperado": [
+        400
+      ],
+      "front": "src/services/backend.ts:24",
+      "gatilho": "usePlanConversation.ts:80 progress ← finish (useCardExport, App.tsx:17) e nextPhrase (App.tsx:75)",
+      "forma_erro": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.codigo"
+        ],
+        "opcionais_ausentes": [
+          "$.state"
+        ],
+        "ok": true
+      },
+      "resultado": "BLOQUEADO",
+      "nota": "Sem plano confirmado: 400 \"Confirme o plano antes de avançar\" esperado."
+    },
+    {
+      "nome": "acompanhamento",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/acompanhamento/",
+      "corpo": null,
+      "status": 404,
+      "latency_ms": 5,
+      "esperado": [
+        404
+      ],
+      "front": "—",
+      "gatilho": "nenhum: o front não chama i-agora/acompanhamento/",
+      "forma_erro": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [],
+        "opcionais_ausentes": [
+          "$.state"
+        ],
+        "ok": true
+      },
+      "resultado": "BLOQUEADO",
+      "nota": "Sem plano confirmado: 404 \"Nenhum objetivo confirmado\" esperado. Rota não usada pelo front."
+    },
+    {
+      "nome": "withdraw",
+      "metodo": "DELETE",
+      "caminho": "/api/v1/context-agent/i-agora/plano/proposta/",
+      "corpo": null,
+      "status": 200,
+      "latency_ms": 6,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:25",
+      "gatilho": "usePlanConversation.ts:79 adjustValues ← CommitmentsPanel onAdjust (App.tsx:73)",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "OK"
+    },
+    {
+      "nome": "reset",
+      "metodo": "DELETE",
+      "caminho": "/api/v1/context-agent/i-agora/plano/",
+      "corpo": null,
+      "status": 200,
+      "latency_ms": 22,
+      "esperado": [
+        200
+      ],
+      "front": "src/services/backend.ts:26",
+      "gatilho": "usePlanConversation.ts:88 reset ← \"Recomeçar planejamento\" (PlanSheet.tsx:23 / ChatScreen onRestart App.tsx:70,80)",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "OK"
+    },
+    {
+      "nome": "open",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/sessao/abertura/",
+      "corpo": {
+        "origem": "fab",
+        "next": true
+      },
+      "status": 201,
+      "latency_ms": 1372,
+      "esperado": [
+        201
+      ],
+      "front": "src/services/backend.ts:21",
+      "gatilho": "usePlanConversation.ts:71 open ← startWith: App.tsx:30 startChat (FAB/atalho Planejamento) e App.tsx:84 next=true",
+      "forma": {
+        "faltam": [],
+        "tipo_errado": [],
+        "extra_nao_lidos": [
+          "$.state.profile.referencePeriod.seal.cache",
+          "$.state.profile.referencePeriod.seal.bytesProcessed",
+          "$.state.profile.referencePeriod.seal.jobId",
+          "$.state.profile.referencePeriod.anomes",
+          "$.state.profile.referencePeriod.income",
+          "$.state.profile.referencePeriod.expenses",
+          "$.state.profile.referencePeriod.balance",
+          "$.state.profile.planPeriod.anomes",
+          "$.state.profile.arrears",
+          "$.state.profile.debt",
+          "$.state.profile.recurringIncome",
+          "$.person"
+        ],
+        "opcionais_ausentes": [
+          "$.state.opening",
+          "$.state.commitmentCase"
+        ],
+        "ok": true
+      },
+      "resultado": "OK",
+      "nota": "next=true (botão \"Testar próximo perfil\").",
+      "pessoa_antes_depois": [
+        1,
+        2
+      ]
+    }
+  ],
+  "negatives": [
+    {
+      "nome": "POST sem X-CSRFToken",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/sessao/abertura/",
+      "status": 403,
+      "esperado": 403,
+      "latency_ms": 24,
+      "resultado": "FALHOU_COMO_ESPERADO"
+    },
+    {
+      "nome": "POST com Origin http://evil.example",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/i-agora/sessao/abertura/",
+      "status": 403,
+      "esperado": 403,
+      "latency_ms": 15,
+      "resultado": "FALHOU_COMO_ESPERADO"
+    },
+    {
+      "nome": "perfil sem cookie de sessão",
+      "metodo": "GET",
+      "caminho": "/api/v1/context-agent/i-agora/perfil/",
+      "status": 401,
+      "esperado": 401,
+      "latency_ms": 4,
+      "resultado": "FALHOU_COMO_ESPERADO"
+    },
+    {
+      "nome": "chat com CSRF válido e sem cookie de sessão",
+      "metodo": "POST",
+      "caminho": "/api/v1/context-agent/conversas/mensagens/",
+      "status": 401,
+      "esperado": 401,
+      "latency_ms": 3,
+      "resultado": "FALHOU_COMO_ESPERADO"
+    }
+  ],
+  "encaixe": [
+    {
+      "id": "opening_ausente",
+      "achado": "state.opening não vem do backend; openingReply() cai no texto de fallback \"Ainda não recebi os dados…\" mesmo com perfil carregado.",
+      "front": "src/services/backend.ts:3; usePlanConversation.ts:32"
+    },
+    {
+      "id": "primeiroNome_igual_nome",
+      "achado": "primeiroNome == nome (\"Pessoa 1 da base\"): o cabeçalho do chat e a Home mostram o alias inteiro.",
+      "front": "ChatScreen.tsx:19,22; HomeScreen.tsx:20"
+    },
+    {
+      "id": "period_cru",
+      "achado": "plan.period chega como \"2026-01\" (AAAA-MM); PlanSheet/SharePreview/FollowUp mostram-no cru, enquanto person.planPeriodLabel = \"Janeiro / 2026\".",
+      "front": "PlanSheet.tsx:30; SharePreview.tsx:9; FollowUpScreen.tsx:24"
+    },
+    {
+      "id": "totals_nao_lido",
+      "achado": "state.totals vem com ['after', 'available', 'deliveryCut', 'initial', 'otherCut', 'released', 'reserve', 'shoppingCut'] (== PlanTotals: True) mas o front recalcula com calculations() e não o lê.",
+      "front": "grep: nenhum uso de .totals em src/"
+    },
+    {
+      "id": "measuredAt",
+      "achado": "referencePeriod.seal.measuredAt presente: True; só planApi.ts:16 (código morto) o lê — a UI não mostra selo/data.",
+      "front": "planApi.ts:16"
+    },
+    {
+      "id": "commitmentCase",
+      "achado": "commitmentCase no estado após o chat: False. Sem caso: painel de confirmação (CommitmentsPanel) não é exercitável neste modo.",
+      "front": "usePlanConversation.ts:31; CommitmentsPanel.tsx:12-17; FollowUpScreen.tsx:33"
+    }
+  ],
+  "summary": {
+    "chamadas": 14,
+    "por_resultado": {
+      "BLOQUEADO": 5,
+      "OK": 9
+    },
+    "negativas_ok": 4,
+    "negativas_total": 4,
+    "falhas": [],
+    "negativas_que_nao_falharam": [],
+    "commitment_case": false,
+    "latencia_total_ms": 5100
+  }
+}

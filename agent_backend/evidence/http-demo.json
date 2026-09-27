@@ -1,0 +1,38 @@
+{
+  "kind": "offline_demo_via_local_http",
+  "timestamp": "2026-09-27T06:50:33.192998+00:00",
+  "cases": [
+    {
+      "question": "Quero organizar meu orçamento. Por onde começar?",
+      "http_status": 200,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "63abc7e6-a4a6-448f-a3d1-40d03dcb906d",
+        "message_id": "93223ae1-e15a-4baf-abfb-eb7913b5234e",
+        "status": "ok",
+        "reply": "Demonstração local: esta resposta é fixa, não foi gerada por IA. O i-agora pode apoiar orçamento, reserva e prevenção de dívidas. Nenhum dado bancário foi consultado. Para experimentar respostas do Gemini, o responsável deve habilitar o modo de teste autorizado no servidor.",
+        "citations": [],
+        "request_id": "ed6ffcbb-f406-49f0-a56c-9ddaeaee9de6"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    }
+  ],
+  "billing_project": "not_determined",
+  "provider_quota": "not_determined",
+  "max_provider_calls": 0,
+  "audit": [
+    {
+      "event": "release",
+      "code": "demo"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    }
+  ],
+  "metrics": [],
+  "actual_provider_attempts": 0,
+  "completed_cases": 1,
+  "all_http_ok": true
+}

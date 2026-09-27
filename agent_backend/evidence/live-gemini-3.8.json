@@ -1,0 +1,174 @@
+{
+  "kind": "real_gemini_via_local_http",
+  "timestamp": "2026-09-27T07:06:05.162187+00:00",
+  "cases": [
+    {
+      "question": "Quero organizar meu orçamento. Por onde começar?",
+      "http_status": 200,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "2092b5cd-3f07-4fb6-b517-cbf34d1586e3",
+        "message_id": "d1d3d5c1-f7ff-4558-baa9-a6440b91c413",
+        "status": "ok",
+        "reply": "Para começar a organizar seu orçamento, um bom primeiro passo é mapear a sua realidade atual:\n\n1. **Identifique suas receitas:** liste todos os valores líquidos que realmente entram no mês.\n2. **Mapeie as despesas essenciais:** anote os gastos indispensáveis para o seu dia a dia (moradia, alimentação, contas básicas, saúde).\n3. **Acompanhe os demais gastos e dívidas:** registre despesas variáveis, hábitos de consumo e eventuais parcelas ou compromissos financeiros.\n\nNão existe uma regra de divisão percentual única e universal que funcione para todas as pessoas, pois o planejamento deve respeitar sua renda, suas prioridades e seu momento de vida.\n\nPara avançarmos de forma mais personalizada, você já possui uma estimativa da sua renda mensal e de quanto gasta hoje com itens essenciais?",
+        "citations": [
+          {
+            "id": "RC-08-2023:art-2",
+            "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=8&tipo=Resolu%C3%A7%C3%A3o%20Conjunta",
+            "excerpt": "Art. 2º As instituições financeiras e demais instituições autorizadas a funcionar pelo Banco Central do Brasil devem adotar medidas de educação financeira direcionadas a seus clientes e usuários pessoas naturais, incluindo empresários individuais.\n§ 1º As medidas de que trata o caput incluem as que contribuem para:\nI - organização e planejamento do orçamento pessoal e familiar;\nII - formação de poupança e resiliência financeira;\nIII - prevenção ao inadimplemento de operações e ao superendividamento.\n§ 2º Para fins desta Resolução Conjunta, o consorciado de administradora de consórcio é considerado cliente.\n\n",
+            "limitations": [
+              "Não autenticado contra cópia certificada do BCB/Imprensa Nacional nesta conversão.",
+              "Extração prévia pode não preservar diagramação e pode conter erros; hashes provam integridade local, não autenticidade legal.",
+              "Cadeia de alterações não certificada como exaustiva."
+            ],
+            "status": "current_according_to_research"
+          }
+        ],
+        "request_id": "9f647243-3f78-46ed-80b4-bb790f444275"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    },
+    {
+      "question": "Meu fluxo do mês foi negativo. Isso significa que estou inadimplente?",
+      "http_status": 503,
+      "public_response": {
+        "schema_version": "1.0",
+        "conversation_id": "2092b5cd-3f07-4fb6-b517-cbf34d1586e3",
+        "message_id": "4ee355ad-32e2-4a7e-86c9-4f08172cd7e1",
+        "status": "unavailable",
+        "reply": "Não consegui validar uma resposta agora. Podemos retomar depois; para organizar o orçamento, comece listando entradas e despesas essenciais, sem enviar identificadores pessoais.",
+        "citations": [],
+        "request_id": "147c976b-b983-4870-82d6-bde432f7bfb8"
+      },
+      "replay_same_message": true,
+      "replay_added_calls": 0
+    }
+  ],
+  "billing_project": "not_determined",
+  "provider_quota": "not_determined",
+  "max_provider_calls": 18,
+  "audit": [
+    {
+      "event": "input_guard",
+      "decision": "allow"
+    },
+    {
+      "event": "output_guard",
+      "decision": "release",
+      "reason_codes": []
+    },
+    {
+      "event": "release",
+      "code": "approved"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    },
+    {
+      "event": "input_guard",
+      "decision": "allow"
+    },
+    {
+      "event": "provider_failure"
+    },
+    {
+      "event": "release",
+      "code": "technical"
+    },
+    {
+      "event": "release",
+      "code": "cache"
+    }
+  ],
+  "metrics": [
+    {
+      "stage": "input_guard",
+      "model": "gemini-3.8-flash",
+      "model_version": "gemini-3.8-flash",
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 5537,
+      "outcome": "complete",
+      "input_tokens": 200,
+      "output_tokens": 21,
+      "total_tokens": 297,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "generate",
+      "model": "gemini-3.8-flash",
+      "model_version": "gemini-3.8-flash",
+      "prompt_sha256": "e9b4109fa83b70581d5349538123a512621d2cef68777c596af4d5e4597aa1dc",
+      "policy_version": "1.0",
+      "latency_ms": 5593,
+      "outcome": "complete",
+      "input_tokens": 3958,
+      "output_tokens": 332,
+      "total_tokens": 4290,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "output_guard",
+      "model": "gemini-3.8-flash",
+      "model_version": "gemini-3.8-flash",
+      "prompt_sha256": "c2ab30c145f2e0b6ca22485695bc0fbe2421c9bd8474eda9fe4014a76ff4481a",
+      "policy_version": "1.0",
+      "latency_ms": 8209,
+      "outcome": "complete",
+      "input_tokens": 4124,
+      "output_tokens": 49,
+      "total_tokens": 4173,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "input_guard",
+      "model": "gemini-3.8-flash",
+      "model_version": "gemini-3.8-flash",
+      "prompt_sha256": "d95ab6c95802477ae5ace95a158021dd310d1119c8a4d8d6c588026f18941a28",
+      "policy_version": "1.0",
+      "latency_ms": 6553,
+      "outcome": "complete",
+      "input_tokens": 416,
+      "output_tokens": 21,
+      "total_tokens": 503,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "generate",
+      "model": "gemini-3.8-flash",
+      "model_version": "gemini-3.8-flash",
+      "prompt_sha256": "e9b4109fa83b70581d5349538123a512621d2cef68777c596af4d5e4597aa1dc",
+      "policy_version": "1.0",
+      "latency_ms": 11717,
+      "outcome": "complete",
+      "input_tokens": 4386,
+      "output_tokens": 294,
+      "total_tokens": 4680,
+      "error_type": null,
+      "http_status": null
+    },
+    {
+      "stage": "output_guard",
+      "model": "gemini-3.8-flash",
+      "model_version": null,
+      "prompt_sha256": "c2ab30c145f2e0b6ca22485695bc0fbe2421c9bd8474eda9fe4014a76ff4481a",
+      "policy_version": "1.0",
+      "latency_ms": 4567,
+      "outcome": "failed_or_uncertain",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "error_type": "ServerError",
+      "http_status": 503
+    }
+  ],
+  "actual_provider_attempts": 6,
+  "completed_cases": 2,
+  "all_http_ok": false
+}

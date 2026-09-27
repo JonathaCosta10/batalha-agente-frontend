@@ -1,0 +1,10 @@
+{
+  "kind": "real_browser_local_http_demo_with_explicit_latency_and_network_fault_injection",
+  "loading_disabled": true,
+  "late_response_discarded": true,
+  "safe_network_error": true,
+  "manual_retry_success": true,
+  "desktop_no_overflow": true,
+  "mobile_no_overflow": true,
+  "keyboard_focus": true
+}

@@ -1,0 +1,27 @@
+name: conversation-checks
+on:
+  pull_request:
+  push:
+    branches: ['feat/i-agora-conversation']
+permissions:
+  contents: read
+jobs:
+  deterministic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test && npm run lint && npm run build
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r agent_backend/requirements.lock
+      - run: python -m pytest agent_backend/tests -q
+      - run: python -m agent_backend.manage check
+      - run: python -m agent_backend.smoke --output /tmp/http-demo.json
+      - run: python scripts/secret_scan.py
+      - run: git diff --check
