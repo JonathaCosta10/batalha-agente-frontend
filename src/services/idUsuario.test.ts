@@ -53,9 +53,12 @@ test('nenhum pedido do front leva índice ou person.id no corpo nem na URL',asyn
  await api.bootstrap();await api.profile();await api.state();await api.open(false);await api.open(true);
  await api.propose();await api.confirm(1,{} as never,'cid');await api.progress(1,'card',0);
  await api.withdraw();await api.reset();await api.chat('olá',null,'mid');
- assert.equal(calls.length,11);
+ // 12 = the 11 routes + perfil-usuario/definir/ that bootstrap() calls first (team backend, 2026-09-27).
+ assert.equal(calls.length,12);
  for(const c of calls){
   const body=c.body?JSON.parse(c.body) as Record<string,unknown>:{};
+  // definir/ is the one route whose contract carries `usuario`, and only as the id_usuario UUID, never an index.
+  if(c.url.endsWith('perfil-usuario/definir/')){assert.ok(idUsuarioOf(body.usuario),`definir/ leva usuario que não é UUID: ${String(body.usuario)}`);delete body.usuario;}
   for(const k of ['ref','indice','index','usuario','personId','person_id','id'])assert.ok(!(k in body),`${c.url} leva "${k}"`);
   assert.ok(!/\/\d+\/?$/.test(c.url),`${c.url} termina com número`);
   assert.ok(!Object.values(body).includes(person.id),`${c.url} leva person.id (${person.id})`);

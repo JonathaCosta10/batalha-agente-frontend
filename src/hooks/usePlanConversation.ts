@@ -41,6 +41,8 @@ export function usePlanConversation(){
  const [composerRestore,setComposerRestore]=useState<{text:string;nonce:number}|null>(null);
  // O que "Tentar de novo" refaz: a mesma chamada que falhou; se o servidor já respondeu (sem abertura), reabre a pessoa atual.
  const retryNext=useRef(false);
+ // True when the backend has conversas/ but no i-agora/ (perfil 404): the chat talks to conversas/ only.
+ const chatOnly=useRef(false);
  const apply=(s:PlanState,resetMessages=false)=>{
    current.current=s;setProfile(s.profile);
    let messages:Saved['messages']=[];
@@ -65,7 +67,11 @@ export function usePlanConversation(){
    if(busy.current)return false;
    setProfileStatus('loading');setLoadStartedAt(Date.now());setProfileFailure(null);
    // 503 perfil_indisponivel (BigQuery), rede, 20 s...: mesmo mapeador, texto legível no cartão com "Tentar de novo".
-   const ok=await run(async()=>{try{const b=await backend.bootstrap();setMode(b.mode);const r=await backend.profile();if(live.current)apply(r.state,true);}
+   const ok=await run(async()=>{try{const b=await backend.bootstrap();setMode(b.mode);
+     const r=await backend.profile().catch(e=>{if(e instanceof ApiError&&e.status===404)return null;throw e;});
+     // Team backend (no i-agora/ plan routes): chat-only, with the person of the session. No values, no opening invented.
+     if(r===null){chatOnly.current=true;if(live.current){const u=b.usuario;setSaved(p=>({...p,person:personFromServer(u?{nome:u.pessoa,nome_origem:u.nome_origem,id_usuario:u.codigo}:null),stage:'invite'}));}return;}
+     chatOnly.current=false;if(live.current)apply(r.state,true);}
      catch(e){if(live.current)setProfileFailure(telaDeErro(e,'perfil'));throw e;}});
    if(live.current)setProfileStatus(ok?'ready':'error');
    return ok;
@@ -75,6 +81,8 @@ export function usePlanConversation(){
  // ou resposta sem `opening` → estado de erro no chat, pelo mapeador único.
  const startWith=async(next=false,withSession=false)=>{
    if(busy.current)return false;
+   // Chat-only: there is no abertura/ to call; the composer is ready and the history keeps what was said.
+   if(chatOnly.current&&!next){setOpeningFailure(null);setChatFailure(null);setOpeningStatus('ready');return true;}
    retryNext.current=next;setOpeningFailure(null);setChatFailure(null);setOpeningStatus('loading');setOpeningStartedAt(Date.now());
    setSaved(p=>({...p,messages:[]}));
    return run(async()=>{
@@ -125,7 +133,9 @@ export function usePlanConversation(){
      cid.current=reply.conversation_id;
      const bot={...createMessage(reply.reply),demo:isDemoReply(reply,mode)};
      setSaved(p=>({...p,messages:[...p.messages,bot]}));
-     const s=await backend.state();if(s.state)apply(s.state);
+     // The reply is already shown; a backend without i-agora/plano must not turn it into an error.
+     if(chatOnly.current)return;
+     const s=await backend.state().catch(()=>null);if(s?.state)apply(s.state);
    });
  };
  const retryChat=()=>{if(chatFailure)void sendText(chatFailure.text,chatFailure.id);};

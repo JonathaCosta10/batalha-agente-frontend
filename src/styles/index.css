@@ -182,3 +182,4 @@ button:disabled { cursor:not-allowed; opacity:.48; }
 .limits-sheet .limits-date { color:var(--text-muted); font-size:12px; margin:0 0 12px; }
 .limits-sheet ul { margin:0; padding-left:18px; display:grid; gap:8px; color:var(--text-secondary); font-size:14px; line-height:1.5; }
 .demo-seal { display:block; margin:0 0 6px; padding:3px 8px; border-radius:8px; background:#fff3e8; color:var(--orange-dark); border:1px dashed var(--orange-dark); font-size:11px; font-weight:700; line-height:1.4; }
+.message-bubble .rich-p { margin:0; } .message-bubble .rich-p + .rich-p, .message-bubble .rich-list + .rich-p, .message-bubble .rich-p + .rich-list { margin-top:8px; } .message-bubble .rich-list { margin:0; padding-left:18px; white-space:normal; } .message-bubble .rich-list li + li { margin-top:4px; } .message-bubble strong { font-weight:800; }
