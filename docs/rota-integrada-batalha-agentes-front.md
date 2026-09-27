@@ -27,6 +27,21 @@ quando se diz `main`. `usePlanConversation.ts` e `useCardExport.ts` estão na pa
 
 ---
 
+## 0. Estado atual (2026-09-27 12:31 BRT, front `c4a9ff3`)
+
+O levantamento abaixo é das 12:13 BRT, por leitura de git. Desde então, medido pela `:3000`:
+
+- **Backend único** local: Django DRF de `Nova pasta/backend` (`batalha-agente-backend@84ead9b`) em `127.0.0.1:8000`;
+  `agent_backend/` deste repo não sobe junto (dois processos na `:8000`). Proxy `/api/v1` → `DJANGO_URL`.
+- **Sequência** (`src/services/backend.ts`): `POST perfil-usuario/definir/ {"usuario":"<UUID>"}` (201) →
+  `GET conversas/sessao/?sessao_id=` (200; cookies `csrftoken` + `conversa_sessao`) → `X-Sessao-Id` em todo pedido →
+  `GET i-agora/perfil/` (200) → `POST i-agora/sessao/abertura/` (201) → `POST conversas/mensagens/` → `GET i-agora/plano/` (200).
+- **Degradações:** `definir/` 404/405 → identidade por cookie (agent_backend); chat 404 com sessão → reabre a sessão uma
+  vez e reenvia como conversa nova; `i-agora/perfil` 404 → modo só-chat, sem inventar valores nem abertura.
+- **Chat:** 11:52 BRT 200 `needs_clarification` em 14,5 s; 12:31 BRT 503 por provedor (flash-lite falhou em 515 ms,
+  contingência `gemini-3.5-flash` timeout 15 s), sem rejeição determinística. Classificação e script:
+  [validacao-front-back.md](validacao-front-back.md) e `skills/integracao-front-back/`.
+
 ## 1. Mapa de montagem (o que o navegador alcança)
 
 | Onde roda | Prefixo que o front chama | Quem responde | Onde |

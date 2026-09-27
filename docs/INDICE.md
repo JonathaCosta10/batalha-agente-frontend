@@ -41,7 +41,8 @@
 - [Identidade do usuário sempre errada](cobrancas/2026-09-27-identidade-do-usuario.md) (27/09 10:10, ao backend): "Pessoa 1 da base" fixa; pedido de sorteio inicial e identificação única por `usuarios_verdade.csv` (nome e gênero configurados).
 
 ## Técnica
-- [Validação front ↔ back por localhost](validacao-front-back.md): cada chamada do front medida (status, forma, latência), provas negativas de CSRF/Origin/sessão, achados de encaixe e o que segue `NAO_MEDIDO` (27/09 09:47 BRT).
+- [Validação front ↔ back por localhost](validacao-front-back.md): **atual (27/09 12:31 BRT)** — backend único `../backend` na `:8000`, sequência `definir/` (UUID) → `sessao/` → `X-Sessao-Id` → perfil → abertura → mensagens → plano, 503 do chat por provedor; histórico do `agent_backend` (09:47 BRT) abaixo.
+- [Skill integracao-front-back](../skills/integracao-front-back/SKILL.md) (versionada, fora de `.claude/`): subir o ambiente, validar ponta a ponta com `scripts/validar_chat_ponta_a_ponta.py`, classificar 503 por `conversas/status/`, armadilhas. Nota 100 no avaliador (`relatorios/skills/mapa-2026-09-27T1249.md`).
 - [Interface](interface/README.md): qual front é o layout certo (`feat/i-agora-gcp-integrado`), como subi-lo
   localmente, o que foi observado no navegador, os ajustes de 27/09 e os pontos em aberto.
 - [Contrato e pipeline i-agora 1.0](i-agora.md).

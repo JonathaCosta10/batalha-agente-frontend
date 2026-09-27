@@ -1,0 +1,43 @@
+{
+  "descricao": "Identidade por cookie (agent_backend) tratada como fluxo do backend unico.",
+  "evidencia": {
+    "medido_em": "2026-09-27T12:31:00-03:00",
+    "base": "http://127.0.0.1:3000",
+    "usuario": "00108ccd-699c-453a-a9f9-a66aad6e03e5",
+    "etapas": [
+      {
+        "etapa": "sessao",
+        "http": 200,
+        "ms": null,
+        "ok": true
+      },
+      {
+        "etapa": "perfil",
+        "http": 200,
+        "ms": null,
+        "ok": true
+      },
+      {
+        "etapa": "abertura",
+        "http": 201,
+        "ms": null,
+        "ok": true
+      },
+      {
+        "etapa": "mensagens",
+        "http": 200,
+        "ms": null,
+        "ok": true
+      },
+      {
+        "etapa": "plano",
+        "http": 200,
+        "ms": null,
+        "ok": true
+      }
+    ]
+  },
+  "deve": "reprovar",
+  "falha_contem": "ordem",
+  "nota": "Caso sintetico: codigos HTTP no formato do script; latencias omitidas (null) para nao inventar medicao."
+}

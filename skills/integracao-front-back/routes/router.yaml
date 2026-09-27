@@ -1,0 +1,21 @@
+routes:
+  - id: integ.subir
+    signals: [subir ambiente local, rodar front e back, porta 8000 ocupada, proxy do vite]
+    workflow: workflows/subir.md
+    loads:
+      - policies/gates.yaml
+  - id: integ.validar
+    signals: [validar chat ponta a ponta, testar integracao, sequencia de chamadas do front, e2e pela 3000]
+    workflow: workflows/validar.md
+    loads:
+      - schemas/evidencia-e2e.schema.json
+      - policies/gates.yaml
+      - templates/relato-e2e.md
+  - id: integ.diagnosticar-503
+    signals: [503 no chat, chat indisponivel, provedor ou guard, conversas status]
+    workflow: workflows/diagnosticar-503.md
+    loads:
+      - policies/gates.yaml
+      - templates/relato-e2e.md
+ambiguity_rule: pergunte se o ambiente ja esta de pe (so validar) ou se e para subir; nao derrube processo de outra sessao
+fallback: para contrato de rotas use docs/front/integracao/contrato-api-i-agora.md e, no backend, docs/contrato-api-frontend.md

@@ -3,6 +3,21 @@
 Documento de passagem. Diz onde está cada coisa, o que está feito, o que falta e de quem depende cada passo.
 Números com selo (valor · fonte · data); o que não foi medido diz NAO_MEDIDO.
 
+## 0. Atualização 2026-09-27 12:31 BRT — integração com o backend único
+
+| O quê | Estado · fonte · hora |
+|---|---|
+| Repo deste front | `JonathaCosta10/batalha-agente-frontend`, `main` `c4a9ff3` (chat integrado: `definir/` + `X-Sessao-Id`, resposta em `RichText.tsx`) |
+| Backend local | **um só**: `Nova pasta/backend` = `JonathaCosta10/batalha-agente-backend` `84ead9b`, Django DRF em `127.0.0.1:8000`; `agent_backend/` daqui não sobe junto |
+| Identidade | `definir/` só com `id_usuario` UUID (índice → 400 desde 10:32); guard `src/services/idUsuario.test.ts` (12 pedidos, prova negativa com `'1'`) |
+| Testes do front | 40/40 (`npm test`), `tsc` 0 erros · 27/09 12:30 BRT |
+| E2E pela `:3000` | 11:52 BRT chat 200 `needs_clarification` 14,5 s; 12:31 BRT `definir` 201 / `sessao` 200 / `perfil` 200 / `abertura` 201 / `plano` 200, chat **503 por provedor** (flash-lite 515 ms; contingência `gemini-3.5-flash` timeout 15 s) |
+| Pendente do dono | repetir o mesmo modelo após timeout (hoje proibido: `erros_api-v1.json` `"repetir_mesmo_pedido": false`); cota da chave Gemini |
+| Como validar | skill versionada [`skills/integracao-front-back/`](../skills/integracao-front-back/SKILL.md) + `scripts/validar_chat_ponta_a_ponta.py`; ver [validacao-front-back.md](validacao-front-back.md) |
+| `agente-app-mobile` | `.claude/` tirado do versionamento (`691c2c8`), fica só local |
+
+As tabelas abaixo são o handoff das 10:54 BRT (repo `agente-app-mobile`); valem como histórico.
+
 ## 1. Onde está cada coisa
 
 | O quê | Onde | Estado |

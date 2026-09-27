@@ -1,0 +1,10 @@
+# Politica da integracao-front-back. Lida pelo modelo e por tools/gate.mjs (chave: valor, uma por linha).
+sequencia: definir,sessao,perfil,abertura,mensagens,plano
+esperado_definir: 201
+esperado_sessao: 200
+uuid_regex: ^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+outcome_ok: complete
+porta_backend: 8000
+porta_front: 3000
+evals_devem_passar: true
+nota_minima_avaliador: 75

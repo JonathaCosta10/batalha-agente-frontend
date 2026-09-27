@@ -14,12 +14,6 @@ por merge de subárvore; o `mobile-front-agente` fica **arquivado por inteiro**,
 `feat/i-agora-gcp-integrado` do Henrique. Limitações do protótipo: [docs/LIMITACOES.md](docs/LIMITACOES.md) (resumo no
 "i" fixo do app).
 
-> **Integração local desde 2026-09-27 (repo `batalha-agente-frontend`, `c4a9ff3`):** o front fala com **um só backend**,
-> o Django DRF de `../backend` (`batalha-agente-backend`, `84ead9b`) em `127.0.0.1:8000`. O `agent_backend/` daqui
-> continua no repositório (imagem do Cloud Run e testes pytest), mas **não sobe junto** na integração local: seriam
-> dois processos na `:8000`. Passo a passo e validação: [§5](#5-executar-localmente) e a skill
-> [`skills/integracao-front-back/`](skills/integracao-front-back/SKILL.md).
-
 ---
 
 ## 1. Estado medido
@@ -28,19 +22,15 @@ Cada linha traz o valor, a fonte e a data. O que não foi medido está marcado `
 
 | Parte | Estado | Evidência |
 | --- | --- | --- |
-| Chat integrado ao backend único (`definir/` + `X-Sessao-Id`) | funciona até o provedor | Pela `:3000`, 27/09 12:31 BRT: `definir` 201 / `sessao` 200 / `perfil` 200 / `abertura` 201 / `plano` 200; chat **503 por provedor** (generate `flash-lite` falhou em 515 ms, contingência `gemini-3.5-flash` timeout 15 s), sem rejeição determinística. 11:52 BRT: "O que eu faço com as sobras?" → 200 `needs_clarification` em 14,5 s |
-| Identidade só por UUID | guardada | `definir/` recebe `{"usuario": "<id_usuario UUID>"}` (índice → 400 desde 10:32); guard `src/services/idUsuario.test.ts`: 12 pedidos, `usuario` só em `definir/` e só UUID, prova negativa com `'1'` reprova · 27/09 12:30 BRT |
-| Testes do front (atual) | **40/40 passam**, `tsc` 0 erros | `npm test` e `npm run lint`, 27/09 12:30 BRT, `c4a9ff3` |
-| Skill `integracao-front-back` | nota **100** (não existia antes) | avaliador Organizesee, `relatorios/skills/mapa-2026-09-27T1249.md`; gate 9/9 casos, 6/6 provas negativas · 27/09 12:49 BRT |
 | Serviço no ar (Cloud Run `i-agora`) | funciona | `GET /` 200; `/api/health/` 200 em 0,57 s (`gemini-3.5-flash-lite`, `gcs-cas`, `synthetic`). Revisão `i-agora-00004-zhd`, 27/09 08:15–08:19 BRT ([histórico](docs/archive/2026-09-27/README-entrega-0916.md)) |
 | Sessão, perfil BigQuery, abertura, plano, conversa Gemini (no ar) | funciona | Mesma verificação: perfil com selo `jobId`; conversa 200 em 4,8 s; Acompanhe sem meta dá 404, como desenhado |
 | Integração local front ↔ Django ↔ BigQuery | funciona | `sessao` 200, `perfil` 200, `abertura` 201, pelo proxy do Vite `:3000` com CSRF. Medido neste repositório unificado, 27/09 09:25 BRT |
 | Contrato de cada chamada do front, via localhost | **9 OK, 5 BLOQUEADO, 4/4 negativas falham como devem** (demo) | `scripts/validar_contrato_local.py` pelo proxy `:3000`; confirmar/progresso sem `commitmentCase`; conversa Gemini local `NAO_MEDIDO` (sem chave). [validação](docs/validacao-front-back.md), `agent_backend/evidence/contrato-local-2026-09-27T0947.json`, 27/09 09:47 BRT |
 | Telas Início e Conversa (intro e carrossel), no navegador | validadas | Chrome, 27/09 09:05–09:20 BRT ([docs/interface](docs/interface/README.md)) |
 | Carregamento do perfil (esqueleto, novas tentativas, refresh só em 401/403) | validado | Navegador, com 401 simulado, e `src/services/loading.test.ts`, 27/09 09:20 BRT |
-| Testes do front (histórico) | 34/34 passavam | `npm test`, 27/09 10:54 BRT, branch `feat/front-consolidado-2026-09-27`; atual na primeira tabela |
+| Testes do front | **34/34 passam** | `npm test` (todos os `*.test.ts` de `src/`), 27/09 10:54 BRT, branch `feat/front-consolidado-2026-09-27` |
 | Typecheck e build do front | passam | `npm run lint` e `npm run build`, 27/09 10:54 BRT |
-| Protótipo local ponta a ponta com `agent_backend` (Django `:8011` + Vite `:3011`), histórico | funcionava, chat em modo demo | perfil 200, clique no ia.i → `POST i-agora/sessao/abertura/` 201 com orientação do perfil, `conversas/mensagens/` 200 (resposta fixa com selo), erro forçado 503 legível. Prints no scratchpad da sessão, 27/09 10:54 BRT |
+| Protótipo local ponta a ponta (Django `:8011` + Vite `:3011`) | funciona, chat em modo demo | perfil 200, clique no ia.i → `POST i-agora/sessao/abertura/` 201 com orientação do perfil, `conversas/mensagens/` 200 (resposta fixa com selo), erro forçado 503 legível. Prints no scratchpad da sessão, 27/09 10:54 BRT |
 | Imagem Docker | `NAO_MEDIDO` | Docker não instalado nesta máquina, 27/09 10:54 BRT |
 | Testes do backend | **106 passam, 2 falham** (WinError 32, só Windows) | `pytest agent_backend/tests`, Windows, Python 3.12, 27/09 10:54 BRT. As falhas estão na §6 |
 | Confirmação de meta ponta a ponta no navegador | `NAO_MEDIDO` | Coberta só por teste (`test_integrated_planning.py`) |
@@ -94,8 +84,7 @@ agente-app-mobile/
 ├── i-agora-codigo/           protótipo de desenho (referência visual, só leitura)
 ├── archive/                  código fora de uso, com índice; front-legado/ = src/ anterior (de7ff9d + 5f4fd75); front-legado/ = src/ anterior (de7ff9d + 5f4fd75)
 ├── relatorios/               mapas de estrutura e de skills (datados)
-├── skills/                   skills versionadas (fora de .claude/): integracao-front-back
-└── scripts/                  secret_scan.py (segredos antes de commit), validar_chat_ponta_a_ponta.py (E2E pela :3000)
+└── scripts/secret_scan.py    varredura de segredos antes de commit
 ```
 
 ---
@@ -118,27 +107,19 @@ A chamada que cada tela faz e o estado que a leva à tela seguinte estão em
 
 ## 5. Executar localmente
 
-**Um só backend** (27/09): o Django DRF de `../backend` na `:8000`, e o Vite na `:3000`.
-
 ```powershell
-# 1) backend do time — pasta Nova pasta/backend (detalhes, ADC e Gemini: README de lá)
-.venv\Scripts\python.exe manage.py runserver 127.0.0.1:8000
-# 2) front — esta pasta
 npm ci
-npm run dev                  # http://127.0.0.1:3000 ; proxy /api/v1 -> DJANGO_URL (padrão http://127.0.0.1:8000)
-# 3) validar ponta a ponta, na ordem do front (definir -> sessao -> perfil -> abertura -> mensagens -> plano)
-python scripts/validar_chat_ponta_a_ponta.py --saida <scratchpad>/e2e.json
-node skills/integracao-front-back/tools/gate.mjs --evidencia <scratchpad>/e2e.json
+.venv\Scripts\python -m agent_backend.manage runserver 127.0.0.1:8000 --noreload   # Django, modo demo (sem chamadas pagas)
+npm run dev                                                                          # front em http://127.0.0.1:3000
 ```
 
-- Backend noutra porta: `$env:DJANGO_URL='http://127.0.0.1:<porta>'; npm run dev`. Porta ocupada por outra sessão não
-  se derruba.
-- **Não** rode `python -m agent_backend.manage runserver` junto: o `agent_backend/` não tem `perfil-usuario/definir/`,
-  e o front cai em identidade por cookie. As instruções antigas (agent_backend na `:8000`/`:8011`) estão em
-  `docs/archive/2026-09-27/README-antes-backend-unico-1231.md`.
-- Usuário: `definir/` recebe o `id_usuario` UUID; o padrão é `00108ccd-699c-453a-a9f9-a66aad6e03e5` (Maria, linha 1 de
-  `backend/data/usuarios_verdade.csv`); `VITE_IAGORA_USUARIO` troca. Índice posicional ("1") dá 400.
-- Armadilha no Git Bash: corpo com acento mandado por `curl` chega fora de UTF-8 e dá 400 — use o script Python.
+Noutras portas (como no teste de ponta a ponta de 27/09, com a `:3000`/`:8000` ocupadas por outra sessão):
+
+```powershell
+$env:IAGORA_DEV_ORIGINS='http://127.0.0.1:3011'; .venv\Scripts\python -m agent_backend.manage runserver 127.0.0.1:8011 --noreload
+$env:DJANGO_URL='http://127.0.0.1:8011'; node node_modules/vite/bin/vite.js --port=3011 --host=127.0.0.1 --strictPort
+# abrir http://127.0.0.1:3011/
+```
 
 Validar e compilar:
 
@@ -150,8 +131,7 @@ $env:PYTHONUTF8='1'; .venv\Scripts\python -m pytest agent_backend/tests -q
 $env:PYTHONUTF8='1'; .venv\Scripts\python -m unittest tests.test_artefatos_padrao
 ```
 
-**`agent_backend` isolado (imagem do Cloud Run; não é a integração local). Ligar o Gemini (chamadas pagas — só com
-autorização do dono):**
+**Ligar o Gemini (chamadas pagas — só com autorização do dono):**
 
 ```powershell
 $env:IAGORA_MODE='live'            # ou demo_live
@@ -180,9 +160,8 @@ desligado neste servidor".
 
 | Suite | Comando | Resultado (27/09) | Estratégia |
 | --- | --- | --- | --- |
-| Front | `npm test` | 40/40 (27/09 12:30 BRT, `c4a9ff3`) | Unitário e de contrato do cliente de API: CSRF, id estável, sem `customer_id`, falha da fonte sem valores inventados, perfil incompleto rejeitado, refresh só em auth; `idUsuario.test.ts` intercepta 12 pedidos e só aceita `usuario` em `definir/` como UUID (prova negativa com `'1'`) |
-| Front, tipos e build | `npm run lint`, `npm run build` | `tsc` 0 erros (27/09 12:30 BRT) | TypeScript estrito sobre `src/` (exclui `src/archive`) |
-| Integração ponta a ponta | `scripts/validar_chat_ponta_a_ponta.py` + `node skills/integracao-front-back/tools/gate.mjs` | ver §1 (12:31 BRT) | Mesma ordem do front pelo proxy `:3000`; 503 do chat classificado por `conversas/status/` (PROVEDOR × DETERMINISTICO); gate com 9 evals, 6 provas negativas |
+| Front | `npm test` | 34/34 (27/09 10:54 BRT) | Unitário e de contrato do cliente de API: CSRF, id estável, sem `customer_id`, falha da fonte sem valores inventados, perfil incompleto rejeitado, refresh só em auth |
+| Front, tipos e build | `npm run lint`, `npm run build` | OK | TypeScript estrito sobre `src/` (exclui `src/archive`) |
 | Backend | `.venv\Scripts\python -m pytest agent_backend/tests -q` | 94 passam, 3 falham | Unitário e de contrato com dublês explícitos (`FakeGateway`, nunca Gemini real): guards, privacidade, fairness, projeções, planos, idempotência e 409, isolamento por dono (401/404), CSRF e origens, regressões de deploy |
 | Smoke | `python -m agent_backend.smoke` (`--live` é pago) | Evidências em `agent_backend/evidence/` | HTTP real local e Gemini real, gravados com data |
 | Navegador | manual, com o Chrome | ver §4 | Sem e2e automatizado; a proposta de CI ([docs/ci/conversation.yml](docs/ci/conversation.yml)) está inativa |
@@ -220,7 +199,6 @@ O caminho completo, com rollback, está em [docs/ambientes/ci-cd.md](docs/ambien
 | Contrato e pipeline do agente (guards, evidência, limites) | [docs/i-agora.md](docs/i-agora.md) |
 | Rota integrada: chamada por tela, estado → tela, divergências | [docs/rota-integrada-batalha-agentes-front.md](docs/rota-integrada-batalha-agentes-front.md) |
 | Validação front ↔ back por localhost: status, forma e latência por chamada, provas negativas, encaixe | [docs/validacao-front-back.md](docs/validacao-front-back.md) |
-| Skill versionada: subir ambiente, sequência de chamadas, validar ponta a ponta, classificar 503 | [skills/integracao-front-back/SKILL.md](skills/integracao-front-back/SKILL.md) |
 | Front: arquitetura, contrato de API do front, pontos de conexão, normas BCB | [docs/front/](docs/front/INDICE.md) |
 | Interface: layout de referência, observação no navegador, ajustes | [docs/interface/README.md](docs/interface/README.md) |
 | Ambientes, provedores, variáveis, Docker, CI/CD | [docs/ambientes/](docs/ambientes/README.md) |
@@ -232,14 +210,8 @@ O caminho completo, com rollback, está em [docs/ambientes/ci-cd.md](docs/ambien
 
 ## 9. Backend do time (complemento)
 
-**Desde 2026-09-27 12:31 BRT** o backend do time está em `../backend` = `JonathaCosta10/batalha-agente-backend`
-(`84ead9b`) e é o **backend único da integração local** (`:8000`): rotas `i-agora/*` portadas para `apps/i_agora`;
-guard de números aceita ponto decimal e fonte negativa (corrigido o falso positivo "fluxo negativo de R$ 1.729,62"
-→ 503); `MODELO_CONTINGENCIA = gemini-3.5-flash`; suíte 588 OK (sessão backend-21). Contrato do lado do servidor:
-`backend/docs/contrato-api-frontend.md` §5.1–5.5.
-
-Antes disso, o repositório `desafio-itau-batalha-de-agentes-time2` (cópia local em `../backend-agente-conversacional`, fora
-deste Git) era o **backend de referência do time**:
+O repositório `desafio-itau-batalha-de-agentes-time2` (cópia local em `../backend-agente-conversacional`, fora
+deste Git) é o **backend de referência do time**:
 - Django com Django REST Framework, páginas próprias em `/app/` e APIs em `/api/v1/`.
 - SQLite com 1.000 recomendações e 5 produtos.
 - A rota `context-agent/primeira-chamada/`, com Gemini.
@@ -260,20 +232,13 @@ Este repositório reaproveita o desenho de conversa e os estudos desse backend, 
 4. **Validar no navegador** as telas Acompanhe, compromissos, card, fim e as folhas; hoje estão `NAO_MEDIDO`.
 5. **Testes do backend:** as 3 falhas da §6 e a ativação do CI.
 6. **Deploy desta consolidação**, seguido de nova medição da revisão no ar.
-7. **Rota do chat (D-3 / I7).** O `chat()` usa `conversas/mensagens/`, já com `perfil-usuario/definir/` e `X-Sessao-Id`
-   (`c4a9ff3`); a rota única decidida é `conversas/interacao/`. Pendente da decisão I7; ver [docs/LIMITACOES.md](docs/LIMITACOES.md).
+7. **Rota do chat (D-3 / I7).** O `chat()` usa `conversas/mensagens/`; a rota única decidida é `conversas/interacao/`
+   do -32, que exige `perfil-usuario/definir/` (só no -32). Pendente da decisão I7; ver [docs/LIMITACOES.md](docs/LIMITACOES.md).
    A abertura guiada por dados ficou resolvida no `dbb253e` e foi provada no navegador (27/09 10:54 BRT).
-8. **503 do chat por provedor (12:31 BRT)** — decisão do dono: repetir o mesmo modelo após timeout (hoje proibido por
-   `erros_api-v1.json` `"repetir_mesmo_pedido": false`) e a cota da chave Gemini. Lado do backend.
 
 ---
 
 ## 11. Histórico
-
-- 2026-09-27 12:31 BRT: chat integrado ao backend do time (`c4a9ff3`, repo `batalha-agente-frontend`).
-  - Backend único `../backend` na `:8000`; `definir/` com UUID → `sessao/` → `X-Sessao-Id`; resposta em `RichText.tsx`.
-  - Skill versionada `skills/integracao-front-back/` e `scripts/validar_chat_ponta_a_ponta.py`; README anterior em
-    `docs/archive/2026-09-27/README-antes-backend-unico-1231.md`.
 
 - 2026-09-27 10:54 BRT: front consolidado (branch `feat/front-consolidado-2026-09-27`).
   - `src/` = `47ee715` de `mobile-front-agente`, por merge de subárvore (história preservada); o `src/` anterior foi para

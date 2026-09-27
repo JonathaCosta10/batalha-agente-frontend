@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidencia de scripts/validar_chat_ponta_a_ponta.py --saida",
+  "type": "object",
+  "required": ["medido_em", "base", "usuario", "etapas"],
+  "properties": {
+    "medido_em": {"type": "string", "description": "ISO 8601 com fuso -03:00"},
+    "base": {"type": "string"},
+    "usuario": {"type": "string", "format": "uuid"},
+    "etapas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["etapa"],
+        "properties": {
+          "etapa": {"enum": ["definir", "sessao", "perfil", "abertura", "mensagens", "plano", "classificacao_503"]},
+          "http": {"type": ["integer", "null"]},
+          "ms": {"type": ["integer", "null"]},
+          "ok": {"type": "boolean"},
+          "classe": {"enum": ["PROVEDOR", "DETERMINISTICO", "NAO_MEDIDO"]},
+          "ultimas_chamadas": {"type": "array"}
+        }
+      }
+    }
+  }
+}

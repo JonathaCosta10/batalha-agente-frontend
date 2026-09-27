@@ -1,0 +1,66 @@
+{
+  "descricao": "503 com chamadas completas: guard recusou (DETERMINISTICO).",
+  "evidencia": {
+    "medido_em": "2026-09-27T12:31:00-03:00",
+    "base": "http://127.0.0.1:3000",
+    "usuario": "00108ccd-699c-453a-a9f9-a66aad6e03e5",
+    "etapas": [
+      {
+        "etapa": "definir",
+        "http": 201,
+        "ms": null,
+        "ok": true
+      },
+      {
+        "etapa": "sessao",
+        "http": 200,
+        "ms": null,
+        "ok": true
+      },
+      {
+        "etapa": "perfil",
+        "http": 200,
+        "ms": null,
+        "ok": true
+      },
+      {
+        "etapa": "abertura",
+        "http": 201,
+        "ms": null,
+        "ok": true
+      },
+      {
+        "etapa": "classificacao_503",
+        "classe": "DETERMINISTICO",
+        "ultimas_chamadas": [
+          {
+            "stage": "input_guard",
+            "outcome": "complete"
+          },
+          {
+            "stage": "generate",
+            "outcome": "complete"
+          },
+          {
+            "stage": "output_guard",
+            "outcome": "complete"
+          }
+        ]
+      },
+      {
+        "etapa": "mensagens",
+        "http": 503,
+        "ms": null,
+        "ok": false
+      },
+      {
+        "etapa": "plano",
+        "http": 200,
+        "ms": null,
+        "ok": true
+      }
+    ]
+  },
+  "deve": "aprovar",
+  "nota": "Caso sintetico: codigos HTTP no formato do script; latencias omitidas (null) para nao inventar medicao."
+}

@@ -1,44 +1,5 @@
 # Validação front ↔ back por localhost
 
-## Atual — backend único (2026-09-27 12:31 BRT, front `c4a9ff3`)
-
-O backend local é **um só**: o Django DRF de `Nova pasta/backend` (repo `batalha-agente-backend`, `84ead9b`) em
-`127.0.0.1:8000`. O Vite `:3000` manda `/api/v1` para `DJANGO_URL` (padrão `http://127.0.0.1:8000`). O `agent_backend/`
-deste repo não sobe junto. Sequência do front (`src/services/backend.ts`):
-
-| # | Chamada | Detalhe | 12:31 BRT |
-| --- | --- | --- | --- |
-| 1 | `POST perfil-usuario/definir/` | `{"usuario": "<id_usuario UUID>"}`; índice → 400 desde 10:32; padrão `00108ccd-…` (Maria), `VITE_IAGORA_USUARIO` troca | 201 |
-| 2 | `GET conversas/sessao/?sessao_id=` | recebe cookies `csrftoken` + `conversa_sessao`; daqui em diante `X-Sessao-Id` em todo pedido | 200 |
-| 3 | `GET i-agora/perfil/` | 404 → modo só-chat (sem inventar valores nem abertura) | 200 |
-| 4 | `POST i-agora/sessao/abertura/` | abertura guiada pelo perfil | 201 |
-| 5 | `POST conversas/mensagens/` | 404 com sessão → reabre a sessão uma vez e reenvia como conversa nova | **503 por provedor** |
-| 6 | `GET i-agora/plano/` | | 200 |
-
-Selos: 12:31 BRT, `scripts/validar_chat_ponta_a_ponta.py` pelo proxy `:3000` — o chat deu 503 porque o generate
-`flash-lite` falhou em 515 ms e a contingência `gemini-3.5-flash` teve timeout de 15 s; sem rejeição determinística.
-11:52 BRT, mesmo caminho: "O que eu faço com as sobras?" → 200 `needs_clarification` em 14,5 s ("…fluxo líquido de
--1729.62 R$ por mês… não havendo sobras…"). A resposta do bot é renderizada por `src/components/chat/RichText.tsx`.
-
-**Como correr** (skill versionada: [`skills/integracao-front-back/SKILL.md`](../skills/integracao-front-back/SKILL.md)):
-
-```bash
-python scripts/validar_chat_ponta_a_ponta.py --pergunta "O que eu faço com as sobras?" --saida <scratchpad>/e2e.json
-node skills/integracao-front-back/tools/gate.mjs --evidencia <scratchpad>/e2e.json   # julga a evidência
-node skills/integracao-front-back/tools/gate.mjs                                      # evals: 9/9, 6/6 negativas
-```
-
-Um 503 do chat é classificado por `GET conversas/status/` (`ultimas_chamadas`): algum `outcome` `failed_or_uncertain`
-→ PROVEDOR; todos `complete` → DETERMINISTICO (guard do backend recusou). Armadilha: não mande corpo com acento por
-`curl` no Git Bash — chega fora de UTF-8 e dá 400; o script usa Python.
-
----
-
-## Histórico — agent_backend (09:47 / 09:50 BRT)
-
-O que segue mediu o `agent_backend/` deste repo, que **não** é mais o backend local da integração. A versão
-inteira de antes desta atualização está em `docs/archive/2026-09-27/validacao-front-back-antes-backend-unico.md`.
-
 Medido em **2026-09-27 09:47 BRT** (demo, pelo proxy do Vite) e **09:50 BRT** (`demo_live`, direto no Django), commit
 `2fe71fb` (árvore com alterações não commitadas só em `agent_backend/conversation/knowledge/*.json`). O Django em `:8000`
 corria com `--noreload`, portanto com o código carregado no arranque; as rotas são as mesmas do commit.

@@ -1,0 +1,13 @@
+name: integracao-front-back
+version: 0.1.0
+owner: repo
+escopo: local
+boundaries:
+  - o cliente HTTP e src/services/backend.ts; o backend e o Django de Nova pasta/backend (repo batalha-agente-backend)
+  - politica de erro do provedor, router de modelos e cota pertencem ao backend
+produces: [evidencia-e2e-json, relato-e2e-md]
+consumes: [src/services/backend.ts, vite.config.ts, scripts/validar_chat_ponta_a_ponta.py]
+engine: scripts/validar_chat_ponta_a_ponta.py
+verifier: tools/gate.mjs
+proof: tools/gate.mjs
+omissoes: [references, examples, docs]

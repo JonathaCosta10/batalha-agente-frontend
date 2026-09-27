@@ -32,8 +32,7 @@ pela plataforma; **img** = `ENV` do Dockerfile; **código** = definida pelo pró
 | `K_SERVICE` | `deploy/urls.py:6` (`hosting: gcp-cloud-run` × `local-validation`) | ausente | não | não | ausente | ausente | ausente | auto (Cloud Run) |
 | `PORT` | `deploy/Dockerfile:2,11` (bind do gunicorn) | `8080` | não | não | não se aplica | img | não | auto (Cloud Run injeta) |
 | `DISABLE_HMR` | `vite.config.ts:22,24` | ausente (HMR ligado) | não | não | shell | não se aplica | não | não se aplica |
-| `DJANGO_URL` | `vite.config.ts:19` (alvo do proxy `/api/v1`) | `http://127.0.0.1:8000` = o backend único (`Nova pasta/backend`, Django DRF) desde 2026-09-27 | não | não | shell | não se aplica | não | não se aplica |
-| `VITE_IAGORA_USUARIO` | `src/services/backend.ts:13` (corpo de `POST perfil-usuario/definir/`) | `00108ccd-699c-453a-a9f9-a66aad6e03e5` (Maria, linha 1 de `backend/data/usuarios_verdade.csv`) | não (é um id sintético, não segredo; vai no bundle) | não | shell / `.env.local` | não se aplica | não | não se aplica |
+| `DJANGO_URL` | `vite.config.ts:18` (alvo do proxy `/api/v1/context-agent`) | `http://127.0.0.1:8000` | não | não | shell | não se aplica | não | não se aplica |
 | `IAGORA_DEV_ORIGINS` | `agent_backend/harness/settings.py:8-16,30` (`CSRF_TRUSTED_ORIGINS`) | `http://127.0.0.1:3000,http://localhost:3000` | não | não | shell | não se aplica (usa `deploy.settings`) | padrão | não se aplica |
 
 Também no `deploy/Dockerfile:2`: `PYTHONDONTWRITEBYTECODE=1`, `PYTHONUNBUFFERED=1` (img; não são lidas pelo código).
@@ -128,16 +127,9 @@ requer autenticação e autorização". Isto foi medido a 2026-09-27 às 09:12 B
   `ValueError`. É uma falha fechada, com prova negativa em `agent_backend/tests/test_dev_origins.py`.
 - O Cloud Run não a lê: usa `deploy.settings`, com as origens derivadas de `IAGORA_HOSTS`.
 
-**Exemplo (2026-09-27, backend único)** — backend do time noutra porta e front na 3000 (PowerShell):
+**Exemplo** com Django na 8001 e front na 3001 (PowerShell):
 
 ```powershell
-# pasta Nova pasta/backend (Django DRF; origens CSRF confiáveis são as do settings de lá)
-.venv\Scripts\python.exe manage.py runserver 127.0.0.1:8001
-# pasta Frontend
-$env:DJANGO_URL='http://127.0.0.1:8001'; npm run dev
+$env:IAGORA_DEV_ORIGINS='http://127.0.0.1:3001'; .venv\Scripts\python -m agent_backend.manage runserver 127.0.0.1:8001 --noreload
+$env:DJANGO_URL='http://127.0.0.1:8001'; npm run dev -- --port=3001
 ```
-
-Não suba o `agent_backend/` deste repositório junto com o backend do time: seriam dois processos disputando a `:8000`
-e o front, sem `definir/`, cairia em identidade por cookie. O exemplo anterior (com `agent_backend` na 8001) está em
-`docs/archive/2026-09-27/variaveis-de-ambiente-antes-backend-unico.md`. As regras de `IAGORA_DEV_ORIGINS` acima valem
-só para o `agent_backend` (imagem do Cloud Run e testes pytest).

@@ -4,6 +4,15 @@
 >
 > Convenções: `F:` = raiz deste repositório (o front vive em `src/` desde 2026-09-27; antes `frontend-agent-conversacional/`); `B:` = `backend-agente-conversacional/` (backend principal); `T2:` = `desafio-itau-batalha-de-agentes-time2/`.
 
+> **Atualização 2026-09-27 12:31 BRT (front `c4a9ff3`).** Este documento é a proposta original; o estado real mudou:
+> o front faz `fetch` por `F:src/services/backend.ts` contra **um só backend**, o Django de `Nova pasta/backend`
+> (repo `batalha-agente-backend`, `84ead9b`) em `:8000`, onde as rotas `i-agora/*` de §3 já existem (`apps/i_agora`)
+> e `conversas/*` correm no mesmo processo (não mais "processo separado", §2.5). Sequência: `POST perfil-usuario/definir/`
+> `{"usuario": "<UUID>"}` → `GET conversas/sessao/?sessao_id=` → `X-Sessao-Id` em todo pedido → `i-agora/perfil/` →
+> `i-agora/sessao/abertura/` → `conversas/mensagens/` → `i-agora/plano/`. Identidade só por UUID (índice → 400 desde
+> 10:32); guard `F:src/services/idUsuario.test.ts`. Contrato vigente do lado do servidor:
+> `backend/docs/contrato-api-frontend.md` §5.1–5.5. Validação: [../../validacao-front-back.md](../../validacao-front-back.md).
+
 ---
 
 ## 0. Resumo em cinco linhas
