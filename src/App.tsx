@@ -30,7 +30,7 @@ export default function App() {
   // Opening resumes the bound profile; it never invents a goal or switches person.
   const startChat=()=>{
     if(!ready)return;
-    void conversation.startWith();
+    conversation.openChat();
     setCarouselIndex(0);
     resetExport();
     openChat();

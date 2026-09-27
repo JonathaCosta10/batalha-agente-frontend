@@ -5,10 +5,17 @@
 **Pedido do dono (14:27):** (1) a frase de abertura aparecia antes do clique no botão "i agora"; deve carregar e ser
 liberada só depois do clique. (2) A cada carga da página ou acionamento do fluxo, uma pessoa diferente da base.
 
-**(1) Frase depois do clique** — `src/services/chatView.ts` + `ChatScreen.tsx`. A abertura continua a ser buscada ao
-abrir o chat, mas enquanto `stage==='intro'` só aparecem a introdução e o botão (campo livre travado). Depois do clique:
-painel de carregamento/erro se a abertura ainda não chegou; senão "digitando" por 700 ms e a frase. Prova:
-`chatView.test.ts` (4 testes; o negativo: abertura já carregada **não** aparece antes do clique).
+**(1) Frase depois do clique** — `src/services/chatView.ts` + `ChatScreen.tsx`: enquanto `stage==='intro'` só
+aparecem a introdução e o botão "E agora" (campo livre travado). Prova: `chatView.test.ts` (4 testes; o negativo:
+abertura já carregada **não** aparece antes do clique).
+
+**Correção 14:40 (dono: "o botão continua aparecendo depois da mensagem"):** duas causas.
+- A `:3000` servia outra cópia do front (Vite iniciado em `Nova pasta/agente-app-mobile`, branch antiga
+  `docs/entrega-consolidada-2026-09-27`, sem nenhuma correção do dia). Parado (PID 80812) e reiniciado a partir de
+  `Nova pasta/Frontend`; conferido: o `ChatScreen.tsx` servido traz `chatView`.
+- Abrir o chat pedia a abertura. Agora abrir o chat (`openChat` no hook) só mostra o botão; o **clique** em "E agora"
+  (`enterAgora`) faz o `POST i-agora/sessao/abertura/`, mostra o carregamento e depois a frase. "Tentar de novo" da
+  abertura fica no chat liberado.
 
 **(2) Sorteio combinado com o backend (backend-21, `94287d0`)** — `definir/` `{"usuario":"aleatorio"}` na carga;
 `{"usuario":"aleatorio","excluir":"<uuid atual>"}` em "Testar próximo perfil" (novo `definir/`, nova sessão). Uniforme

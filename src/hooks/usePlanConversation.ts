@@ -80,7 +80,13 @@ export function usePlanConversation(){
  useEffect(()=>{live.current=true;void load();return()=>{live.current=false;};},[]);
  // POST sessao/abertura/ (com withSession, antes refaz conversas/sessao/). Falha (rede, 4xx/5xx, 429, 503, CSRF, 20 s)
  // ou resposta sem `opening` → estado de erro no chat, pelo mapeador único.
- const startWith=async(next=false,withSession=false)=>{
+ // Chat opened: the "E agora" button first, nothing fetched yet (owner, 14:36). The opening sentence is only requested
+ // by the click (enterAgora → startWith with release), so it is really loaded after it, never before.
+ const openChat=()=>{
+   cid.current=null;setChatFailure(null);setOpeningFailure(null);
+   setSaved(p=>({...p,stage:p.commitmentCase&&!p.confirmed?'confirm':'intro',messages:[]}));
+ };
+ const startWith=async(next=false,withSession=false,release=false)=>{
    if(busy.current)return false;
    // Chat-only: there is no abertura/ to call; the composer is ready and the history keeps what was said.
    if(chatOnly.current&&!next){setOpeningFailure(null);setChatFailure(null);setOpeningStatus('ready');return true;}
@@ -91,6 +97,8 @@ export function usePlanConversation(){
        if(withSession){cid.current=null;const b=await backend.bootstrap();setMode(b.mode);}
        const switched=next&&await backend.nextPerson();if(switched)cid.current=null;
        const r=await backend.open(next&&!switched);cid.current=null;confirmAttempt.current=null;apply(r.state,true);
+       // After the click the chat stays released: apply() would put it back on the intro button.
+       if(release)setSaved(p=>({...p,stage:p.stage==='intro'?'invite':p.stage}));
      }catch(e){
        if(e instanceof ApiError&&e.state)apply(e.state);
        if(live.current){setOpeningFailure(telaDeErro(e,'abertura'));setOpeningStatus('error');}
@@ -99,9 +107,9 @@ export function usePlanConversation(){
      }
    });
  };
- const retryOpening=()=>startWith(retryNext.current,openingFailure?.action==='reiniciar_sessao');
+ const retryOpening=()=>startWith(retryNext.current,openingFailure?.action==='reiniciar_sessao',true);
  const restartSession=()=>startWith(false,true);
- const enterAgora=()=>{setSaved(p=>({...p,stage:'invite'}));document.querySelector<HTMLTextAreaElement>('[data-testid=input-free-text]')?.focus();};
+ const enterAgora=()=>{setSaved(p=>({...p,stage:'invite'}));void startWith(false,false,true);document.querySelector<HTMLTextAreaElement>('[data-testid=input-free-text]')?.focus();};
  const assumeCommitments=()=>run(async()=>{
    const state=current.current;if(!state)throw new Error('Carregue o cliente antes de registrar objetivos.');
    // Sem id_usuario do servidor não há pedido: IdentidadeAusente → telaDeErro (aviso global).
@@ -151,6 +159,6 @@ export function usePlanConversation(){
  };
  const retryChat=()=>{if(chatFailure)void sendText(chatFailure.text,chatFailure.id);};
  const reset=()=>run(async()=>{const r=await backend.reset();cid.current=null;confirmAttempt.current=null;setChatFailure(null);if(r.state)apply(r.state,true);});
- return {saved,typing,error,mode,profile,profileStatus,profileFailure,loadStartedAt,openingStatus,openingFailure,openingStartedAt,retryOpening,restartSession,
+ return {saved,openChat,typing,error,mode,profile,profileStatus,profileFailure,loadStartedAt,openingStatus,openingFailure,openingStartedAt,retryOpening,restartSession,
    chatFailure,composerRestore,retryChat,load,startWith,enterAgora,assumeCommitments,adjustValues,finish,nextPhrase,showCard,sendText,reset};
 }
