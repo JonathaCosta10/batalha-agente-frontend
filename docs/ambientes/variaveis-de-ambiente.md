@@ -33,7 +33,7 @@ pela plataforma; **img** = `ENV` do Dockerfile; **código** = definida pelo pró
 | `PORT` | `deploy/Dockerfile:2,11` (bind do gunicorn) | `8080` | não | não | não se aplica | img | não | auto (Cloud Run injeta) |
 | `DISABLE_HMR` | `vite.config.ts:22,24` | ausente (HMR ligado) | não | não | shell | não se aplica | não | não se aplica |
 | `DJANGO_URL` | `vite.config.ts:19` (alvo do proxy `/api/v1`) | `http://127.0.0.1:8000` = o backend único (`Nova pasta/backend`, Django DRF) desde 2026-09-27 | não | não | shell | não se aplica | não | não se aplica |
-| `VITE_IAGORA_USUARIO` | `src/services/backend.ts:13` (corpo de `POST perfil-usuario/definir/`) | `00108ccd-699c-453a-a9f9-a66aad6e03e5` (Maria, linha 1 de `backend/data/usuarios_verdade.csv`) | não (é um id sintético, não segredo; vai no bundle) | não | shell / `.env.local` | não se aplica | não | não se aplica |
+| `VITE_IAGORA_USUARIO` | `src/services/backend.ts` (`FIXED_USER`, corpo de `POST perfil-usuario/definir/`) | vazio = pessoa sorteada pelo backend a cada carga (`"aleatorio"`, desde 27/09 14:35); definida = fixa essa pessoa. Fallback sem lista: `00108ccd-…` (Maria) | não (é um id sintético, não segredo; vai no bundle) | não | shell / `.env.local` | não se aplica | não | não se aplica |
 | `IAGORA_DEV_ORIGINS` | `agent_backend/harness/settings.py:8-16,30` (`CSRF_TRUSTED_ORIGINS`) | `http://127.0.0.1:3000,http://localhost:3000` | não | não | shell | não se aplica (usa `deploy.settings`) | padrão | não se aplica |
 
 Também no `deploy/Dockerfile:2`: `PYTHONDONTWRITEBYTECODE=1`, `PYTHONUNBUFFERED=1` (img; não são lidas pelo código).

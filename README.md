@@ -136,8 +136,12 @@ node skills/integracao-front-back/tools/gate.mjs --evidencia <scratchpad>/e2e.js
 - **Não** rode `python -m agent_backend.manage runserver` junto: o `agent_backend/` não tem `perfil-usuario/definir/`,
   e o front cai em identidade por cookie. As instruções antigas (agent_backend na `:8000`/`:8011`) estão em
   `docs/archive/2026-09-27/README-antes-backend-unico-1231.md`.
-- Usuário: `definir/` recebe o `id_usuario` UUID; o padrão é `00108ccd-699c-453a-a9f9-a66aad6e03e5` (Maria, linha 1 de
-  `backend/data/usuarios_verdade.csv`); `VITE_IAGORA_USUARIO` troca. Índice posicional ("1") dá 400.
+- Usuário (desde 27/09 14:35): **uma pessoa sorteada da base a cada carga da página** e a cada "Testar próximo perfil".
+  O front manda `definir/` `{"usuario":"aleatorio"}` (próximo perfil: `+ "excluir":"<uuid atual>"`); o backend `94287d0`
+  sorteia entre os 1.000 de `backend/data/usuarios_verdade.csv` (todos com 12 meses) e devolve o `usuario.codigo`.
+  Na expiração da sessão (404 no chat) a mesma pessoa é mantida. Backend sem `aleatorio` (400) → sorteio pelo front em
+  `usuario-real/?limite=1&offset=<aleatório>`; sem lista → `00108ccd-…` (Maria) com `origem:'padrao'`.
+  `VITE_IAGORA_USUARIO` fixa uma pessoa. Índice posicional ("1") dá 400.
 - Armadilha no Git Bash: corpo com acento mandado por `curl` chega fora de UTF-8 e dá 400 — use o script Python.
 
 Validar e compilar:

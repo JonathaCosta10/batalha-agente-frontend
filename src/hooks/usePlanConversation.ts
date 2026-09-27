@@ -89,7 +89,8 @@ export function usePlanConversation(){
    return run(async()=>{
      try{
        if(withSession){cid.current=null;const b=await backend.bootstrap();setMode(b.mode);}
-       const r=await backend.open(next);cid.current=null;confirmAttempt.current=null;apply(r.state,true);
+       const switched=next&&await backend.nextPerson();if(switched)cid.current=null;
+       const r=await backend.open(next&&!switched);cid.current=null;confirmAttempt.current=null;apply(r.state,true);
      }catch(e){
        if(e instanceof ApiError&&e.state)apply(e.state);
        if(live.current){setOpeningFailure(telaDeErro(e,'abertura'));setOpeningStatus('error');}

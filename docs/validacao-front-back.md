@@ -1,5 +1,31 @@
 # Validação front ↔ back por localhost
 
+## 2026-09-27 14:34 BRT — pessoa sorteada por carga e frase de abertura só depois do "i agora"
+
+**Pedido do dono (14:27):** (1) a frase de abertura aparecia antes do clique no botão "i agora"; deve carregar e ser
+liberada só depois do clique. (2) A cada carga da página ou acionamento do fluxo, uma pessoa diferente da base.
+
+**(1) Frase depois do clique** — `src/services/chatView.ts` + `ChatScreen.tsx`. A abertura continua a ser buscada ao
+abrir o chat, mas enquanto `stage==='intro'` só aparecem a introdução e o botão (campo livre travado). Depois do clique:
+painel de carregamento/erro se a abertura ainda não chegou; senão "digitando" por 700 ms e a frase. Prova:
+`chatView.test.ts` (4 testes; o negativo: abertura já carregada **não** aparece antes do clique).
+
+**(2) Sorteio combinado com o backend (backend-21, `94287d0`)** — `definir/` `{"usuario":"aleatorio"}` na carga;
+`{"usuario":"aleatorio","excluir":"<uuid atual>"}` em "Testar próximo perfil" (novo `definir/`, nova sessão). Uniforme
+entre os 1.000 do CSV, todos com 12 meses (mín. 278 movimentos, mediana 450 — backend-21). Na expiração da sessão a
+pessoa fica a mesma. Fallback para backend sem `aleatorio`: sorteio pelo front via `usuario-real/`. O sorteio ainda
+**não** varia por situação (sobra / equilíbrio / negativo): pede classificação por pessoa no backend — decisão do dono.
+
+| Hora | Pedido | Pessoa (`codigo`) | Abertura | "O que eu faço com as sobras?" |
+| --- | --- | --- | --- | --- |
+| 14:31 | lista + UUID | André `af9c7321` | "saídas acima das entradas" | 200 em 24,0 s |
+| 14:31 | lista + UUID | Luana `14d3ee51` | "com sobra no mês" | 200 em 13,5 s, cita sobra de R$ 3.968,64 |
+| 14:33 | `aleatorio` | Marcelo `711dd83b` | "com sobra no mês" | 200 em 23,0 s, cita R$ 1.104,53 |
+| 14:34 | `aleatorio` + `excluir 711dd83b` | Marcelo `de06a76b` (outro id; nome gerado coincide) | "com sobra no mês" | 200 em 12,3 s, cita R$ 2.474,53 |
+
+`npm test` 53/53, `tsc` 0 erros. Guard de identidade (`idUsuario.test.ts`): `definir/` aceita só UUID ou
+`"aleatorio"`; `excluir` só UUID; a prova negativa com `'1'` continua a reprovar.
+
 ## 2026-09-27 14:07 BRT — "continuo com erro": o reenvio batia no cache da falha
 
 **Sintoma (dono, 13:35):** `POST conversas/mensagens/` → 503, `Retry-After: 10`, e "Tentar de novo" não saía do erro.

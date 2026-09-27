@@ -56,9 +56,16 @@ test('nenhum pedido do front leva índice ou person.id no corpo nem na URL',asyn
  // 12 = the 11 routes + perfil-usuario/definir/ that bootstrap() calls first (team backend, 2026-09-27).
  assert.equal(calls.length,12);
  for(const c of calls){
+  // The fallback draw only reads the list; its offset is a page position, never an identity.
+  if(/usuario-real\/\?limite=1(&offset=\d+)?$/.test(c.url)){assert.equal(c.body,'',`${c.url} leva corpo`);continue;}
   const body=c.body?JSON.parse(c.body) as Record<string,unknown>:{};
-  // definir/ is the one route whose contract carries `usuario`, and only as the id_usuario UUID, never an index.
-  if(c.url.endsWith('perfil-usuario/definir/')){assert.ok(idUsuarioOf(body.usuario),`definir/ leva usuario que não é UUID: ${String(body.usuario)}`);delete body.usuario;}
+  // definir/ is the one route whose contract carries `usuario`: the id_usuario UUID or the server draw "aleatorio"
+  // (backend 94287d0), never an index; `excluir`, when sent, is a UUID too.
+  if(c.url.endsWith('perfil-usuario/definir/')){
+   assert.ok(body.usuario==='aleatorio'||idUsuarioOf(body.usuario),`definir/ leva usuario que não é UUID nem "aleatorio": ${String(body.usuario)}`);
+   if('excluir' in body)assert.ok(idUsuarioOf(body.excluir),`definir/ leva excluir que não é UUID: ${String(body.excluir)}`);
+   delete body.usuario;delete body.excluir;
+  }
   for(const k of ['ref','indice','index','usuario','personId','person_id','id'])assert.ok(!(k in body),`${c.url} leva "${k}"`);
   assert.ok(!/\/\d+\/?$/.test(c.url),`${c.url} termina com número`);
   assert.ok(!Object.values(body).includes(person.id),`${c.url} leva person.id (${person.id})`);
