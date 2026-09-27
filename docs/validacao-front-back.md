@@ -1,5 +1,35 @@
 # Validação front ↔ back por localhost
 
+## 2026-09-27 14:07 BRT — "continuo com erro": o reenvio batia no cache da falha
+
+**Sintoma (dono, 13:35):** `POST conversas/mensagens/` → 503, `Retry-After: 10`, e "Tentar de novo" não saía do erro.
+
+**Causa medida (backend `9152041`, pela `:3000`):** o backend guarda toda resposta, falhas incluídas, em
+`(sessão, conversa, client_message_id)` e nunca regera com o mesmo id (`apps/conversas/service.py` `_send`, "sem
+cobrança dupla"). O front reenviava com o **mesmo** id → recebia a mesma falha do cache (16–31 ms, nenhum modelo chamado).
+Além disso o front descartava o `conversation_id` que vem no corpo da falha, e cada reenvio abria uma conversa nova
+(teto de 5 por sessão → 429).
+
+**Correção no front (`src/services/chatRetry.ts`, `usePlanConversation.ts`, `backend.ts`):**
+- falha que o servidor respondeu (status > 0) → o reenvio leva um `client_message_id` novo; sem resposta (rede,
+  timeout do cliente) o id fica, para receber do cache a resposta que o servidor possa ter concluído;
+- o `conversation_id` do corpo da falha é adotado (`ApiError.conversationId`);
+- `busy` (429/503/504) com `Retry-After` ≤ 30 s → **um** reenvio automático depois da espera; o botão continua.
+- Prova: `chatRetry.test.ts` (4 testes, 2 negativos). `npm test` 44/44, `tsc` 0 erros.
+
+**Medição real (`scratchpad/e2e_retry.py`, Gemini real):**
+
+| Hora | Turnos | Resultado |
+| --- | --- | --- |
+| 13:36 | 3 | 200, 200, 503 (`resposta_reprovada_validacao`; a mesma pergunta numa conversa nova → 200 em 21 s) |
+| 13:39 | 5 | 200 ×4, depois 429 `cota_provedor`; mesmo id → 429 do cache em 31 ms; id novo após 30 s → 429 (todos os modelos em resfriamento) |
+| 14:06 | 3 | 200, 200, 429 `cota_provedor`; mesmo id → cache em 16 ms; id novo após 30 s → 503 (ainda sem modelo) |
+
+**O que continua:** a cota gratuita do Gemini (`conversas/status/` → `roteador.resfriamentos` às 13:40:
+`3.5-flash` `cota_dia` 861 s, `3.5-flash-lite` `cota_dia`, `3.1-flash-lite` `timeout`). Cada turno faz 3 chamadas
+(input_guard, generate, output_guard). Isto não se resolve no front; é cota/plano do projeto no AI Studio (dono) e
+rotação do router (backend-21). Com a correção, a conversa volta sozinha quando um modelo sai do resfriamento.
+
 ## Atual — backend único (2026-09-27 12:31 BRT, front `c4a9ff3`)
 
 O backend local é **um só**: o Django DRF de `Nova pasta/backend` (repo `batalha-agente-backend`, `84ead9b`) em

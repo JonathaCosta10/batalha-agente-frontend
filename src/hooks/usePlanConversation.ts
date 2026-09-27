@@ -5,6 +5,7 @@ import { errorLine, telaDeErro, type ScreenError } from '../services/errorScreen
 import { IdentidadeAusente, personFromServer, requireIdUsuario } from '../services/identity';
 import { openingFromState, type OpeningStatus } from '../services/openingLoad';
 import { isDemoReply } from '../services/demoReply';
+import { autoRetryDelayMs, retryMessageId } from '../services/chatRetry';
 import type { ProfileStatus } from '../services/profileLoad';
 import type { Plan, Person, Saved } from '../types';
 
@@ -115,7 +116,10 @@ export function usePlanConversation(){
  const showCard=()=>{if(saved.confirmed)setSaved(p=>({...p,stage:'card'}));};
  // Envio do chat: a falha vira estado de tela (mapeador único), a mensagem sai do histórico e, conforme
  // acao_cliente, volta ao campo (enviar_como_nova/reformular), espera e reenvia (aguardar) ou não repete.
- const sendText=(query:string,id:string=crypto.randomUUID())=>{
+ const autoRetry=useRef<ReturnType<typeof setTimeout>|null>(null);
+ useEffect(()=>()=>{if(autoRetry.current)clearTimeout(autoRetry.current);},[]);
+ const sendText=(query:string,id:string=crypto.randomUUID(),auto=false)=>{
+   if(autoRetry.current){clearTimeout(autoRetry.current);autoRetry.current=null;}
    setChatFailure(null);
    return run(async()=>{
      const mine=createMessage(query,'user');
@@ -125,9 +129,15 @@ export function usePlanConversation(){
      catch(e){
        const screen=telaDeErro(e,'mensagem');
        setSaved(p=>({...p,messages:p.messages.filter(m=>m.id!==mine.id)}));
+       // The backend opens the conversation before the model fails: keep it, or every retry opens a new one (max 5 → 429).
+       if(e instanceof ApiError&&e.conversationId)cid.current=e.conversationId;
        if(screen.action==='reiniciar_sessao')cid.current=null;
        if(screen.action==='enviar_como_nova'||screen.action==='reformular')setComposerRestore({text:query,nonce:Date.now()});
-       setChatFailure({screen,text:query,id:screen.action==='enviar_como_nova'?crypto.randomUUID():id});
+       // A failure the server answered is cached under this id: the resend needs a new one (chatRetry.ts).
+       const nextId=screen.action==='enviar_como_nova'?crypto.randomUUID():retryMessageId(screen,id);
+       setChatFailure({screen,text:query,id:nextId});
+       const delay=autoRetryDelayMs(screen,auto);
+       if(delay!==null)autoRetry.current=setTimeout(()=>{autoRetry.current=null;if(live.current)void sendText(query,nextId,true);},delay);
        return;
      }
      cid.current=reply.conversation_id;

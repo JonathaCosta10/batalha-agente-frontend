@@ -4,7 +4,7 @@ import { parseErroApi, parseRetryAfter, type ErroApi } from './errorScreen';
 export type PlanState = { opening?:{message:string;phase:string}; commitmentCase?:CommitmentCase|null; planId:string;version:number;stage:Stage;draft:Plan;confirmed:Plan|null;confirmedAt:string|null;phraseIndex:number;profile:{person:Person;referencePeriod:{label:string;seal:{source:string;nature:string;measuredAt?:string;jobId?:string}};planPeriod:{label:string};situation:string};totals:Record<string,number> };
 // Sem abertura devolve null: a falta vira estado de erro na tela (openingLoad.ts), nunca uma fala do agente.
 export const openingReply=(state:Pick<PlanState,'opening'>)=>typeof state.opening?.message==='string'&&state.opening.message.trim()?state.opening.message:null;
-export class ApiError extends Error { constructor(message:string,public status:number,public state?:PlanState,public erroApi:ErroApi|null=null,public retryAfterS:number|null=null){super(message);} }
+export class ApiError extends Error { constructor(message:string,public status:number,public state?:PlanState,public erroApi:ErroApi|null=null,public retryAfterS:number|null=null,public conversationId:string|null=null){super(message);} }
 const prefix='/api/v1/context-agent/';
 export type SessionUser={codigo:string;pessoa:string;nome_origem?:string};
 export type Bootstrap={mode:string;usuario?:SessionUser};
@@ -25,7 +25,8 @@ export class Backend {
       const body=await r.json().catch(()=>null) as Record<string,unknown>|null;
       if(!r.ok){
         const b=body||{};
-        throw new ApiError(typeof b.erro==='string'?b.erro:typeof b.reply==='string'?b.reply:`Servidor indisponível (HTTP ${r.status}).`,r.status,(b.state||undefined) as PlanState|undefined,parseErroApi(b.erro_api),parseRetryAfter(r.headers?.get?.('Retry-After')));
+        // conversation_id also comes on a failed chat turn (the backend opened the conversation before failing).
+        throw new ApiError(typeof b.erro==='string'?b.erro:typeof b.reply==='string'?b.reply:`Servidor indisponível (HTTP ${r.status}).`,r.status,(b.state||undefined) as PlanState|undefined,parseErroApi(b.erro_api),parseRetryAfter(r.headers?.get?.('Retry-After')),typeof b.conversation_id==='string'?b.conversation_id:null);
       }
       if(body===null)throw new ApiError('Resposta ilegível do servidor.',r.status);
       return body as T;
