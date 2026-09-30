@@ -58,7 +58,7 @@
   },
   "proibidas": {
     "nota": "Procuradas em texto, atributos e comentários do DOM, sem diferenciar maiúsculas.",
-    "literais": ["organizesee", "@gmail", "C:\\Desenvolvendo", "C:/Desenvolvendo"],
+    "literais": ["@gmail", "C:\\Users", "C:/Users"],
     "padroes": ["AIza[0-9A-Za-z_-]{35}", "gh[pousr]_[0-9A-Za-z]{30,}", "sk-[A-Za-z0-9]{30,}", "-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"]
   },
   "limites": {

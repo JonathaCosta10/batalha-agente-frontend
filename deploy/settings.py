@@ -2,7 +2,7 @@
 import os
 from agent_backend.harness.settings import *
 SECRET_KEY=os.environ['DJANGO_SECRET_KEY']
-ALLOWED_HOSTS=os.environ.get('IAGORA_HOSTS','i-agora.hsoares.com.br').split(',')+['localhost','127.0.0.1','testserver']
+ALLOWED_HOSTS=os.environ.get('IAGORA_HOSTS','localhost').split(',')+['localhost','127.0.0.1','testserver']
 ROOT_URLCONF='deploy.urls'
 MIDDLEWARE=['deploy.middleware.SecurityHeaders','django.middleware.common.CommonMiddleware',*MIDDLEWARE]
 CSRF_TRUSTED_ORIGINS=['https://'+h for h in ALLOWED_HOSTS if h not in ('localhost','127.0.0.1','testserver')]
