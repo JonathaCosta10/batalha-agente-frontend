@@ -6,6 +6,8 @@ from django.http import JsonResponse
 from .bigquery import BigQuerySource, SourceUnavailable
 from .domain import from_snapshot
 from .opening import guided_opening
+from .names import demo_name
+from django.conf import settings
 from .store import PlanStore, Conflict
 from agent_backend.conversation.http import principal_for
 
@@ -148,6 +150,10 @@ def conversation_context(principal):
     context=build_context();s=store().withdraw_case(principal)
     if not s:return context
     snap=s['snapshot'];p=s['profile'];context['financial_period']=snap['reference_month']
+    context['guided_opening']=guided_opening(s)
+    # Real person's generated name (sealed), never pr4's demo alias: identity is id_usuario (owner, 10:22).
+    context['customer_display_name']=(s['profile']['person'].get('primeiroNome') or '')
+    context['display_name_kind']='generated_name_for_id_usuario'
     context['financial_profile']={'situation':p['situation'],'source':snap['seal'],'inflows_are_not_recurring_income':True,'arrears':None,'debt':None}
     values={'inflows':snap['inflows'],'outflows':snap['outflows'],'cash_flow':str(p['referencePeriod']['balance']),**{'category:'+k:v for k,v in snap['categories'].items()}}
     context['facts'].extend({'id':'BQ:'+k,'value':str(v),'origin':snap['seal']['source'],'period':snap['reference_month']} for k,v in values.items())
@@ -155,7 +161,27 @@ def conversation_context(principal):
     group=s['draft']['deliveryCurrent']
     context['facts'].append({'id':'BQ:group_delivery_restaurants','value':str(group),'origin':'deterministic_sum_of_Delivery_and_Restaurantes','period':snap['reference_month']})
     context['financial_input_basis']+=f'; Delivery e refeições fora: R$ {group:.2f} por mês'.replace('.',',')
+    context['transaction_detail']={'status':'not_loaded'}
+    if getattr(settings,'IAGORA_DETAILED_CONTEXT',False):
+        try:
+            detail=source().details(snap['client_ref'],snap['reference_month'])
+            from decimal import Decimal
+            grouped={}
+            for row in detail['summaries']:grouped[row['category']]=grouped.get(row['category'],Decimal(0))+Decimal(row['amount'])
+            if any(grouped.get(k,Decimal(0)).quantize(Decimal('.01'))!=Decimal(snap['categories'].get(k,'0')).quantize(Decimal('.01')) for k in detail['covered_categories']):
+                raise SourceUnavailable('Detalhamento mudou em relação ao período carregado.')
+            context['transaction_detail']=detail
+            for group in ('summaries','samples'):
+                for i,row in enumerate(detail[group]):
+                    context['facts'].append({'id':f'DETAIL:{group}:{i}','value':format(Decimal(row['amount']),'.2f'),'origin':detail['seal']['source'],'period':snap['reference_month'],'text':json.dumps(row,ensure_ascii=False),'detail':row})
+        except SourceUnavailable:
+            context['transaction_detail']={'status':'unavailable','reason':'Detalhamento não carregado agora; totais anteriores continuam identificados. Não afirme ausência de acesso ao banco nem invente detalhes.'}
     context['goal_state']={'planId':s['planId'],'version':s['version'],'commitment_case':s.get('commitmentCase'),'draft':s['draft'],'confirmed':s['confirmed'],'confirmed_at':s['confirmedAt'],'source':'persistent_server_plan'}
+    if s['confirmed']:
+        from decimal import Decimal
+        for field in ('shoppingTarget','deliveryTarget','reserve','plannedExpenses','released'):
+            if field in s['confirmed']:
+                context['facts'].append({'id':'GOAL:'+field,'value':format(Decimal(str(s['confirmed'][field])),'.2f'),'origin':'server_confirmed_plan','text':'Valor confirmado pela pessoa: '+field})
     return context
 
 

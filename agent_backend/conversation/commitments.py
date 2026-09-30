@@ -26,9 +26,24 @@ def validate_case(proposal,user_messages,reference_month):
             index=refs[field]
             if type(index)!=int or not 1<=index<=len(user_messages):raise ValueError('Referência de conversa inválida.')
             source=user_messages[index-1]
-            if folded(proposal[field]) not in folded(source):
-                if field=='monthly_amount' or len(source)>500:raise ValueError('Trecho não encontrado na fala indicada.')
-                proposal[field]=literal_clause(proposal[field],source,field)
+            if field=='monthly_amount':
+                chosen=money(proposal[field]);matches=[]
+                for statement in user_messages:
+                    tokens=re.findall(r'R\$\s*\d[\d.,]*|\b\d+[.,]\d{2}\b',statement)
+                    if re.search(r'limite|mensal|por m[eê]s',statement,re.I):
+                        tokens+=re.findall(r'\b\d[\d.,]*',statement)
+                    for token in tokens:
+                        try:
+                            if money(token.rstrip('.'))==chosen:matches.append(token.rstrip('.'))
+                        except ValueError:pass
+                if not matches:raise ValueError('O valor mensal não foi informado pela pessoa.')
+                proposal[field]=matches[-1]
+                continue
+            # Reference IDs are hints; an exact excerpt in this same authenticated
+            # dialogue remains valid even if the model selected a different turn.
+            if any(folded(proposal[field]) in folded(text) for text in user_messages):continue
+            if len(source)>500:raise ValueError('Trecho não encontrado na fala indicada.')
+            proposal[field]=literal_clause(proposal[field],source,field)
     texts=[folded(x) for x in user_messages if x.strip()]
     if len(texts)<2:raise ValueError('Converse sobre seu contexto antes de montar a proposta.')
     for field in ('objective','personal_context','action','monthly_amount'):

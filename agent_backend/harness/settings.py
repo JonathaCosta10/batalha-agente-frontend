@@ -33,6 +33,7 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 16384
 IAGORA_MODE = os.environ.get('IAGORA_MODE', 'demo')
 IAGORA_ALLOW_PAID_CALLS = os.environ.get('IAGORA_ALLOW_PAID_CALLS') == 'yes'
 IAGORA_MAX_CALLS = min(max(int(os.environ.get('IAGORA_MAX_CALLS', '12')), 0), 60)
+IAGORA_DETAILED_CONTEXT = os.environ.get('IAGORA_DETAILED_CONTEXT') == 'yes'
 IAGORA_PRINCIPAL_RESOLVER = None  # Integrator must configure auth AND current consent.
 IAGORA_MODEL = os.environ.get('AGENT_MODEL', 'gemini-3.5-flash-lite')
 IAGORA_GUARD_MODEL = os.environ.get('GUARD_MODEL', IAGORA_MODEL)

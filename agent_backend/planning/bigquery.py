@@ -3,7 +3,8 @@
 No built-in invented dataset or credential. Schema mapping is explicit because
 transaction sign/direction semantics must be verified against the event table.
 """
-import json,os,re,time
+import json,os,re,time,secrets
+from .names import demo_name
 from datetime import datetime,timezone
 from decimal import Decimal
 from pathlib import Path
@@ -41,7 +42,7 @@ class BigQuerySource:
         if not self.mapping_path or not Path(self.mapping_path).is_file():
             raise SourceUnavailable('Mapeamento do schema BigQuery ainda não validado. Não é seguro supor nomes ou sinais dos valores.')
         m=json.loads(Path(self.mapping_path).read_text());meta=self.inspect();fields={f['name']:f for f in meta['columns']}
-        for role in ('customer','period','amount','category'):
+        for role in ('customer','period','amount','category')+tuple(k for k in ('subcategory','description','date','installment_current','installment_total') if m.get(k)):
             value=m.get(role,'')
             if value not in fields or not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*',value):raise SourceUnavailable('Mapeamento de colunas incompatível com a tabela.')
         if m.get('direction'):
@@ -112,4 +113,38 @@ class BigQuerySource:
                 'inflows':str(sum((Decimal(r['inflows']) for r in rows),Decimal(0)).quantize(Decimal('.01'))),
                 'outflows':str(sum((Decimal(r['outflows']) for r in rows),Decimal(0)).quantize(Decimal('.01'))),
                 'categories':{r['category'] or 'Sem categoria':r['outflows'] for r in rows},'seal':seal}
+        self.cache[key]=(time.monotonic(),result);return result
+
+    def details(self,client_ref,reference_month):
+        from agent_backend.conversation.rules import minimize
+        if not re.fullmatch(r'20\d{2}-(0[1-9]|1[0-2])',reference_month):raise SourceUnavailable('Período inválido.')
+        key=('details',client_ref,reference_month)
+        if key in self.cache and time.monotonic()-self.cache[key][0]<900:return self.cache[key][1]
+        m=self.mapping();required=('subcategory','description','date','installment_current','installment_total')
+        if any(not m.get(k) for k in required):raise SourceUnavailable('Detalhamento não configurado.')
+        period=self._period(m);value=f'SAFE_CAST(`{m["amount"]}` AS NUMERIC)'
+        params={'customer':client_ref,'period':reference_month,'categories':['Lojas e sites','Delivery','Restaurantes'],'outflow':m['outflow_labels']}
+        where=f'CAST(`{m["customer"]}` AS STRING)=@customer AND {period}=@period AND `{m["category"]}` IN UNNEST(@categories) AND LOWER(CAST(`{m["direction"]}` AS STRING)) IN UNNEST(@outflow)'
+        sql=f'''SELECT `{m['category']}` AS category, `{m['subcategory']}` AS subcategory,
+          CAST(SUM(ABS({value})) AS STRING) AS amount, COUNT(*) AS n,
+          COUNTIF(SAFE_CAST(`{m['installment_total']}` AS NUMERIC)>1) AS installments,
+          COUNTIF({value} IS NULL) AS invalid
+          FROM `{TABLE}` WHERE {where} GROUP BY category,subcategory ORDER BY SUM(ABS({value})) DESC'''
+        rows,seal=self.query(sql,params,m['location'])
+        if any(int(r['invalid']) for r in rows):raise SourceUnavailable('Detalhamento contém valores inválidos.')
+        sql=f'''SELECT `{m['category']}` AS category, `{m['subcategory']}` AS subcategory,
+          `{m['description']}` AS description, CAST(DATE(`{m['date']}`) AS STRING) AS date,
+          CAST(ABS({value}) AS STRING) AS amount,
+          CAST(`{m['installment_current']}` AS STRING) AS installment_current,
+          CAST(`{m['installment_total']}` AS STRING) AS installment_total
+          FROM `{TABLE}` WHERE {where} ORDER BY ABS({value}) DESC, `{m['date']}` DESC LIMIT 12'''
+        samples,_=self.query(sql,params,m['location'])
+        for row in rows+samples:
+            for field in ('category','subcategory','description'):
+                if field in row:row[field]=minimize(str(row[field] or 'Não informado'))[:160]
+        result={'status':'available','period':reference_month,'summaries':rows,'samples':samples,
+                'samples_limit':12,'samples_order':'largest_amount_first','covered_categories':params['categories'],
+                'merchant_names_verified':False,'purchased_items_available':False,
+                'limitations':'Descrições bancárias genéricas, não notas fiscais. Parcelas são lançamentos do período; não inferir valor total da compra nem possibilidade de cancelar parcelas. Amostra não é o extrato completo.',
+                'seal':seal}
         self.cache[key]=(time.monotonic(),result);return result

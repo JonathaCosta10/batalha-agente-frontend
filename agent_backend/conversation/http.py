@@ -21,9 +21,9 @@ def service_for(mode, paid, model, guard_model, budget):
     if mode not in ('live', 'demo_live') or not paid:
         raise ValueError('Live access not configured')
     from .gateway import GeminiGateway
-    from agent_backend.planning.http import conversation_context, offer_case
+    from agent_backend.planning.http import conversation_context, offer_case, opening_for
     return ConversationService(gateway=GeminiGateway(model=model, guard_model=guard_model, max_calls=budget),
-        principal_context_builder=conversation_context, on_commitment_proposed=offer_case)
+        principal_context_builder=conversation_context, on_commitment_proposed=offer_case, principal_opening_builder=opening_for)
 
 
 def get_service():
@@ -92,6 +92,20 @@ def bootstrap(request):
         output.set_cookie(COOKIE, signing.dumps(str(uuid4()), salt=COOKIE), max_age=getattr(settings, 'IAGORA_SESSION_AGE', 1800),
                           httponly=True, samesite='Strict', secure=request.is_secure())
     return output
+
+
+def start(request):
+    if request.method!='POST':return failure('schema',405)
+    principal=principal_for(request)
+    if not principal:return failure()
+    try:
+        if request.content_type!='application/json' or len(request.body)>1000:raise ValueError()
+        data=json.loads(request.body)
+        if not isinstance(data,dict) or set(data)!={'client_request_id'}:raise ValueError()
+    except (ValueError,TypeError):return failure('schema',400)
+    from agent_backend.planning.http import store
+    if store().get(principal) is None:return failure('schema',409)
+    return response(asyncio.run(get_service().start(principal,data['client_request_id'])))
 
 
 def message(request):

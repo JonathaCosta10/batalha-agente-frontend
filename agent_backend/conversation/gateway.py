@@ -73,7 +73,7 @@ class GeminiGateway:
         if not key:
             raise RuntimeError('Server credential missing')
         return genai.Client(api_key=key, vertexai=False, http_options=types.HttpOptions(
-            timeout=15000, retry_options=types.HttpRetryOptions(attempts=1)))
+            timeout=35000, retry_options=types.HttpRetryOptions(attempts=1)))
 
     def _metric(self, stage, started, digest, usage=None, model_version=None, outcome='complete', error=None):
         if error:

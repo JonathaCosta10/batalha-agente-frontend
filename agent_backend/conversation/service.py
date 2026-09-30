@@ -24,7 +24,7 @@ FALLBACKS = {
     'not_found': 'Conversa indisponível para esta sessão. Inicie uma nova conversa.',
     'conflict': 'Este identificador já foi usado para outra mensagem. Inicie um novo envio.',
     'limit': 'Limite temporário da conversa atingido. Aguarde antes de tentar novamente.',
-    'technical': 'Não consegui validar uma resposta agora. Podemos retomar depois; para organizar o orçamento, comece listando entradas e despesas essenciais, sem enviar identificadores pessoais.',
+    'technical': 'Não consegui concluir a resposta agora. Tente novamente em instantes.',
     'denied': 'Não posso ajudar com acesso a dados de terceiros ou uma finalidade prejudicial. Posso ajudar a formular uma alternativa respeitosa e segura.',
     'clarify': 'Pode explicar o objetivo da pergunta, sem enviar dados de outras pessoas? Assim posso ajudar com a parte segura.',
     'demo': 'Demonstração local: esta resposta é fixa, não foi gerada por IA. O i-agora pode apoiar orçamento, reserva e prevenção de dívidas. Nenhum dado bancário foi consultado. Para experimentar respostas do Gemini, o responsável deve habilitar o modo de teste autorizado no servidor.',
@@ -32,11 +32,12 @@ FALLBACKS = {
 
 
 class ConversationService:
-    def __init__(self, gateway=None, *, context_builder=build_context, timeout=45,
-                 principal_context_builder=None, on_commitment_proposed=None,
+    def __init__(self, gateway=None, *, context_builder=build_context, timeout=75,
+                 principal_context_builder=None, on_commitment_proposed=None, principal_opening_builder=None,
                  max_turns=20, max_sessions=100, ttl=1800, clock=time.monotonic, requests_per_minute=6):
         self.gateway, self.context_builder = gateway, context_builder
         self.principal_context_builder = principal_context_builder
+        self.principal_opening_builder = principal_opening_builder
         self.on_commitment_proposed = on_commitment_proposed
         self.timeout, self.max_turns, self.max_sessions = timeout, max_turns, max_sessions
         self.ttl, self.clock = ttl, clock
@@ -63,7 +64,13 @@ class ConversationService:
             'citations': citations or [], 'request_id': str(uuid4()),
         }, http_status
 
-    async def send(self, principal, payload):
+    async def start(self,principal,request_id):
+        import re
+        if not isinstance(request_id,str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,60}',request_id):
+            return self.release(code='schema',http_status=400)
+        return await self.send(principal,{'schema_version':'1.0','conversation_id':None,'client_message_id':'open-'+request_id,'message':'Inicie a análise contextual deste perfil selecionado. Explique um achado relevante e faça uma pergunta específica, sem definir nem salvar metas.'},_opening_event=True)
+
+    async def send(self, principal, payload, *, _opening_event=False):
         if not principal:
             return self.release()
         try:
@@ -75,7 +82,7 @@ class ConversationService:
         if not self.lock.acquire(blocking=False):
             return self.release(code='limit', http_status=429)
         try:
-            return await self._send(principal, request)
+            return await self._send(principal, request, opening_event=_opening_event)
         finally:
             self.lock.release()
 
@@ -99,13 +106,13 @@ class ConversationService:
             if not self.rates[principal]:
                 del self.rates[principal]
 
-    async def _send(self, principal, request):
+    async def _send(self, principal, request, opening_event=False):
         self._expire()
         cid = request.conversation_id
         if cid and (principal, cid) not in self.sessions:
             return self.release(code='not_found', http_status=404)
         key = (principal, cid, request.client_message_id)
-        digest = hashlib.sha256(json.dumps(request.model_dump(), sort_keys=True).encode()).hexdigest()
+        digest = hashlib.sha256(json.dumps({**request.model_dump(),'opening_event':opening_event}, sort_keys=True).encode()).hexdigest()
         if key in self.cache:
             previous_digest, response, status = self.cache[key]
             if previous_digest != digest:
@@ -117,7 +124,8 @@ class ConversationService:
             if len(self.sessions) >= self.max_sessions or sum(p == principal for p, _ in self.sessions) >= 5:
                 return self.release(code='limit', http_status=429)
             cid = str(uuid4())
-            self.sessions[(principal, cid)] = []
+            opening=self.principal_opening_builder(principal) if self.principal_opening_builder and not opening_event else None
+            self.sessions[(principal, cid)] = [{'role':'model','text':opening}] if opening else []
             self.created[(principal, cid)] = self.clock()
         history = self.sessions[(principal, cid)]
         if len(history) >= self.max_turns * 2:
@@ -126,18 +134,19 @@ class ConversationService:
         stamps = self.rates.setdefault(principal, [])
         stamps.append(self.clock())
         try:
-            result = await asyncio.wait_for(self._pipeline(message, history[-12:], cid, (principal, cid)), self.timeout)
+            result = await asyncio.wait_for(self._pipeline(message, history[-12:], cid, (principal, cid), opening_event=opening_event), self.timeout)
         except (Exception, asyncio.CancelledError) as error:
             import logging
             logging.getLogger(__name__).warning('conversation_failure type=%s code=%s', type(error).__name__, getattr(error, 'code', None))
             # Cache uncertain outcome. No automatic regeneration/double billing.
             self.audit.append({'event': 'provider_failure'})
             result = self.release(code='technical', conversation_id=cid, http_status=503)
-        history.extend([{'role': 'user', 'text': message}, {'role': 'model', 'text': result[0]['reply']}])
+        if not opening_event:history.append({'role':'user','text':message})
+        history.append({'role':'model','text':result[0]['reply']})
         self.cache[key] = (digest, deepcopy(result[0]), result[1])
         return result
 
-    async def _pipeline(self, message, history, cid, session_key=None):
+    async def _pipeline(self, message, history, cid, session_key=None, opening_event=False):
         if self.gateway is None:
             return self.release(code='demo', conversation_id=cid, http_status=200)
         pending = self.proposals.pop(session_key, None)
@@ -153,7 +162,9 @@ class ConversationService:
         context = self.principal_context_builder(session_key[0]) if self.principal_context_builder and session_key else self.context_builder()
         counter_speech = equality_draft(message, context) if counter_speech else None
         context['user_reported_history'] = deepcopy(history)
-        user_statements=[h['text'] for h in history if h['role']=='user']+[message]
+        context['opening_event']=opening_event
+        if opening_event:context.pop('guided_opening',None)
+        user_statements=[h['text'] for h in history if h['role']=='user']+([] if opening_event else [message])
         context['user_statements']=[{'id':i+1,'text':text} for i,text in enumerate(user_statements)]
         next_proposal = None
         next_case = None
@@ -173,6 +184,8 @@ class ConversationService:
                         for k,v in calculated.items() if v is not None and k in ('current_spending','target_spending','reference_month','n_5','n_8')], missing_data=[])
         else:
             draft = AgentDraftV1.model_validate(await self.gateway.generate(message, context, history, decision.constraints))
+            if opening_event and (draft.commitment_proposal or draft.projection_proposal):
+                raise ValueError('Opening cannot create proposals')
             if draft.commitment_proposal:
                 from . import commitments
                 from agent_backend.planning.domain import draft_for_case

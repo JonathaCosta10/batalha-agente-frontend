@@ -115,3 +115,12 @@ def test_adjustment_does_not_copy_old_amount_into_action():
  assert '600' not in result['action']
  assert result['action'] in messages[2]
  assert result['monthly_amount']=='550.00'
+
+
+def test_money_format_and_untrusted_source_hint_do_not_erase_real_context():
+ from agent_backend.conversation.commitments import validate_case
+ messages=['Quero viajar sem comprometer o aluguel.', 'Vou esperar dois dias antes de comprar em lojas e sites.', 'Preciso preservar minhas contas essenciais; prefiro R$ 550,00 por mês.']
+ proposal={'objective':messages[0],'personal_context':'Preciso preservar minhas contas essenciais','action':'Vou esperar dois dias antes de comprar em lojas e sites.','category':'shopping','monthly_amount':'R$550,00','reference_month':'2025-12','source_refs':{'objective':1,'personal_context':3,'action':2,'monthly_amount':1}}
+ result=validate_case(proposal,messages,'2025-12')
+ assert result['monthly_amount']=='550.00'
+ assert result['personal_context']==proposal['personal_context']

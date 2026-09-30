@@ -1,4 +1,4 @@
 from django.urls import path
-from .http import message, bootstrap
+from .http import message, bootstrap, start
 
-urlpatterns = [path('mensagens/', message), path('sessao/', bootstrap)]
+urlpatterns = [path('abertura/',start), path('mensagens/', message), path('sessao/', bootstrap)]
